@@ -2,24 +2,30 @@
   margin: 0;
   padding: 0;
 }
-body {
-  height: 200vh;
+.hover:hover {
+  cursor: pointer;
 }
-/* img.landingGif {
+body {
+    overflow-x: hidden;
     width: 100%;
-    height: 850px;
+}
+video {
+    pointer-events: none;
     position: absolute;
-} */
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+}
 .landingPage {
-    background-image: url(./images/clouds_background_wallpaper.gif);
-    height: 850px;
+    height: 950px;
     background-attachment: fixed;
     background-position: center 25%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 header {
-    width: 55%;
+    width: 60%;
     margin: auto;
     position: relative;
 }
@@ -52,4 +58,433 @@ nav {
   color: #E7FF6E;
   transition: .3s;
   cursor: pointer;
+}
+.landingPageContent {
+    width: 843px;
+    margin: auto;
+    font-size: 110px;
+    margin-top: 30px;
+    position: relative;
+    opacity: 0;
+    transition: 2s;
+}
+.landingPageContent h1 {
+    color: white;
+    font-family: helvetica;
+    font-weight: bold;
+    font-stretch: 100%;
+    font-size: 110px;
+    margin-top: 135px;
+    padding-left: 60px;
+}
+.arrowIcon {
+    text-align: center;
+    margin-top: 50px;
+}
+.arrowIcon img:hover {
+    cursor: pointer;
+}
+.arrowIcon img {
+    padding: 15px;
+}
+.demoContainer {
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    width: 300px;
+    padding: 20px 0 20px 20px;
+    background: #E7FF6E;
+    z-index: 1000;
+}
+.demoContainer p {
+    font-size: 20px;
+    font-family: helvetica;
+}
+
+/* Technology Section */
+.technologySection {
+    padding-bottom: 50px;
+    background: white;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.technologySection h2 {
+    font-family: helvetica;
+    font-weight: bold;
+    font-stretch: 100%;
+    font-size: 110px;
+    text-align: center;
+    padding-top: 100px;
+    color: #605E5E;
+}
+.attributeContainer {
+    width: 863px;
+    margin: auto;
+    margin-top: 100px;
+}
+.singleAttribute {
+    width: 245px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 20px;
+    opacity: 0;
+    transition: 1s;
+}
+.attrTitle p {
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #605E5E;
+}
+.attrTitle p span {
+    font-weight: normal;
+    color: #8EFC52;
+}
+.attrContent p {
+    font-family: helvetica;
+    color: #605E5E;
+}
+.pleaseContain {
+    position: relative;
+}
+.tutorialBtn button:hover {
+    background-color: #E7FF6E;
+}
+.tutorialBtn button {
+    color: black;
+    padding: 15px 30px;
+    position: relative;
+    font-size: 1.2rem;
+    background-color: white;
+    border: 4px solid black;
+    font-family: helvetica;
+    font-weight: bold;
+    transition: 1s;
+}
+.tutorialBtn {
+    text-align: center;
+    opacity: 0;
+    transition: .8s;
+}
+.pleaseContain {
+    position: relative;
+    margin-top: 45px;
+}
+
+/* Feature Section */
+.featureSection {
+    padding: 50px 0 175px 0;
+    font-family: helvetica;
+    color: #605E5E;
+    background-color: white;
+}
+.featureSection h2 {
+    text-align: center;
+    font-size: 109px;
+    width: 891px;
+    margin: auto;
+}
+.featureSection h3 {
+    width: 860px;
+    margin: auto;
+    font-weight: 100;
+    font-size: 1.4rem;
+}
+.boldify {
+    font-weight: bold !important;
+}
+.featureSection h3.boldify {
+  font-size: 2rem;
+  margin: 25px auto;
+}
+/* About Section */
+.aboutSection {
+  background-color: #E7FF6E;
+  padding: 80px 0;
+}
+.aboutContent {
+    text-align: center;
+}
+.left-col, .right-col {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+.aboutTextContainer p {
+    font-family: helvetica;
+    text-align: left;
+}
+.aboutTextContainer {
+    padding: 0 100px;
+}
+.aboutContent {
+    text-align: center;
+    width: 900px;
+    margin: auto;
+}
+.aboutSection h2 {
+    text-align: center;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: helvetica;
+    color: #605E5E;
+    margin-bottom: 60px;
+}
+.aboutContent h3 {
+    width: 238px;
+    margin: auto;
+    text-align: left;
+    margin: 30px auto;
+    font-size: 1.5rem;
+    font-family: helvetica;
+    color: #605E5E;
+}
+.strikeThrough {
+    width: 238px;
+    height: 5px;
+    background: #605E5E;
+    margin: auto;
+    margin-top: 15px;
+}
+.aboutTextContainer p {
+    font-family: helvetica;
+    text-align: left;
+    color: #605E5E;
+    width: 238px;
+    margin: auto;
+}
+
+/* Contact us */
+.contactSection h2 {
+    font-family: helvetica;
+    font-weight: bold;
+    font-stretch: 100%;
+    font-size: 110px;
+    text-align: center;
+    padding-top: 100px;
+    color: #605E5E;
+}
+.contactSection h3 {
+    font-family: helvetica;
+    text-align: center;
+    margin: 45px 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+    opacity: 0;
+    transition: 1s;
+}
+.formContainer {
+    text-align: center;
+    opacity: 0;
+    transition: 1;
+}
+.formContainer input {
+    padding: 10px;
+    width: 600px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    margin: 5px;
+    background: #E7FF6E;
+}
+textarea#message {
+    width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100px;
+    font-size: 1rem;
+    font-family: helvetica;
+    border: 1px solid #CCC;
+    background: #E7FF6E;
+}
+.submitFormBtn {
+    background-color: white;
+    padding: 10px 40px;
+    font-size: 1rem;
+    font-family: helvetica;
+    border: 4px solid #605E5E;
+    color: #605E5E;
+    margin: 15px 0;
+}
+form div {
+    position: relative;
+}
+.formContainer p {
+  display: none;
+  position: absolute;
+  padding: 0 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+  margin: auto;
+  font-family: helvetica;
+  font-weight: 100;
+  color: #605E5E;
+}
+.contactSection {
+    padding-bottom: 100px;
+    background: white;
+}
+.hidden-desktop {
+  display: none;
+}
+/* Mobile Media Queries */
+@media only screen and (max-width: 768px) {
+  .landingPageContent {
+  width: 100%;
+  }
+  .landingPage {
+    height: 90vh;
+  }
+  video {
+    height: 90vh;
+    width: auto;
+  }
+  nav {
+    display: none;
+  }
+  header {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+  }
+  .landingPageContent h1 {
+    font-size: 45px;
+    margin-top: 100px;
+    padding: 0;
+    text-align: center;
+  }
+  .arrowIcon img {
+    width: 14%;
+  }
+  .arrowIcon {
+    text-align: center;
+    margin-top: 25px;
+  }
+  .technologySection h2 {
+    font-size: 35px;
+    padding-top: 75px;
+  }
+  .hidden-desktop {
+    display: block;
+    position: relative;
+  }
+  .hidden-small {
+    display: none;
+  }
+  .attributeContainer {
+    width: 100%;
+    margin-top: 35px;
+}
+.singleAttribute {
+    width: 275px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%) !important;
+    margin: 20px 0;
+}
+.technologySection {
+    padding-bottom: 0;
+}
+.featureSection {
+    padding: 60px 0 40px 0;
+}
+.tutorialBtn {
+  opacity: 1;
+}
+.tutorialBtn button {
+    padding: 15px 30px;
+    font-size: 1rem;
+}
+.featureSection h3.boldify {
+    font-size: 1.4rem;
+}
+.featureSection h3 {
+    width: 76%;
+    margin: auto;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+.featureSection h2 {
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+    margin: auto;
+}
+.aboutSection h2 {
+    font-size: 40px;
+    margin-bottom: 55px;
+}
+.aboutContent {
+    width: 100%;
+}
+.left-col, .right-col {
+    width: 100%;
+}
+.imgContainer {
+    width: 80%;
+    padding: 0;
+    text-align: left;
+    margin: auto;
+}
+.strikeThrough {
+    height: 5px;
+    background: #605E5E;
+    width: 80%;
+    margin: 5px auto;
+}
+.aboutContent h3 {
+    text-align: left;
+    margin: 20px auto;
+    padding: 0;
+    width: 80%;
+}
+.aboutTextContainer {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 0;
+}
+.aboutTextContainer p {
+    font-family: helvetica;
+    text-align: left;
+    color: #605E5E;
+    margin: auto;
+    width: 100%;
+}
+.aboutSection {
+    padding: 25px 0;
+}
+.contactSection h2 {
+    font-size: 40px;
+    padding-top: 50px;
+}
+.contactSection h3 {
+    margin: 30px 0;
+    font-size: 1.1rem;
+}
+.formContainer input {
+    width: 80%;
+}
+textarea#message {
+    width: 80%;
+    margin-top: 5px;
+}
+.demoContainer {
+    right: 0;
+    width: 200px;
+    padding: 15px 0 15px 20px;
+}
+}
+
+/* Desktop Media Queries */
+@media only screen and (min-width: 1824px) {
+.landingPage {
+    height: 1150px;
+  }
+
 }
