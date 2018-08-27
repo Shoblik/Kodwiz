@@ -31,6 +31,10 @@ $output = [
     $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
     $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
     $mail->addAddress('shoblik@yahoo.com');  // Add a recipient
+    $mail->addAddress('jhoblik@yahoo.com');
+    $mail->addAddress('otto.oficial@gmail.com');
+
+    // $mail->addAddress();
 
 //$mail->addAddress('ellen@example.com');                        // Name is optional
     $mail->addReplyTo($post['email']);                          // Add a reply-to address
