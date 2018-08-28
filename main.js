@@ -10,6 +10,7 @@ function submitForm(e) {
   }
 }).then(function(response) {
   console.log(response);
+  alert(response);
   let target = document.getElementById('feedbackMessage');
   if (response.data.emailSent) {
     target.innerHTML = 'Thank you for contacting us, we\'ll be reaching out to you soon.';
