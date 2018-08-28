@@ -370,8 +370,10 @@ form div {
     padding-top: 75px;
   }
   .hidden-desktop {
-    display: block;
-    position: relative;
+      text-align: center;
+      display: block;
+      position: relative;
+      margin-top: 20px;
   }
   .hidden-small {
     display: none;
