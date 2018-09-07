@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kod Wiz</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='./main.js'></script>
+    <link rel='stylesheet' href='./style.css' />
+  </head>
+  <body>
+    <div class='mainContainer'>
+      <div class='filter'></div>
+      <div class='headerContainer'>
+        <header>
+          <div class='logoContainer'>
+            <img src='../images/kod_wiz_logo.png' />
+          </div>
+          <nav>
+            <div class='innerNavContainer'>
+              <div onclick='smoothScroll("home")' class='navItem'>
+                <p>Home</p>
+              </div>
+              <div onclick='smoothScroll("technology")' class='navItem'>
+                <p>Product</p>
+              </div>
+              <div onclick='smoothScroll("feature")' class='navItem'>
+                <p>Features</p>
+              </div>
+              <div onclick='smoothScroll("about")' class='navItem'>
+                <p>About</p>
+              </div>
+              <div onclick='smoothScroll("contact")' class='navItem'>
+                <p>Contact</p>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </div>
+        <content>
+          <div class='priceStructure'>
+            <div class='head'>
+              <div class='user'>
+                <p>User</p>
+              </div>
+              <div class='programFee'>
+                <p>Fee / per Program</p>
+              </div>
+              <div class='monthlyFee'>
+                <p>Monthly Fee</p>
+              </div>
+              <div class='notes'>
+                <p>Notes</p>
+              </div>
+            </div>
+            <div class='body'>
+              <div class='singleRow'>
+                <div class='user'>
+                  <p>Basic</p>
+                </div>
+                <div class='programFee'>
+                  <p>$20 / per program</p>
+                </div>
+                <div class='monthlyFee'>
+                  <p>$0</p>
+                </div>
+                <div class='notes'>
+                  <p></p>
+                </div>
+              </div>
+              <div class='singleRow'>
+                <div class='user'>
+                  <p>Silver</p>
+                </div>
+                <div div class='programFee'>
+                  <p>$15 / per program</p>
+                </div>
+                <div div class='monthlyFee'>
+                  <p>$99</p>
+                </div>
+                <div class='notes'>
+                  <p>10 programs/month generation included</p>
+                </div>
+              </div>
+              <div class='singleRow'>
+                <div class='user'>
+                  <p>Golden</p>
+                </div>
+                <div div class='programFee'>
+                  <p>$15 / per program</p>
+                </div>
+                <div div class='monthlyFee'>
+                  <p>$199</p>
+                </div>
+                <div class='notes'>
+                  <p>30 program/month included in mohtly fees</p>
+                </div>
+              </div>
+              <div class='singleRow'>
+                <div class='user'>
+                  <p>Platinum</p>
+                </div>
+                <div div class='programFee'>
+                  <p>$10 / per program</p>
+                </div>
+                <div div class='monthlyFee'>
+                  <p>$499</p>
+                </div>
+                <div class='notes'>
+                  <p>50 programs/month included in monthly fees</p>
+                </div>
+              </div>
+              <div class='singleRow'>
+                <div class='user'>
+                  <p>Diamond</p>
+                </div>
+                <div div class='programFee'>
+                  <p>N/A</p>
+                </div>
+                <div div class='monthlyFee'>
+                  <p>$10000</p>
+                </div>
+                <div class='notes'>
+                  <p>Unlimited program generation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class='colContainer'>
+            <div class='left-col'>
+              <h1>Login</h1>
+              <form onsubmit='login();'>
+                <div>
+                  <input id='emailLogin' type='text' placeholder='Email'/>
+                </div>
+                <div>
+                  <input id='pinLogin' type='text' placeholder='Pin'/>
+                </div>
+              </form>
+            </div>
+            <div class='right-col'>
+              <h1>Sign Up</h1>
+              <form onsubmit='register();'>
+                <div>
+                  <input id='name' type='text' placeholder='Name'/>
+                </div>
+                <div>
+                  <input id='bussiness' type='text' placeholder='Bussiness Name'/>
+                </div>
+                <div>
+                  <input id='email' type='text' placeholder='Email'/>
+                </div>
+                <div>
+                  <input id='phone' type='text' placeholder='Phone'/>
+                </div>
+                <div>
+                  <input id='pin' type='text' placeholder='Pin'/>
+                </div>
+                <div>
+                  <input id='confirmPin' type='text' placeholder='Confirm Pin'/>
+                </div>
+              </form>
+            </div>
+          </div>
+        </content>
+      </div>
+  </body>
+</html>

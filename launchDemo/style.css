@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: helvetica;
+}
+body {
+  overflow-x: hidden;
+}
+header {
+    width: 60%;
+    margin: auto;
+    position: relative;
+}
+.logoContainer, nav {
+    display: inline-block;
+}
+.navItem {
+    display: inline-block;
+    padding: 10px 12px;
+}
+.innerNavContainer {
+    position: relative;
+    top: 50%;
+    text-align: right;
+    transform: translateY(-50%);
+}
+nav {
+    height: 100%;
+    position: absolute;
+    width: 70%;
+}
+.navItem p {
+    font-family: helvetica;
+    font-weight: bold;
+    color: white;
+}
+.navItem:first-child p {
+  color: #E7FF6E;
+}
+.navItem p:hover {
+  color: #E7FF6E;
+  transition: .3s;
+  cursor: pointer;
+}
+.logoContainer img {
+    width: 50%;
+}
+.mainContainer {
+    /* background-image: url('./images/plane_in_trees.jpg'); */
+    height: 100vh;
+    width: 100vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color : rgba(0,0,0, 0.4); */
+}
+.headerContainer {
+    background-color: rgba(0,0,0, 0.5);
+}
+content {
+    font-size: 0;
+}
+.left-col, .right-col {
+    display: inline-block;
+    font-size: initial;
+    width: 50%;
+    position: relative;
+    vertical-align: top;
+}
+.left-col h1, .right-col h1 {
+    text-align: center;
+    color: white;
+}
+label {
+    color: white;
+}
+form input {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 50%;
+    border: 1px #CCC;
+    margin: 2px 0;
+    border-radius: 3px;
+}
+.colContainer {
+    background: rgba(0,0,0, 0.5);
+    padding: 30px 0;
+}
+form div {
+    position: relative;
+    text-align: center;
+}
+form {
+    margin-top: 15px;
+}
+.priceStructure {
+    font-size: initial;
+    text-align: center;
+}
+.head div {
+    display: inline-block;
+    font-size: initial;
+}
+.priceStructure {
+    width: 950px;
+    margin: auto;
+    font-size: 0;
+    border: 1px solid #CCC;
+    margin: 15px auto;
+    border-radius: 3px;
+}
+.singleRow div {
+    display: inline-block;
+    vertical-align: top;
+    font-size: initial;
+}
+.singleRow {
+    padding: 10px;
+}
+.head {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #CCC;
+    font-weight: bold;
+}
+.body {
+    padding: 10px;
+    text-align: left;
+}
+.notes {
+    width: 35%;
+}
+.monthlyFee {
+    width: 25%;
+}
+.programFee {
+    width: 25%;
+}
+.user {
+    width: 15%;
+}
