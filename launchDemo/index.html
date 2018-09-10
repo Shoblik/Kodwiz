@@ -6,6 +6,8 @@
     <title>Kod Wiz</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src='./main.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link rel='stylesheet' href='./style.css' />
   </head>
   <body>
@@ -14,7 +16,7 @@
       <div class='headerContainer'>
         <header>
           <div class='logoContainer'>
-            <img src='../images/kod_wiz_logo.png' />
+            <img src='../images/kod_wiz_logo_org.png' />
           </div>
           <nav>
             <div class='innerNavContainer'>
@@ -38,90 +40,92 @@
         </header>
       </div>
         <content>
-          <div class='priceStructure'>
-            <div class='head'>
-              <div class='user'>
-                <p>User</p>
-              </div>
-              <div class='programFee'>
-                <p>Fee / per Program</p>
-              </div>
-              <div class='monthlyFee'>
-                <p>Monthly Fee</p>
-              </div>
-              <div class='notes'>
-                <p>Notes</p>
-              </div>
-            </div>
-            <div class='body'>
-              <div class='singleRow'>
+          <div class='priceStructureContainer'>
+            <div class='priceStructure'>
+              <div class='head'>
                 <div class='user'>
-                  <p>Basic</p>
+                  <p>User</p>
                 </div>
                 <div class='programFee'>
-                  <p>$20 / per program</p>
+                  <p>Fee / per Program</p>
                 </div>
                 <div class='monthlyFee'>
-                  <p>$0</p>
+                  <p>Monthly Fee</p>
                 </div>
                 <div class='notes'>
-                  <p></p>
+                  <p>Notes</p>
                 </div>
               </div>
-              <div class='singleRow'>
-                <div class='user'>
-                  <p>Silver</p>
+              <div class='body'>
+                <div class='singleRow'>
+                  <div class='user'>
+                    <p>Basic</p>
+                  </div>
+                  <div class='programFee'>
+                    <p>$20 / per program</p>
+                  </div>
+                  <div class='monthlyFee'>
+                    <p>$0</p>
+                  </div>
+                  <div class='notes'>
+                    <p></p>
+                  </div>
                 </div>
-                <div div class='programFee'>
-                  <p>$15 / per program</p>
+                <div class='singleRow'>
+                  <div class='user'>
+                    <p>Silver</p>
+                  </div>
+                  <div div class='programFee'>
+                    <p>$15 / per program</p>
+                  </div>
+                  <div div class='monthlyFee'>
+                    <p>$99</p>
+                  </div>
+                  <div class='notes'>
+                    <p>10 programs/month generation included</p>
+                  </div>
                 </div>
-                <div div class='monthlyFee'>
-                  <p>$99</p>
+                <div class='singleRow'>
+                  <div class='user'>
+                    <p>Golden</p>
+                  </div>
+                  <div div class='programFee'>
+                    <p>$15 / per program</p>
+                  </div>
+                  <div div class='monthlyFee'>
+                    <p>$199</p>
+                  </div>
+                  <div class='notes'>
+                    <p>30 program/month included in mohtly fees</p>
+                  </div>
                 </div>
-                <div class='notes'>
-                  <p>10 programs/month generation included</p>
+                <div class='singleRow'>
+                  <div class='user'>
+                    <p>Platinum</p>
+                  </div>
+                  <div div class='programFee'>
+                    <p>$10 / per program</p>
+                  </div>
+                  <div div class='monthlyFee'>
+                    <p>$499</p>
+                  </div>
+                  <div class='notes'>
+                    <p>50 programs/month included in monthly fees</p>
+                  </div>
                 </div>
-              </div>
-              <div class='singleRow'>
-                <div class='user'>
-                  <p>Golden</p>
-                </div>
-                <div div class='programFee'>
-                  <p>$15 / per program</p>
-                </div>
-                <div div class='monthlyFee'>
-                  <p>$199</p>
-                </div>
-                <div class='notes'>
-                  <p>30 program/month included in mohtly fees</p>
-                </div>
-              </div>
-              <div class='singleRow'>
-                <div class='user'>
-                  <p>Platinum</p>
-                </div>
-                <div div class='programFee'>
-                  <p>$10 / per program</p>
-                </div>
-                <div div class='monthlyFee'>
-                  <p>$499</p>
-                </div>
-                <div class='notes'>
-                  <p>50 programs/month included in monthly fees</p>
-                </div>
-              </div>
-              <div class='singleRow'>
-                <div class='user'>
-                  <p>Diamond</p>
-                </div>
-                <div div class='programFee'>
-                  <p>N/A</p>
-                </div>
-                <div div class='monthlyFee'>
-                  <p>$10000</p>
-                </div>
-                <div class='notes'>
-                  <p>Unlimited program generation</p>
+                <div class='singleRow'>
+                  <div class='user'>
+                    <p>Diamond</p>
+                  </div>
+                  <div div class='programFee'>
+                    <p>N/A</p>
+                  </div>
+                  <div div class='monthlyFee'>
+                    <p>$10000</p>
+                  </div>
+                  <div class='notes'>
+                    <p>Unlimited program generation</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -129,14 +133,14 @@
           <div class='nextStepContainer'>
             <div class='colContainer'>
                 <div class='left-col'>
-                  <button class='loginBtn'>Login</button>
+                  <button onclick='transition("login")' class='loginBtn'>Login</button>
                 </div>
                 <div class='right-col'>
-                  <button class='signUpBtn'>Sign Up for a Demo</button>
+                  <button onclick='transition("signUp")' class='signUpBtn activeBtn'>Sign Up for a Demo</button>
                 </div>
               </div>
               <div class='login'>
-                <h1>Login</h1>
+                <!-- <h1>Login</h1> -->
                 <form onsubmit='login();'>
                   <div>
                     <input id='emailLogin' type='text' placeholder='Email'/>
@@ -146,14 +150,14 @@
                   </div>
                 </form>
               </div>
-              <div class='signUp'>
-                <h1>Sign Up</h1>
+              <div class='signUp' style='height: initial;'>
+                <!-- <h1>Sign Up</h1> -->
                 <form onsubmit='register();'>
                   <div>
                     <input id='name' type='text' placeholder='Name'/>
                   </div>
                   <div>
-                    <input id='bussiness' type='text' placeholder='Bussiness Name'/>
+                    <input id='bussiness' type='text' placeholder='Bussiness'/>
                   </div>
                   <div>
                     <input id='email' type='text' placeholder='Email'/>
