@@ -80,22 +80,23 @@ content {
 label {
     color: white;
 }
-form input {
+.form input {
     font-size: 0.9rem;
     padding: 10px;
-    width: 50%;
+    width: 300px;
     border: 1px solid #CCC;
     margin: 2px 0;
     border-radius: 3px;
 }
 .colContainer {
-    padding: 30px 0;
+    padding: 20px 0;
     font-size: 0;
     color: black;
-    width: 500px;
+    width: 1100px;
     margin: auto;
+    text-align: center;
 }
-form div {
+.form div {
     position: relative;
     text-align: center;
 }
@@ -158,15 +159,15 @@ form div {
     color: white;
     border: 2px solid transparent;
 }
-
 .colContainer button {
     background-color: white;
     border: 2px solid #303030;
-    font-size: 17px;
+    font-size: 15px;
     padding: 10px 30px;
     color: #303030;
     border-radius: 3px;
     transition: .3s;
+    margin-top: 5px;
 }
 .priceStructureContainer {
     padding: 50px 0;
@@ -176,4 +177,18 @@ form div {
     background: #B23B3A !important;
     color: white !important;
     border: 2px solid transparent !important;
+}
+.signUpTitle, .loginTitle {
+    padding-bottom: 20px;
+    color: #B23B3A;
+}
+.form {
+    text-align: right;
+    display: inline-block;
+}
+.errorContainer {
+  text-align: left;
+}
+.errorContainer p {
+  color: #B23B3A;
 }

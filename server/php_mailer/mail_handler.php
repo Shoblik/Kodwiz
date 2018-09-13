@@ -28,25 +28,30 @@ $output = [
         )
     );
     $mail->smtpConnect($options);
-    $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
-    $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
-    $mail->addAddress('shoblik@yahoo.com');  // Add a recipient
-    $mail->addAddress('jhoblik@yahoo.com');
-    $mail->addAddress('otto.oficial@gmail.com');
 
-    // $mail->addAddress();
+    if (isset($verifyAccount)) {
+      $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
+      $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
+      $mail->addAddress($post['email']);  // Add a recipient
 
-//$mail->addAddress('ellen@example.com');                        // Name is optional
-    $mail->addReplyTo($post['email']);                          // Add a reply-to address
-//$mail->addCC('cc@example.com');
-//$mail->addBCC('bcc@example.com');
+      $mail->isHTML(true);
 
-//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
-    $mail->isHTML(true);                                  // Set email format to HTML
+      $mail->Subject = 'Verify your Account';
+      $mail->Body    = 'Thank you for signing up with Kod Wiz please follow the link to activate your account ' . $verifyLink;
 
-    $mail->Subject = 'Kod Wiz Company Site Message';
-    $mail->Body    = $post['message'];
+    } else {
+      $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
+      $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
+      $mail->addAddress('shoblik@yahoo.com');  // Add a recipient
+      $mail->addAddress('jhoblik@yahoo.com');
+      $mail->addAddress('otto.oficial@gmail.com');
+
+      $mail->addReplyTo($post['email']);
+      $mail->isHTML(true);
+
+      $mail->Subject = 'Kod Wiz Company Site Message';
+      $mail->Body    = $post['message'];
+    }
     $mail->AltBody = htmlentities('something went wrong');
 
     if(!$mail->send()) {
@@ -58,7 +63,9 @@ $output = [
         $output['success'] = true;
 
     }
-    $output = json_encode($output);
-    print($output);
+    if (!isset($verifyAccount)) {
+      $output = json_encode($output);
+      print($output);
+    }
 
 ?>
