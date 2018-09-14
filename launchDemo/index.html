@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kod Wiz</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='./main.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel='stylesheet' href='./style.css' />
+  </head>
+  <body>
+    <div class='mainContainer'>
+      <div class='filter'></div>
+      <div class='headerContainer'>
+        <header>
+          <div class='logoContainer'>
+            <img src='../images/kod_wiz_logo_org.png' />
+          </div>
+          <nav>
+            <div class='innerNavContainer'>
+              <div onclick='smoothScroll("home")' class='navItem'>
+                <p>Home</p>
+              </div>
+              <div onclick='smoothScroll("technology")' class='navItem'>
+                <p>Product</p>
+              </div>
+              <div onclick='smoothScroll("feature")' class='navItem'>
+                <p>Features</p>
+              </div>
+              <div onclick='smoothScroll("about")' class='navItem'>
+                <p>About</p>
+              </div>
+              <div onclick='smoothScroll("contact")' class='navItem'>
+                <p>Contact</p>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </div>
+      <content>
+        <div class='individualOption'></div>
+      </content>
+    </div>
+  </body>
+</html>
