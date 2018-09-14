@@ -112,8 +112,6 @@ label {
     width: 950px;
     margin: auto;
     font-size: 0;
-    border: 1px solid #CCC;
-    border-radius: 3px;
 }
 .singleRow div {
     display: inline-block;
