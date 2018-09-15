@@ -62,3 +62,15 @@ function handleErrors(errors) {
     document.querySelector('#' + i).innerText = errors[i];
   }
 }
+function initTransition() {
+  let pills = document.querySelectorAll('.individualOption');
+
+  for (let i = 0; i < pills.length; i++) {
+    pills[i].addEventListener('mouseover', function() {
+      this.classList.add('hover');
+    });
+    pills[i].addEventListener('mouseout', function() {
+      this.classList.remove('hover');    
+    })
+  }
+}

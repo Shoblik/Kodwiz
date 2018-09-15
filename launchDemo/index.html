@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link rel='stylesheet' href='./style.css' />
   </head>
-  <body>
+  <body onload='initTransition()'>
     <div class='mainContainer'>
       <div class='filter'></div>
       <div class='headerContainer'>
@@ -42,7 +42,7 @@
       <content>
         <h1>Price Structure</h1>
         <div class='priceStructure'>
-          <div class='individualOption basic'>
+          <div onclick='window.open("https://kodwiz.com/payment");' class='individualOption basic'>
             <div>
               <div class='user'>
                 <p>Basic</p>
@@ -66,9 +66,9 @@
                 <p></p>
               </div>
             </div>
-            <button class='selectBtn'>Select</button>
+            <!-- <button class='selectBtn'>Select</button> -->
           </div>
-          <div class='individualOption silver'>
+          <div onclick='window.open("https://kodwiz.com/payment");' class='individualOption silver'>
             <div>
               <div class='user'>
                 <p>Silver</p>
@@ -92,9 +92,9 @@
                 <p>10 programs/month generation included.</p>
               </div>
             </div>
-            <button class='selectBtn'>Select</button>
+            <!-- <button class='selectBtn'>Select</button> -->
           </div>
-          <div class='individualOption gold'>
+          <div onclick='window.open("https://kodwiz.com/payment");' class='individualOption gold'>
             <div>
               <div class='user'>
                 <p>Golden</p>
@@ -118,9 +118,9 @@
                 <p>30 program/month included in monthly fees.</p>
               </div>
             </div>
-            <button class='selectBtn'>Select</button>
+            <!-- <button class='selectBtn'>Select</button> -->
           </div>
-          <div class='individualOption platinum'>
+          <div onclick='window.open("https://kodwiz.com/payment");' class='individualOption platinum'>
             <div>
               <div class='user'>
                 <p>Platinum</p>
@@ -144,9 +144,9 @@
                 <p>50 programs/month included in monthly fees.</p>
               </div>
             </div>
-            <button class='selectBtn'>Select</button>
+            <!-- <button class='selectBtn'>Select</button> -->
           </div>
-          <div class='individualOption diamond'>
+          <div onclick='window.open("https://kodwiz.com/payment");' class='individualOption diamond'>
             <div>
               <div class='user'>
                 <p>Diamond</p>
@@ -170,9 +170,9 @@
                 <p>Unlimited program generation.</p>
               </div>
             </div>
-            <button class='selectBtn'>Select</button>
+            <!-- <button class='selectBtn'>Select</button> -->
           </div>
-          <div class='individualOption demo'>
+          <div onclick='window.open("https://kodwiz.com/login")' class='individualOption demo'>
             <div>
               <div class='user'>
                 <p>Demo</p>
@@ -196,8 +196,11 @@
                 <p>5 program limit.</p>
               </div>
             </div>
-            <button class='selectBtn'>Select</button>
+            <!-- <button class='selectBtn'>Select</button> -->
           </div>
+        </div>
+        <div>
+          <p class='disclaimer'>How KodWiz identifies a new program: if the selected fields are changed by 50% compared to the previous program, it will be billed as a new program.</p>
         </div>
       </content>
     </div>
