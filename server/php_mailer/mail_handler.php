@@ -5,9 +5,11 @@ require_once('phpmailer/PHPMailer/PHPMailerAutoload.php');
 $postJSON = file_get_contents('php://input');
 $post = json_decode($postJSON, TRUE);
 
-$output = [
-  'success' => false,
-];
+if (!isset($verifyAccount)) {
+  $output = [
+    'success' => false,
+  ];
+}
     $mail = new PHPMailer;
     $mail->SMTPDebug = 0;           // Enable verbose debug output. Change to 0 to disable debugging output.
 

@@ -48,3 +48,70 @@ nav {
 .logoContainer img {
     width: 50%;
 }
+
+content {
+    font-size: 0;
+}
+.left-col, .right-col {
+    display: inline-block;
+    font-size: initial;
+    width: 50%;
+    position: relative;
+    vertical-align: top;
+    text-align: center;
+}
+.left-col h1, .right-col h1 {
+    text-align: center;
+    color: white;
+}
+label {
+    color: white;
+}
+.form input {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #CCC;
+    margin: 2px 0;
+    border-radius: 3px;
+}
+.colContainer {
+    padding: 20px 0;
+    font-size: 0;
+    color: black;
+    width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+.form div {
+    position: relative;
+    text-align: center;
+}
+.login, .signUp {
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+}
+.loginBtn:hover, .signUpBtn:hover {
+  cursor: pointer;
+}
+.colContainer button:hover {
+    background: #B23B3A;
+    color: white;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.colContainer button {
+    background-color: white;
+    border: 2px solid #303030;
+    font-size: 15px;
+    padding: 10px 30px;
+    color: #303030;
+    border-radius: 3px;
+    transition: .3s;
+    margin-top: 5px;
+}
+p#response {
+    width: 300px;
+    margin: 15px auto;
+}

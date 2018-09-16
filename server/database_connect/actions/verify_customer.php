@@ -22,7 +22,59 @@ if ($customer_id) {
   $result = mysqli_query($conn, $query);
   $output['active'] = $query;
 }
-print('<style>* {padding: 0; margin: 0;}body {text-align: center; font-family: "Lato", sans-serif;} h2 {padding: 30px 0; font-weight: 100;} button:hover {background-color: #B23B3A !important; color: white; border-color: transparent;} button {transition: .3s; padding: 10px 15px; background-color: white; border: 2px solid #B23B3A; font-size: 1.2rem; color: #B23B3A; border-radius: 5px; font-family: "Lato", sans-serif;} img {width: 15%;}</style><div style="text-align: center; padding: 25px; background-color: rgba(250,250,250, 1);"><img src="../../images/kod_wiz_logo_org.png"/></div><content><h2>Thank you for verifying your account, your account has been activated.</h2><button onclick="https://kodwiz.com">Login</button></content>');
+print('
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kodwiz</title>
+<style>
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  text-align: center;
+  font-family: "Lato",
+  sans-serif;
+}
+h2 {
+  padding: 30px 0;
+  font-weight: 100;
+}
+button:hover {
+  background-color: #B23B3A !important;
+   color: white;
+    border-color: transparent;
+  }
+ button {
+   transition: .3s;
+   padding: 10px 15px;
+   background-color: white;
+   border: 2px solid #B23B3A;
+   font-size: 1.2rem;
+   color: #B23B3A;
+   border-radius: 5px;
+   font-family: "Lato", sans-serif;
+ }
+  img {
+    width: 15%;
+  }
+  </style>
+  </head>
+  <div style="text-align: center; padding: 25px; background-color: rgba(250,250,250, 1);">
+    <img src="../../images/kod_wiz_logo_org.png"/>
+  </div>
+  <content>
+    <h2>Thank you for verifying your account, your account has been activated.</h2>
+    <button onclick="openLogin();">Login</button>
+  </content>
+  <script>
+    function openLogin() {
+      window.open("http://kodwiz.com/login");
+    }
+  </script>
+  '
+);
 
 // $json_output = json_encode($output);
 // print($json_output);

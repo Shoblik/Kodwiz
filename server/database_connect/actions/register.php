@@ -19,8 +19,7 @@ if (isset($ACCESS_CONTROL)) {
     $insert_id = $conn->insert_id;
     $code = random_str(15);
 
-    $query = "INSERT INTO `verify_customer` (`customer_id`, `confirmation_code`)
-              VALUES ('$insert_id', '$code')";
+    $query = "INSERT INTO `verify_customer` (`customer_id`, `confirmation_code`) VALUES ('$insert_id', $code)";
     $result = mysqli_query($conn, $query);
 
     $output['customer_verification_added'] = true;
