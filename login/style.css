@@ -115,3 +115,6 @@ p#response {
     width: 300px;
     margin: 15px auto;
 }
+.signUpTitle, .loginTitle {
+    padding: 15px;
+}

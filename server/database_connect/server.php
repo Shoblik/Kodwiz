@@ -23,6 +23,11 @@ switch($_GET['action']) {
           require('./actions/register.php');
         }
       }
+      case 'login': {
+        if (!empty($post)) {
+          require('./actions/login.php');
+        }
+      }
     }
   case 'get':
     switch($_GET['resource']) {

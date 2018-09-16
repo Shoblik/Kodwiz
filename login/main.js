@@ -57,7 +57,19 @@ function register() {
   }
 }
 function login() {
-
+  axios({
+    method: 'post',
+    url: 'http://localhost/server/database_connect/server.php?action=post&resource=login',
+    data: {
+      email: document.getElementById('emailLogin').value,
+      pin: document.getElementById('pinLogin').value
+    }
+  }).then(function(response) {
+    console.log(response);
+    if (response.data.success) {
+      window.open(response.data.url);
+    }
+  });
 }
 function handleErrors(errors) {
   for (i in errors) {
