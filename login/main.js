@@ -15,9 +15,9 @@ function register() {
   if (!last_name) {
     errors['last_name_error'] = 'Please enter a last name';
   }
-  if (!bussiness) {
-    errors['bussiness_error'] = 'Please enter a bussiness name';
-  }
+  // if (!bussiness) {
+  //   errors['bussiness_error'] = 'Please enter a bussiness name';
+  // }
   if (!email) {
     errors['email_error'] = 'Please enter a valid email address';
   }
