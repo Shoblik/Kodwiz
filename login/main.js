@@ -67,7 +67,11 @@ function login() {
   }).then(function(response) {
     console.log(response);
     if (response.data.success) {
-      window.open(response.data.url);
+      window.open(response.data.url, target="_self");
+    } else {
+      document.getElementById('loginResponse').innerText = "Incorrect username or password";
+      document.getElementById('emailLogin').style.border = "1px solid #B23B3A";
+      document.getElementById('pinLogin').style.border = "1px solid #B23B3A";
     }
   });
 }

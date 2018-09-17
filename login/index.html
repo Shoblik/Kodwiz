@@ -15,19 +15,19 @@
         </div>
         <nav>
           <div class='innerNavContainer'>
-            <div onclick='smoothScroll("home")' class='navItem'>
+            <div onclick='window.open("https://kodwiz.com", target="_self")' class='navItem'>
               <p>Home</p>
             </div>
-            <div onclick='smoothScroll("technology")' class='navItem'>
+            <div onclick='window.open("https://kodwiz.com#technology", target="_self")' class='navItem'>
               <p>Product</p>
             </div>
-            <div onclick='smoothScroll("feature")' class='navItem'>
+            <div onclick='window.open("https://kodwiz.com#feature", target="_self")' class='navItem'>
               <p>Features</p>
             </div>
-            <div onclick='smoothScroll("about")' class='navItem'>
+            <div onclick='window.open("https://kodwiz.com#about", target="_self")' class='navItem'>
               <p>About</p>
             </div>
-            <div onclick='smoothScroll("contact")' class='navItem'>
+            <div onclick='window.open("https://kodwiz.com#contact", target="_self")' class='navItem'>
               <p>Contact</p>
             </div>
           </div>
@@ -102,6 +102,7 @@
                   <div>
                     <input id='pinLogin' type='password' placeholder='Pin'/>
                   </div>
+                  <p id='loginResponse'></p>
                   <button onclick='login();' class='loginBtn'>Login</button>
                 </div>
               </div>

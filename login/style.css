@@ -115,6 +115,13 @@ p#response {
     width: 300px;
     margin: 15px auto;
 }
+#loginResponse {
+    width: 300px;
+    margin: 15px auto;
+}
 .signUpTitle, .loginTitle {
     padding: 15px;
+}
+.errorContainer p {
+    color: rgb(178, 59, 58) !important;
 }
