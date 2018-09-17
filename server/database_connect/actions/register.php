@@ -10,7 +10,7 @@ if (isset($ACCESS_CONTROL)) {
 
   if ($duplicateResult->num_rows === 0) {
     $query = "INSERT INTO `customer` (`first_name`, `last_name`, `bussiness`, `email`, `phone`, `pin`, `date_added`, `active`)
-    VALUES ('{$post['first_name']}', '{$post['last_name']}', '{$post['bussiness']}', '{$post['email']}', '{$post['phone']}', '{$post['pin']}', CURRENT_DATE, '{$post['active']}')";
+    VALUES ('{$post['first_name']}', '{$post['last_name']}', '{$post['bussiness']}', '{$post['email']}', '{$post['phone']}', '{$post['pin']}', CURRENT_DATE, 0)";
 
     $result = mysqli_query($conn, $query);
 
