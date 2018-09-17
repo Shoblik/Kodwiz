@@ -13,6 +13,8 @@ if (isset($ACCESS_CONTROL)) {
     VALUES ('{$post['first_name']}', '{$post['last_name']}', '{$post['bussiness']}', '{$post['email']}', '{$post['phone']}', '{$post['pin']}', CURRENT_DATE, '{$post['active']}')";
 
     $result = mysqli_query($conn, $query);
+
+    $output['insert_query'] = $query;
     $output['customer_added'] = $result;
 
     // generate code in verify customer column
