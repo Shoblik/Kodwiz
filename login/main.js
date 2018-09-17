@@ -37,7 +37,7 @@ function register() {
   if (Object.keys(errors).length === 0 && errors.constructor === Object) {
     axios({
       method: 'post',
-      url: 'http://localhost/server/database_connect/server.php?action=post&resource=register',
+      url: 'http://kodwiz.com/server/database_connect/server.php?action=post&resource=register',
       data: {
         first_name: first_name,
         last_name: last_name,
@@ -59,7 +59,7 @@ function register() {
 function login() {
   axios({
     method: 'post',
-    url: 'http://localhost/server/database_connect/server.php?action=post&resource=login',
+    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=login',
     data: {
       email: document.getElementById('emailLogin').value,
       pin: document.getElementById('pinLogin').value
