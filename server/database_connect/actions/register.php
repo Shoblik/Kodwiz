@@ -14,7 +14,6 @@ if (isset($ACCESS_CONTROL)) {
 
     $result = mysqli_query($conn, $query);
 
-    $output['insert_query'] = $query;
     $output['customer_added'] = $result;
 
     // generate code in verify customer column
