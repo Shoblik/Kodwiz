@@ -1,3 +1,6 @@
+function moveLabel() {
+  event.target.nextElementSibling.classList.add('activateLabel');
+}
 function register() {
   let errors = {};
 
