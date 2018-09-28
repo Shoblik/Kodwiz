@@ -19,6 +19,7 @@ switch($_GET['action']) {
   case 'post':
     switch($_GET['resource']) {
       case 'register': {
+        $output['test'] = true;
         if (!empty($post)) {
           require('./actions/register.php');
         }

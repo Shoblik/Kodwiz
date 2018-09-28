@@ -4,13 +4,15 @@ if (isset($ACCESS_CONTROL)) {
 
   //check if the email is already in the system
   $duplicateQuery = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}'";
+
+  $output['duplicateQuery'] = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}'";
   $duplicateResult = mysqli_query($conn, $duplicateQuery);
 
   $data['num_rows'] = $duplicateResult->num_rows;
 
   if ($duplicateResult->num_rows === 0) {
-    $query = "INSERT INTO `customer` (`first_name`, `last_name`, `bussiness`, `email`, `phone`, `pin`, `date_added`, `active`)
-    VALUES ('{$post['first_name']}', '{$post['last_name']}', '{$post['bussiness']}', '{$post['email']}', '{$post['phone']}', '{$post['pin']}', CURRENT_DATE, 0)";
+    $query = "INSERT INTO `customer` (`name`, `bussiness`, `email`, `phone`, `password`, `date_added`, `active`)
+    VALUES ('{$post['name']}', '{$post['bussiness']}', '{$post['email']}', '{$post['phone']}', SHA1('{$post['password']}'), CURRENT_DATE, 0)";
 
     $result = mysqli_query($conn, $query);
 

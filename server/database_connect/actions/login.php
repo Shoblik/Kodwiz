@@ -2,7 +2,8 @@
 
 if (isset($ACCESS_CONTROL)) {
 
-  $query = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}' AND `pin` = '{$post['pin']}' AND `active` = 1";
+  $password = SHA1("{$post['password']}");
+  $query = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}' AND `password` = '$password' AND `active` = 1";
   $result = mysqli_query($conn, $query);
 
   if ($result->num_rows > 0) {

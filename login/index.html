@@ -7,7 +7,7 @@
     <link rel='stylesheet' href='./style.css' />
     <script src='./main.js'></script>
   </head>
-  <body onload=''>
+  <body onload='init();'>
     <!-- <div class='headerContainer'>
       <header>
         <div class='logoContainer'>
@@ -39,20 +39,64 @@
 
       </div>
       <div class='right-col'>
-        <div class='loginInner'>
+        <div id='login' class='loginInner'>
           <h2 class='loginTitle'>Log into your account</h2>
           <div class='login' style='height: initial;'>
             <div class='form'>
-              <div class='inputContainer'>
-                <input onclick='moveLabel();' class='formInput' id='emailLogin' type='text' placeholder=''/>
-                <label class='activeLabel'>Your e-mail address</label>
-              </div>
-              <div class='inputContainer'>
-                <input onclick='moveLabel();' class='formInput' id='pinLogin' type='password' placeholder=''/>
-                <label class='activeLabel'>Password</label>
+              <div class='outerInputContainer'>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel();' class='formInput' id='emailLogin' type='text' placeholder=''/>
+                  <label class='activeLabel'>Your e-mail address</label>
+                </div>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel();' class='formInput' id='pinLogin' type='password' placeholder=''/>
+                  <label class='activeLabel'>Password</label>
+                </div>
               </div>
               <p id='loginResponse'></p>
               <button onclick='login();' class='loginBtn'>Log in</button>
+            </div>
+            <div class='otherLinks'>
+              <p onclick='showSignUp();'>Sign up</p>
+              <p onclick='window.open("https://kodwiz.com/passwordreset", target="_self")'>Forgot your password?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class='loginInner register'>
+          <h2 class='signUpTitle'>Get started with a free account</h2>
+          <h3 class='registerLine'>No credit card needed.</h3>
+          <div class='login' style='height: initial;'>
+            <div class='form'>
+              <div class='outerInputContainer'>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel()' id='name' type='text'/>
+                  <label class='activeLabel'>What's your name?</label>
+                </div>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel()' id='bussiness' type='text'/>
+                  <label class='activeLabel'>Your bussiness (optional)</label>
+                </div>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel()' id='email' type='text'/>
+                  <label class='activeLabel'>Your email-address</label>
+                </div>
+                <div>
+                  <input onfocus='moveLabel()' id='phone' type='text'/>
+                  <label class='activeLabel'>Your phone number</label>
+                </div>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel()' id='pin' type='password'/>
+                  <label class='activeLabel'>Secure password</label>
+                </div>
+                <div>
+                  <p id='response'></p>
+                </div>
+                <button onfocus='register();' class='signUpBtn'>Sign Up</button>
+              </div>
+              <div class='otherLinks'>
+                <p onclick='showLogIn();'>Log In</p>
+              </div>
             </div>
           </div>
         </div>
