@@ -8,6 +8,7 @@ if (isset($ACCESS_CONTROL)) {
 
   if ($result->num_rows > 0) {
     $output['success'] = true;
+
     $output['url'] = 'http://application.kodwiz.com';
   }
 
