@@ -1,5 +1,5 @@
 function moveLabel() {
-  event.target.nextElementSibling.classList.add('activateLabel');
+  // event.target.nextElementSibling.classList.add('activateLabel');
 }
 function register() {
   let errors = {};
@@ -54,7 +54,7 @@ function login() {
       password: document.getElementById('pinLogin').value
     }
   }).then(function(response) {
-    console.log(response);
+    console.log(response.data);
     if (response.data.success) {
       window.open(response.data.url, target="_self");
     } else {
