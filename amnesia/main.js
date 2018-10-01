@@ -14,5 +14,6 @@ function updatePassword() {
     }
   }).then(function(response) {
     console.log(response.data);
+    window.open('https://kodwiz.com/login', target='_self');
   })
 }
