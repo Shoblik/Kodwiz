@@ -22,11 +22,25 @@ switch($_GET['action']) {
         $output['test'] = true;
         if (!empty($post)) {
           require('./actions/register.php');
+          break;
         }
       }
       case 'login': {
         if (!empty($post)) {
           require('./actions/login.php');
+          break;
+        }
+      }
+      case 'passwordreset': {
+        if (!empty($post)) {
+          require('./actions/insert_password_code.php');
+          break;
+        }
+      }
+      case 'updatePassword': {
+        if (!empty($post)) {
+          require('./actions/reset_password.php');
+          break;
         }
       }
     }
@@ -35,6 +49,7 @@ switch($_GET['action']) {
       case 'verify': {
         if (!empty($_GET['code'])) {
           require('./actions/verify_customer.php');
+          break;
         }
       }
     }

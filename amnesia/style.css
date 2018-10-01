@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  color: #605E5E;
+}
+.left-col {
+    width: 30%;
+    height: 100vh;
+    background-color: #B23B3A;
+    font-size: initial;
+}
+.right-col {
+    min-height: 100vh;
+    width: 69%;
+}
+.left-col, .right-col {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    position: relative;
+}
+.innerContent > h2 {
+    font-weight: 100;
+    color: #131431;
+    padding: 15px 15px 45px 0;
+}
+.innerContent {
+    font-size: initial;
+    width: 500px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Form */
+.form div {
+    position: relative;
+    text-align: center;
+}
+.form input {
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 35px 15px 15px 15px;
+}
+.inputContainer {
+  position: relative;
+}
+.activeLabel {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 15px;
+    color: #605E5E;
+    font-weight: 100;
+    pointer-events: none;
+    font-size: 1.1rem;
+    transition: .2s;
+    left: 0;
+}
+.activateLabel {
+    transform: translateY(-130%);
+    font-size: .9rem;
+}
+.form {
+  text-align: center;
+}
+button {
+    background-color: #B23B3A;
+    border: 2px solid transparent;
+    font-size: 15px;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 20px;
+    transition: .3s;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+button:focus, input:focus {
+    outline: none;
+}
+button:hover {
+    background: #B23B3A;
+    color: white;
+    border: 2px solid transparent;
+    cursor: pointer;
+}

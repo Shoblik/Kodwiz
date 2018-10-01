@@ -6,6 +6,8 @@ if (isset($ACCESS_CONTROL)) {
   $query = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}' AND `password` = '$password' AND `active` = 1";
   $result = mysqli_query($conn, $query);
 
+  $output['query'] = $query;
+
   if ($result->num_rows > 0) {
     $output['success'] = true;
 

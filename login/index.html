@@ -8,36 +8,8 @@
     <script src='./main.js'></script>
   </head>
   <body onload='init();'>
-    <!-- <div class='headerContainer'>
-      <header>
-        <div class='logoContainer'>
-          <img src='../images/kod_wiz_logo_org.png' />
-        </div>
-        <nav>
-          <div class='innerNavContainer'>
-            <div onclick='window.open("https://kodwiz.com", target="_self")' class='navItem'>
-              <p>Home</p>
-            </div>
-            <div onclick='window.open("https://kodwiz.com#technology", target="_self")' class='navItem'>
-              <p>Product</p>
-            </div>
-            <div onclick='window.open("https://kodwiz.com#feature", target="_self")' class='navItem'>
-              <p>Features</p>
-            </div>
-            <div onclick='window.open("https://kodwiz.com#about", target="_self")' class='navItem'>
-              <p>About</p>
-            </div>
-            <div onclick='window.open("https://kodwiz.com#contact", target="_self")' class='navItem'>
-              <p>Contact</p>
-            </div>
-          </div>
-        </nav>
-      </header>
-    </div> -->
     <content>
-      <div class='left-col'>
-
-      </div>
+      <div class='left-col'></div>
       <div class='right-col'>
         <div id='login' class='loginInner'>
           <h2 class='loginTitle'>Log into your account</h2>
@@ -58,7 +30,7 @@
             </div>
             <div class='otherLinks'>
               <p onclick='showSignUp();'>Sign up</p>
-              <p onclick='window.open("https://kodwiz.com/passwordreset", target="_self")'>Forgot your password?</p>
+              <p onclick='showForgotPassword();'>Forgot your password?</p>
             </div>
           </div>
         </div>
@@ -100,62 +72,33 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- <div class='right-col'>
-        <h2 class='signUpTitle'>Sign Up</h2>
-        <div class='signUp' style='height: initial;'>
-          <div class='form'>
-            <div>
-              <label>Name:</label>
-              <input id='first_name' type='text' placeholder='First Name'/>
-              <div class='errorContainer'>
-                <p id='first_name_error'></p>
+        <div id='login' class='loginInner forgotPassword'>
+          <h2 class='loginTitle'>Please enter your e-mail address.</h2>
+          <div class='login' style='height: initial;'>
+            <div class='form'>
+              <div class='outerInputContainer'>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel();' class='formInput' id='emailReset' type='text' placeholder=''/>
+                  <label class='activeLabel activateLabel'>Your e-mail address</label>
+                </div>
+              </div>
+              <button onclick='resetPassword();'>Send</button>
+              <div class='otherLinks'>
+                <p onclick='showSignUp();'>Sign up</p>
+                <p onclick='showLogIn();'>Log in</p>
               </div>
             </div>
-            <div>
-              <input id='last_name' type='text' placeholder='Last Name'/>
-              <div class='errorContainer'>
-                <p id='last_name_error'></p>
-              </div>
-            </div>
-            <div>
-              <input id='bussiness' type='text' placeholder='Bussiness'/>
-              <div class='errorContainer'>
-                <p id='bussiness_error'></p>
-              </div>
-            </div>
-            <div>
-              <input id='email' type='text' placeholder='Email'/>
-              <div class='errorContainer'>
-                <p id='email_error'></p>
-              </div>
-            </div>
-            <div>
-              <input id='phone' type='text' placeholder='Phone'/>
-              <div class='errorContainer'>
-                <p id='phone_error'></p>
-              </div>
-            </div>
-            <div>
-              <input id='pin' type='password' placeholder='6 Digit Pin'/>
-              <div class='errorContainer'>
-                <p id='pin_error'></p>
-              </div>
-            </div>
-            <div>
-              <input id='confirmPin' type='password' placeholder='Confirm Pin'/>
-              <div class='errorContainer'>
-                <p id='pin_error'></p>
-              </div>
-            </div>
-            <div>
-              <p id='response'></p>
-            </div>
-            <button onclick='register();' class='signUpBtn'>Sign Up</button>
+          </div>
+          <div class='passwordResetFeedback'>
+            <p class='resetText'>Success! We've sent a link to reset your password to your inbox.</p>
           </div>
         </div>
-      </div> -->
-    <!-- </div> -->
+      </div>
     </content>
+    <div class='feedbackContainer'>
+      <div class='feedbackInner'>
+        <p class='feedbackText'></p>
+      </div>
+    </div>
   </body>
 </html>

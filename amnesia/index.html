@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Password Reset</title>
+    <link rel='stylesheet' href='./style.css' />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='./main.js'></script>
+  </head>
+  <body>
+    <div class='left-col'></div>
+    <div class='right-col'>
+      <div class='innerContent'>
+        <h2>Reset Password</h2>
+        <div class='form'>
+          <div class='outerInputContainer'>
+            <div class='inputContainer'>
+              <input onfocus='moveLabel();' class='formInput' id='password' type='text' placeholder=''/>
+              <label class='activeLabel activateLabel'>Please enter a new password.</label>
+            </div>
+          </div>
+          <button onclick='updatePassword();'>Reset</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

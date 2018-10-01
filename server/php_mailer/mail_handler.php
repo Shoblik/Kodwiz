@@ -5,7 +5,7 @@ require_once('phpmailer/PHPMailer/PHPMailerAutoload.php');
 $postJSON = file_get_contents('php://input');
 $post = json_decode($postJSON, TRUE);
 
-if (!isset($verifyAccount)) {
+if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
   $output = [
     'success' => false,
   ];
@@ -41,6 +41,16 @@ if (!isset($verifyAccount)) {
       $mail->Subject = 'Verify your Account';
       $mail->Body    = 'Thank you for signing up with Kod Wiz please follow the link to activate your account ' . $verifyLink;
 
+    } else if ($insertPasswordLink) {
+      $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
+      $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
+      $mail->addAddress($post['email']);  // Add a recipient
+
+      $mail->isHTML(true);
+
+      $mail->Subject = 'Password reset';
+      $mail->Body    = 'Please follow the link to reset your password ' . $verifyLink;
+
     } else {
       $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
       $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
@@ -59,13 +69,19 @@ if (!isset($verifyAccount)) {
     if(!$mail->send()) {
         $output['success'] = false;
         $output['message'] = $mail->ErrorInfo;
+        if (isset($verifyAccount)) {
+          $output['message'] = 'An error occured, please contact customer support at 714-608-7664 if this issue persists.';
+        }
     } else {
 //    echo 'Message has been sent';
         $output['emailSent'] = true;
         $output['success'] = true;
 
+        if (isset($verifyAccount)) {
+          $output['message'] = 'Success! Thank you for registering, please check your email for an account confirmation link.';
+        }
     }
-    if (!isset($verifyAccount)) {
+    if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
       $output = json_encode($output);
       print($output);
     }

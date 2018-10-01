@@ -38,15 +38,14 @@ if (isset($ACCESS_CONTROL)) {
     require_once('../php_mailer/mail_handler.php');
 
   } else {
-    $output['errors'] = 'This email is already in use';
+    $output['message'] = 'This email is already in use';
   }
 
 } else {
   die('no direct access allowed');
 }
 
-function random_str($length, $keyspace = '0123456789')
-{
+function random_str($length, $keyspace = '0123456789') {
     $pieces = [];
     $max = mb_strlen($keyspace, '8bit') - 1;
     for ($i = 0; $i < $length; ++$i) {

@@ -37,7 +37,7 @@ function register() {
   if (Object.keys(errors).length === 0 && errors.constructor === Object) {
     axios({
       method: 'post',
-      url: 'http://localhost/server/database_connect/server.php?action=post&resource=register',
+      url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=register',
       data: {
         first_name: first_name,
         last_name: last_name,
@@ -70,7 +70,7 @@ function initTransition() {
       this.classList.add('hover');
     });
     pills[i].addEventListener('mouseout', function() {
-      this.classList.remove('hover');    
+      this.classList.remove('hover');
     })
   }
 }
