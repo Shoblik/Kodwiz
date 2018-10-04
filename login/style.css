@@ -191,9 +191,8 @@ p#response {
   font-weight: 100;
   color: #605E5E;
 }
-.errorContainer p {
-    color: rgb(178, 59, 58) !important;
-}
+
+
 label {
   font-size: initial;
   color: black;
@@ -257,4 +256,12 @@ p.feedbackText {
     width: 70%;
     text-align: center;
 }
-/*  */
+/* Error handling */
+.individualError {
+    margin-bottom: 10px;
+    /* padding-left: 10px; */
+    font-weight: 100;
+    border-left: 3px solid rgb(178, 59, 58);
+    padding: 5px 0 5px 15px;
+    font-size: 0.9rem;
+}

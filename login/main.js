@@ -3,7 +3,13 @@ function moveLabel() {
   // event.target.nextElementSibling.classList.add('activateLabel');
 }
 function register() {
-  let errors = {};
+  let activeErrors = document.getElementsByClassName('individualError');
+
+  while(activeErrors[0]) {
+    activeErrors[0].remove();
+  }
+
+  let errors = [];
 
   //check to make sure there is a value for all of these
   let name = document.querySelector('#name').value;
@@ -13,19 +19,15 @@ function register() {
   let password = document.querySelector('#pin').value;
 
   if (!name) {
-    errors['first_name_error'] = 'Name can\'t be blank';
+    errors.push('Name can\'t be blank');
   }
   if (!email) {
-    errors['email_error'] = 'Email can\t be blank';
+    errors.push('Email can\'t be blank');
   }
-  if (!phone) {
-    errors['phone_error'] = 'Phone can\'t be blank';
+  if (!password) {
+    errors.push('Password can\'t be blank');
   }
-  if (!pin) {
-    errors['pin_error'] = 'Password can\'t be blank';
-  }
-
-  if (Object.keys(errors).length === 0 && errors.constructor === Object) {
+  if (errors.length === 0) {
     axios({
       method: 'post',
       url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=register',
@@ -41,7 +43,7 @@ function register() {
       document.querySelector('#response').innerText = response.data.message;
     });
   } else {
-    // handleErrors(errors);
+    handleErrors(errors);
   }
 }
 function login() {
@@ -66,11 +68,17 @@ function login() {
     }
   });
 }
-// function handleErrors(errors) {
-//   for (i in errors) {
-//     document.querySelector('#' + i).innerText = errors[i];
-//   }
-// }
+function handleErrors(errors) {
+  for (let i = 0; i < errors.length; i++) {
+    let individualError = document.createElement('DIV');
+    individualError.classList.add('individualError');
+    let p = document.createElement('P');
+    p.innerText = errors[i];
+
+    individualError.appendChild(p);
+    document.querySelector('.errorContainer').appendChild(individualError);
+  }
+}
 function showSignUp() {
   document.querySelector('#login').style.display = 'none';
   document.querySelector('.register').style.display = 'block';
