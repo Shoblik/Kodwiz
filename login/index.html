@@ -9,7 +9,11 @@
   </head>
   <body onload='init();'>
     <content>
-      <div class='left-col'></div>
+      <div class='left-col'>
+        <div>
+          <p id='response'></p>
+        </div>
+      </div>
       <div class='right-col'>
         <div id='login' class='loginInner'>
           <h2 class='loginTitle'>Log into your account</h2>
@@ -62,10 +66,10 @@
                   <input onfocus='moveLabel()' id='pin' type='password'/>
                   <label class='activeLabel activateLabel'>Secure password</label>
                 </div>
-                <div>
+                <!-- <div>
                   <p id='response'></p>
-                </div>
-                <button onfocus='register();' class='signUpBtn'>Sign Up</button>
+                </div> -->
+                <button onClick='register();' class='signUpBtn'>Sign Up</button>
               </div>
               <div class='otherLinks'>
                 <p onclick='showLogIn();'>Log In</p>

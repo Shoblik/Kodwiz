@@ -40,6 +40,21 @@ function register() {
       }
     }).then(function(response) {
       console.log(response.data);
+
+      if (response.data.emailSent) {
+          let column = document.querySelector('.left-col');
+          let signUpBtn = document.querySelector('.signUpBtn');
+          column.style.transition = '1s';
+          column.style.backgroundColor = '#5cb85c';
+
+          signUpBtn.style.backgroundColor = '#5cb85c';
+          signUpBtn.style.backgroundColor = '#5cb85c';
+
+          document.querySelector('#response').style.color = 'initial';
+      } else {
+        document.querySelector('#response').style.color = 'white';
+      }
+
       document.querySelector('#response').innerText = response.data.message;
     });
   } else {

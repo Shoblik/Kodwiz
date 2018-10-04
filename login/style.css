@@ -265,3 +265,14 @@ p.feedbackText {
     padding: 5px 0 5px 15px;
     font-size: 0.9rem;
 }
+p#response {
+    width: 300px;
+    margin: 15px auto 0 auto;
+    color: #131431;
+}
+.left-col div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
