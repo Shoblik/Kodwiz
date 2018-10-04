@@ -43,6 +43,12 @@ switch($_GET['action']) {
           break;
         }
       }
+      case 'add_subscription': {
+        if (!empty($post)) {
+          require('./actions/add_subscription.php');
+          break;
+        }
+      }
     }
   case 'get':
     switch($_GET['resource']) {
@@ -51,6 +57,14 @@ switch($_GET['action']) {
           require('./actions/verify_customer.php');
           break;
         }
+      }
+      case 'test': {
+        require('./actions/test.php');
+        break;
+      }
+      case 'readSession': {
+        require('./actions/read_session.php');
+        break;
       }
     }
 }

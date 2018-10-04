@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  color: #605E5E;
+}
+body {
+    overflow-x: hidden;
+    background-color: #e3e8ee;
+}
+nav {
+    display: inline-block;
+    width: 20%;
+}
+header {
+    display: inline-block;
+    vertical-align: top;
+    height: 75px;
+    width: 79.6%;
+    position: relative;
+
+}
+.greeting {
+    height: 100%;
+    width: 80%;
+    display: inline-block;
+}
+.greeting h1 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.logo {
+    margin-bottom: 15px;
+}
+.logo img {
+    width: 100px;
+    position: relative;
+    left: 29px;
+}
+.navItem p {
+    left: 53px;
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px 10px 10px 0;
+    color: #2b2d50;
+}
+.iconCircle:hover {
+  cursor: pointer;
+}
+.iconCircle {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+}
+.iconCircle img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    user-select: none;
+}
+.accountIcon {
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.profilePopup {
+    text-align: left;
+    position: relative;
+    padding-top: 10px;
+}
+.profilePopupContainer {
+    position: absolute;
+    width: 220px;
+    background-color: white;
+    transform: translateX(-77%);
+    border-radius: 3px;
+    margin-top: 5px;
+    padding: 15px 0;
+    display: none;
+}
+.showProfile {
+  display: block;
+}
+.accountName {
+    padding: 5px 15px 15px 15px;
+    border-bottom: 1px solid #CCC;
+}
+.profileLink {
+    padding: 8px 15px;
+    font-size: .9rem;
+}
+.profileLink:hover {
+  background-color: #f7fafc;
+  cursor: pointer;
+}

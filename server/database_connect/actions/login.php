@@ -1,12 +1,12 @@
 <?php
 
-if (isset($ACCESS_CONTROL)) {
+if (!isset($ACCESS_CONTROL) || $ACCESS_CONTROL === false) {
+  die('no direct access allowed');
+}
 
   $password = SHA1("{$post['password']}");
   $query = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}' AND `password` = '$password' AND `active` = 1";
   $result = mysqli_query($conn, $query);
-
-  $output['query'] = $query;
 
   if ($result->num_rows > 0) {
     $output['success'] = true;
@@ -14,14 +14,17 @@ if (isset($ACCESS_CONTROL)) {
     $date = date('mdY');
     $email = $post['email'];
 
-    $token = generateToken($date, $email);
+    $post['auth'] = true;
+    $post['logout'] = false;
+    $post['id'] = mysqli_fetch_assoc($result)['id'];
 
-    $output['url'] = 'http://application.kodwiz.com?warp=' . $token . '&usr=' . $email;
+    require('./actions/update_session.php');
+    // $token = generateToken($date, $email);
+    //
+    // $output['url'] = 'http://application.kodwiz.com?warp=' . $token . '&usr=' . $email;
   }
 
-} else {
-  die('No direct access allowed');
-}
+
 
 function generateToken($date, $emailUsername) {
   $letterArr = array(

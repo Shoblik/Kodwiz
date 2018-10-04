@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>KodWiz Dashboard</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel='stylesheet' href='./style.css' />
+    <script src='./main.js'></script>
+  </head>
+    <body onload='checkSession();'>
+      <nav>
+        <div class='logo'>
+          <img src='../images/kod_wiz_logo_org.png' />
+        </div>
+        <div class='navItemContainer'>
+          <div class='navItem'>
+            <p>Home</p>
+          </div>
+          <div class='navItem'>
+            <p>Account Info</p>
+          </div>
+          <div class='navItem'>
+            <p>Subscriptions</p>
+          </div>
+          <div class='navItem'>
+            <p>Contact</p>
+          </div>
+        </div>
+      </nav>
+      <header>
+        <div class='greeting'>
+          <h1>Hello <span id='name'></span>, Welcome to your Dashboard</h1>
+        </div>
+        <div class='accountIcon'>
+          <div onclick='document.querySelector(".profilePopupContainer").classList.toggle("showProfile")' class='iconCircle'>
+            <img src='../images/icon_user.png'/>
+          </div>
+          <div class='profilePopupContainer'>
+            <div class='accountName'>
+              <p id='profilefullName'>Simon Hoblik</p>
+            </div>
+            <div class='profilePopup'>
+              <div class='profileInfo'>
+                <p class='profileLink'>Account Info</p>
+              </div>
+              <div class='profileLogout'>
+                <p class='profileLink'>Logout</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </body>
+  </html>
