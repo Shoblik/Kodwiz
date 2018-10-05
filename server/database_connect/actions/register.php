@@ -1,6 +1,7 @@
 <?php
 if (isset($ACCESS_CONTROL)) {
   $output['success'] = true;
+  $output['emailSent'] = false;
 
   if (isset($_GET['target'])) {
     $output['plan'] = $_GET['target'];
@@ -9,7 +10,6 @@ if (isset($ACCESS_CONTROL)) {
   //check if the email is already in the system
   $duplicateQuery = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}'";
 
-  $output['duplicateQuery'] = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}'";
   $duplicateResult = mysqli_query($conn, $duplicateQuery);
 
   $data['num_rows'] = $duplicateResult->num_rows;
@@ -38,11 +38,11 @@ if (isset($ACCESS_CONTROL)) {
     } else {
       $verifyLink = "<a href='https://kodwiz.com/server/database_connect/server.php?action=get&resource=verify&code=$code'>here</a>";
     }
-
+    $output['emailSent'] = true;
     require_once('../php_mailer/mail_handler.php');
 
   } else {
-    $output['message'] = 'This email is already in use';
+    $output['message'] = 'Error! This email is already in use';
   }
 
 } else {

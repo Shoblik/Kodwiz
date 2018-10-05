@@ -14,6 +14,14 @@ function register() {
 
   let errors = [];
 
+  let activeErrors = document.getElementsByClassName('individualError');
+
+  while(activeErrors[0]) {
+    activeErrors[0].remove();
+  }
+
+  let errors = [];
+
   //check to make sure there is a value for all of these
   let name = document.querySelector('#name').value;
   let bussiness = document.querySelector('#bussiness').value;
@@ -60,6 +68,16 @@ function register() {
       }
 
       document.querySelector('#response').innerText = response.data.message;
+      // console.log(response.data);
+//       if (response.data.plan === 0701) {
+//         document.querySelector('#response').innerText = response.data.message;
+//       } else {
+//         handler.open({
+//         name: 'Kodwiz',
+//         description: '2 widgets',
+//         amount: Number(response.data.plan)
+//       });
+//       }
     });
   } else {
     handleErrors(errors);

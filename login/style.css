@@ -256,4 +256,36 @@ p.feedbackText {
     width: 70%;
     text-align: center;
 }
-/*  */
+/* Error handling */
+.individualError {
+    margin-bottom: 10px;
+    /* padding-left: 10px; */
+    font-weight: 100;
+    border-left: 3px solid rgb(178, 59, 58);
+    padding: 5px 0 5px 15px;
+    font-size: 0.9rem;
+}
+p#response {
+    width: 300px;
+    margin: 15px auto 0 auto;
+    color: #131431;
+}
+.left-col div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.progressBar {
+    height: 2px;
+    background-color: #B23B3A;
+    width: 0;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+.expandProgressBar {
+  transition: .5s;
+  width: 100%;
+}
+.collapseProgressBar {
+  width: 0;
+}
