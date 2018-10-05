@@ -3,12 +3,16 @@ function moveLabel() {
   // event.target.nextElementSibling.classList.add('activateLabel');
 }
 function register() {
-  let errors = {};
+  loading = true;
+  moveProgressBar(1);
 
-  //get the target
-  let url = window.location.href;
-  target = url.slice(url.indexOf('target=') + 7);
-  console.log(target);
+  let activeErrors = document.getElementsByClassName('individualError');
+
+  while(activeErrors[0]) {
+    activeErrors[0].remove();
+  }
+
+  let errors = [];
 
   //check to make sure there is a value for all of these
   let name = document.querySelector('#name').value;
@@ -18,19 +22,18 @@ function register() {
   let password = document.querySelector('#pin').value;
 
   if (!name) {
-    errors['first_name_error'] = 'Name can\'t be blank';
+    errors.push('Name can\'t be blank');
   }
   if (!email) {
-    errors['email_error'] = 'Email can\t be blank';
+    errors.push('Email can\'t be blank');
   }
-  if (!pin) {
-    errors['pin_error'] = 'Password can\'t be blank';
+  if (!password) {
+    errors.push('Password can\'t be blank');
   }
-
-  if (Object.keys(errors).length === 0 && errors.constructor === Object) {
+  if (errors.length === 0) {
     axios({
       method: 'post',
-      url: 'http://localhost/server/database_connect/server.php?action=post&resource=register&target=' + target,
+      url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=register',
       data: {
         name: name,
         bussiness: bussiness,
@@ -39,59 +42,78 @@ function register() {
         password: password,
       }
     }).then(function(response) {
-      // console.log(response.data);
-      if (response.data.plan === 0701) {
-        document.querySelector('#response').innerText = response.data.message;
+      console.log(response.data);
+      loading = false;
+
+      if (response.data.emailSent) {
+          let column = document.querySelector('.left-col');
+          let signUpBtn = document.querySelector('.signUpBtn');
+          column.style.transition = '1s';
+          column.style.backgroundColor = '#5cb85c';
+
+          signUpBtn.style.backgroundColor = '#5cb85c';
+          signUpBtn.style.backgroundColor = '#5cb85c';
+
+          document.querySelector('#response').style.color = 'initial';
       } else {
-        handler.open({
-        name: 'Kodwiz',
-        description: '2 widgets',
-        amount: Number(response.data.plan)
-      });
+        document.querySelector('#response').style.color = 'white';
       }
+
+      document.querySelector('#response').innerText = response.data.message;
     });
   } else {
     handleErrors(errors);
   }
 }
 function login() {
+
   document.querySelector('.feedbackContainer').classList.remove('showFeedback');
   clearTimeout(timeout);
+  loading = true;
+  moveProgressBar(0);
+
   axios({
     method: 'post',
-    url: 'http://localhost/server/database_connect/server.php?action=post&resource=login',
+    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=login',
     data: {
       email: document.getElementById('emailLogin').value,
       password: document.getElementById('pinLogin').value
     }
   }).then(function(response) {
+    loading = false;
     console.log(response.data);
     if (response.data.success) {
-      // window.open(response.data.url, target="_self");
-      window.open('http://localhost/dashboard');
+      window.open(response.data.url, target="_self");
     } else {
       // document.getElementById('loginResponse').innerText = "Incorrect username or password";
-      document.getElementById('emailLogin').style.border = "1px solid #B23B3A";
-      document.getElementById('pinLogin').style.border = "1px solid #B23B3A";
+      // document.getElementById('emailLogin').style.border = "1px solid #B23B3A";
+      // document.getElementById('pinLogin').style.border = "1px solid #B23B3A";
       showFeedback('Incorrect email or password.');
     }
   });
 }
 function handleErrors(errors) {
-  for (i in errors) {
-    // document.querySelector('#' + i).innerText = errors[i];
-    console.log(i);
+  for (let i = 0; i < errors.length; i++) {
+    let individualError = document.createElement('DIV');
+    individualError.classList.add('individualError');
+    let p = document.createElement('P');
+    p.innerText = errors[i];
+
+    individualError.appendChild(p);
+    document.querySelector('.errorContainer').appendChild(individualError);
   }
 }
 function showSignUp() {
   document.querySelector('#login').style.display = 'none';
   document.querySelector('.register').style.display = 'block';
   document.querySelector('.forgotPassword').style.display = 'none';
+
 }
 function showLogIn() {
   document.querySelector('#login').style.display = 'block';
   document.querySelector('.register').style.display = 'none';
   document.querySelector('.forgotPassword').style.display = 'none';
+
 }
 function showForgotPassword() {
   document.querySelector('#login').style.display = 'none';
@@ -99,6 +121,9 @@ function showForgotPassword() {
   document.querySelector('.forgotPassword').style.display = 'block';
 }
 function resetPassword() {
+  loading = true;
+  moveProgressBar(2);
+
   let email = document.querySelector('#emailReset').value;
   axios({
     method: 'post',
@@ -108,6 +133,7 @@ function resetPassword() {
     }
   }).then(function(response) {
     console.log(response.data);
+    loading = false;
     if (response.data.emailSent) {
       document.querySelector('.passwordResetFeedback').style.opacity = 1;
     } else {
@@ -126,6 +152,36 @@ function showFeedback(text, color = 'rgba(178, 59, 58, 1)') {
     document.querySelector('.feedbackContainer').classList.remove('showFeedback');
 
   }, 6000);
+}
+let loading = false;
+let expand = true;
+let interval = null;
+
+function moveProgressBar(index) {
+  movement(index);
+  interval = setInterval(function() {
+    movement(index);
+  }, 700);
+}
+function movement(index) {
+  let progressBar = document.querySelectorAll('.progressBar')[index];
+  if (loading) {
+    if (expand) {
+      progressBar.classList.add('expandProgressBar');
+      progressBar.classList.remove('collapseProgressBar');
+      expand = false;
+    } else {
+      progressBar.classList.add('collapseProgressBar');
+      progressBar.classList.remove('expandProgressBar');
+      expand = true;
+    }
+  } else {
+    clearInterval(interval);
+    loading = false;
+    progressBar.classList.add('collapseProgressBar');
+    progressBar.classList.remove('expandProgressBar');
+    expand = true;
+  }
 }
 function init() {
   // setInterval(function() {
