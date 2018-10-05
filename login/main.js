@@ -3,6 +3,9 @@ function moveLabel() {
   // event.target.nextElementSibling.classList.add('activateLabel');
 }
 function register() {
+  loading = true;
+  moveProgressBar(1);
+
   let activeErrors = document.getElementsByClassName('individualError');
 
   while(activeErrors[0]) {
@@ -40,6 +43,7 @@ function register() {
       }
     }).then(function(response) {
       console.log(response.data);
+      loading = false;
 
       if (response.data.emailSent) {
           let column = document.querySelector('.left-col');
@@ -62,8 +66,12 @@ function register() {
   }
 }
 function login() {
+
   document.querySelector('.feedbackContainer').classList.remove('showFeedback');
   clearTimeout(timeout);
+  loading = true;
+  moveProgressBar(0);
+
   axios({
     method: 'post',
     url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=login',
@@ -72,13 +80,14 @@ function login() {
       password: document.getElementById('pinLogin').value
     }
   }).then(function(response) {
+    loading = false;
     console.log(response.data);
     if (response.data.success) {
       window.open(response.data.url, target="_self");
     } else {
       // document.getElementById('loginResponse').innerText = "Incorrect username or password";
-      document.getElementById('emailLogin').style.border = "1px solid #B23B3A";
-      document.getElementById('pinLogin').style.border = "1px solid #B23B3A";
+      // document.getElementById('emailLogin').style.border = "1px solid #B23B3A";
+      // document.getElementById('pinLogin').style.border = "1px solid #B23B3A";
       showFeedback('Incorrect email or password.');
     }
   });
@@ -112,6 +121,9 @@ function showForgotPassword() {
   document.querySelector('.forgotPassword').style.display = 'block';
 }
 function resetPassword() {
+  loading = true;
+  moveProgressBar(2);
+
   let email = document.querySelector('#emailReset').value;
   axios({
     method: 'post',
@@ -121,6 +133,7 @@ function resetPassword() {
     }
   }).then(function(response) {
     console.log(response.data);
+    loading = false;
     if (response.data.emailSent) {
       document.querySelector('.passwordResetFeedback').style.opacity = 1;
     } else {
@@ -139,6 +152,36 @@ function showFeedback(text, color = 'rgba(178, 59, 58, 1)') {
     document.querySelector('.feedbackContainer').classList.remove('showFeedback');
 
   }, 6000);
+}
+let loading = false;
+let expand = true;
+let interval = null;
+
+function moveProgressBar(index) {
+  movement(index);
+  interval = setInterval(function() {
+    movement(index);
+  }, 700);
+}
+function movement(index) {
+  let progressBar = document.querySelectorAll('.progressBar')[index];
+  if (loading) {
+    if (expand) {
+      progressBar.classList.add('expandProgressBar');
+      progressBar.classList.remove('collapseProgressBar');
+      expand = false;
+    } else {
+      progressBar.classList.add('collapseProgressBar');
+      progressBar.classList.remove('expandProgressBar');
+      expand = true;
+    }
+  } else {
+    clearInterval(interval);
+    loading = false;
+    progressBar.classList.add('collapseProgressBar');
+    progressBar.classList.remove('expandProgressBar');
+    expand = true;
+  }
 }
 function init() {
   // setInterval(function() {
