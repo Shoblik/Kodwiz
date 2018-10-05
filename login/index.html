@@ -7,14 +7,19 @@
     <link rel='stylesheet' href='./style.css' />
     <script src='./main.js'></script>
   </head>
-  <body onload='init();'>
+  <body>
     <content>
-      <div class='left-col'></div>
+      <div class='left-col'>
+        <div>
+          <p id='response'></p>
+        </div>
+      </div>
       <div class='right-col'>
         <div id='login' class='loginInner'>
           <h2 class='loginTitle'>Log into your account</h2>
           <div class='login' style='height: initial;'>
             <div class='form'>
+              <div class='progressBar'></div>
               <div class='outerInputContainer'>
                 <div class='inputContainer'>
                   <input onfocus='moveLabel();' class='formInput' id='emailLogin' type='text' placeholder=''/>
@@ -38,6 +43,7 @@
         <div class='loginInner register'>
           <h2 class='signUpTitle'>Get started with a free account</h2>
           <h3 class='registerLine'>No credit card needed.</h3>
+          <div class='errorContainer'></div>
           <div class='login' style='height: initial;'>
             <div class='errorContainer'>
               <!-- <div class='individualError'>
@@ -48,6 +54,7 @@
               </div>
             </div>
             <div class='form'>
+              <div class='progressBar'></div>
               <div class='outerInputContainer'>
                 <div class='inputContainer'>
                   <input onfocus='moveLabel()' id='name' type='text'/>
@@ -69,10 +76,10 @@
                   <input onfocus='moveLabel()' id='pin' type='password'/>
                   <label class='activeLabel activateLabel'>Secure password</label>
                 </div>
-                <div>
+                <!-- <div>
                   <p id='response'></p>
-                </div>
-                <button onfocus='register();' class='signUpBtn'>Sign Up</button>
+                </div> -->
+                <button onClick='register();' class='signUpBtn'>Sign Up</button>
               </div>
               <div class='otherLinks'>
                 <p onclick='showLogIn();'>Log In</p>
@@ -84,6 +91,7 @@
           <h2 class='loginTitle'>Please enter your e-mail address.</h2>
           <div class='login' style='height: initial;'>
             <div class='form'>
+              <div class='progressBar'></div>
               <div class='outerInputContainer'>
                 <div class='inputContainer'>
                   <input onfocus='moveLabel();' class='formInput' id='emailReset' type='text' placeholder=''/>
