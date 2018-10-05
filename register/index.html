@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>KodWiz Login</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel='stylesheet' href='./style.css' />
+    <script src='./main.js'></script>
+  </head>
+  <body onload='init();'>
+    <content>
+      <div class='left-col'></div>
+      <div class='right-col'>
+        <div class='loginInner register'>
+          <h2 class='signUpTitle'>Get started with a free account</h2>
+          <h3 class='registerLine'>No credit card needed.</h3>
+          <div class='login' style='height: initial;'>
+            <div class='errorContainer'>
+              <!-- <div class='individualError'>
+                <p class='error'>Email can't be blank</p>
+              </div> -->
+              <div class='individualError'>
+                <p class='error'></p>
+              </div>
+            </div>
+            <div class='form'>
+              <div class='outerInputContainer'>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel()' id='name' type='text'/>
+                  <label class='activeLabel activateLabel'>What's your name?</label>
+                </div>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel()' id='email' type='text'/>
+                  <label class='activeLabel activateLabel'>Your email-address</label>
+                </div>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel()' id='bussiness' type='text'/>
+                  <label class='activeLabel activateLabel'>Your bussiness (optional)</label>
+                </div>
+                <div>
+                  <input onfocus='moveLabel()' id='phone' type='text'/>
+                  <label class='activeLabel activateLabel'>Your phone number (optional)</label>
+                </div>
+                <div class='inputContainer'>
+                  <input onfocus='moveLabel()' id='pin' type='password'/>
+                  <label class='activeLabel activateLabel'>Secure password</label>
+                </div>
+                <div>
+                  <p id='response'></p>
+                </div>
+                <button onfocus='register();' class='signUpBtn'>Sign Up</button>
+              </div>
+              <div class='otherLinks'>
+                <p onclick='window.open("https://kodwiz.com/login");'>Log In</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </content>
+    <div class='feedbackContainer'>
+      <div class='feedbackInner'>
+        <p class='feedbackText'></p>
+      </div>
+    </div>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+
+    <script>
+    var handler = StripeCheckout.configure({
+      key: 'pk_test_hJDzvApd3S2zpLvqgOJHwISa',
+      image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+      locale: 'auto',
+      token: function(token) {
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+        console.log(token);
+        axios({
+          method: 'post',
+          url: 'http://localhost/server/database_connect/server.php?action=post&resource=add_subscription&target=' + target,
+          data: {
+            stripeEmail: token.email,
+            stripeToken: token.id
+          }
+        })
+      }
+    });
+
+    // Open Checkout with further options:
+
+    // Close Checkout on page navigation:
+    window.addEventListener('popstate', function() {
+      handler.close();
+    });
+    </script>
+  </body>
+</html>

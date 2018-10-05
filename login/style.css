@@ -187,12 +187,10 @@ p#response {
 
 }
 .registerLine {
-  padding: 5px 15px 45px 0;
+  padding: 5px 15px 0 0;
   font-weight: 100;
   color: #605E5E;
 }
-
-
 label {
   font-size: initial;
   color: black;
@@ -227,7 +225,9 @@ p.resetText {
   opacity: 0;
   transition: .3s;
 }
-
+.login {
+    padding-top: 45px;
+}
 /* Feedback bar */
 .feedbackContainer {
     position: fixed;

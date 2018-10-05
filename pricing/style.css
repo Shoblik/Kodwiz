@@ -114,10 +114,11 @@ label {
     margin: auto;
     font-size: 0;
 }
-.singleRow div {
-    display: inline-block;
-    vertical-align: top;
-    font-size: initial;
+.priceStructure {
+    width: 1200px;
+    height: 450px;
+    margin: 25px auto 0 auto;
+    font-size: 0;
 }
 .singleRow {
     padding: 10px 0;
@@ -218,7 +219,9 @@ label {
 h1 {
     font-size: 2rem;
     text-align: center;
-    padding: 30px;
+    padding: 100px;
+    background: #B23B3A;
+    color: white;
 }
 .individualOption > div {
     height: 100%;

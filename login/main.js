@@ -14,6 +14,11 @@ function register() {
 
   let errors = [];
 
+  //get the target
+  let url = window.location.href;
+  target = url.slice(url.indexOf('target=') + 7);
+  console.log(target);
+
   //check to make sure there is a value for all of these
   let name = document.querySelector('#name').value;
   let bussiness = document.querySelector('#bussiness').value;
@@ -33,7 +38,7 @@ function register() {
   if (errors.length === 0) {
     axios({
       method: 'post',
-      url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=register',
+      url: 'http://localhost/server/database_connect/server.php?action=post&resource=register&target=' + target,
       data: {
         name: name,
         bussiness: bussiness,
@@ -60,6 +65,16 @@ function register() {
       }
 
       document.querySelector('#response').innerText = response.data.message;
+      // console.log(response.data);
+//       if (response.data.plan === 0701) {
+//         document.querySelector('#response').innerText = response.data.message;
+//       } else {
+//         handler.open({
+//         name: 'Kodwiz',
+//         description: '2 widgets',
+//         amount: Number(response.data.plan)
+//       });
+//       }
     });
   } else {
     handleErrors(errors);
@@ -74,7 +89,7 @@ function login() {
 
   axios({
     method: 'post',
-    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=login',
+    url: 'http://localhost/server/database_connect/server.php?action=post&resource=login',
     data: {
       email: document.getElementById('emailLogin').value,
       password: document.getElementById('pinLogin').value
@@ -83,7 +98,8 @@ function login() {
     loading = false;
     console.log(response.data);
     if (response.data.success) {
-      window.open(response.data.url, target="_self");
+      // window.open(response.data.url, target="_self");
+      window.open('http://localhost/dashboard');
     } else {
       // document.getElementById('loginResponse').innerText = "Incorrect username or password";
       // document.getElementById('emailLogin').style.border = "1px solid #B23B3A";
@@ -107,13 +123,11 @@ function showSignUp() {
   document.querySelector('#login').style.display = 'none';
   document.querySelector('.register').style.display = 'block';
   document.querySelector('.forgotPassword').style.display = 'none';
-
 }
 function showLogIn() {
   document.querySelector('#login').style.display = 'block';
   document.querySelector('.register').style.display = 'none';
   document.querySelector('.forgotPassword').style.display = 'none';
-
 }
 function showForgotPassword() {
   document.querySelector('#login').style.display = 'none';

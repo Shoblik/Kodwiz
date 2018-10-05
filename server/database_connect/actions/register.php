@@ -3,6 +3,10 @@ if (isset($ACCESS_CONTROL)) {
   $output['success'] = true;
   $output['emailSent'] = false;
 
+  if (isset($_GET['target'])) {
+    $output['plan'] = $_GET['target'];
+  }
+
   //check if the email is already in the system
   $duplicateQuery = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}'";
 
