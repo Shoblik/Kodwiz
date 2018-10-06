@@ -6,12 +6,6 @@ function register() {
   loading = true;
   moveProgressBar(1);
 
-  let activeErrors = document.getElementsByClassName('individualError');
-
-  while(activeErrors[0]) {
-    activeErrors[0].remove();
-  }
-
   let errors = [];
 
   let activeErrors = document.getElementsByClassName('individualError');
@@ -19,8 +13,6 @@ function register() {
   while(activeErrors[0]) {
     activeErrors[0].remove();
   }
-
-  let errors = [];
 
   //check to make sure there is a value for all of these
   let name = document.querySelector('#name').value;
@@ -41,7 +33,7 @@ function register() {
   if (errors.length === 0) {
     axios({
       method: 'post',
-      url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=register',
+      url: 'http://localhost/server/database_connect/server.php?action=post&resource=register',
       data: {
         name: name,
         bussiness: bussiness,
@@ -80,6 +72,7 @@ function register() {
 //       }
     });
   } else {
+    loading = false;
     handleErrors(errors);
   }
 }
@@ -92,7 +85,7 @@ function login() {
 
   axios({
     method: 'post',
-    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=login',
+    url: 'http://localhost/server/database_connect/server.php?action=post&resource=login',
     data: {
       email: document.getElementById('emailLogin').value,
       password: document.getElementById('pinLogin').value
@@ -101,7 +94,7 @@ function login() {
     loading = false;
     console.log(response.data);
     if (response.data.success) {
-      window.open(response.data.url, target="_self");
+      window.open('http://localhost/dashboard', target="_self");
     } else {
       // document.getElementById('loginResponse').innerText = "Incorrect username or password";
       // document.getElementById('emailLogin').style.border = "1px solid #B23B3A";

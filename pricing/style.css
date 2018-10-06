@@ -100,25 +100,17 @@ label {
     position: relative;
     text-align: center;
 }
-.priceStructure {
-    font-size: initial;
-    text-align: center;
-}
 .head div {
     display: inline-block;
     font-size: initial;
 }
-.priceStructure {
-    width: 1200px;
-    height: 450px;
-    margin: auto;
-    font-size: 0;
-}
+/* Price */
 .priceStructure {
     width: 1200px;
     height: 450px;
     margin: 25px auto 0 auto;
     font-size: 0;
+    text-align: center;
 }
 .singleRow {
     padding: 10px 0;
@@ -184,6 +176,8 @@ label {
     padding: 10px;
     border: 1px solid #CCC;
     border-radius: 10px;
+    height: 100%;
+    box-sizing: border-box;
 }
 .individualOption {
     position: relative;
@@ -223,10 +217,7 @@ h1 {
     background: #B23B3A;
     color: white;
 }
-.individualOption > div {
-    height: 100%;
-    box-sizing: border-box;
-}
+
 button.selectBtn:hover {
     color: white;
     border-color: transparent;

@@ -66,6 +66,10 @@ switch($_GET['action']) {
         require('./actions/read_session.php');
         break;
       }
+      case 'launchApplication': {
+        require('./actions/launch_application.php');
+        break;
+      }
     }
 }
 

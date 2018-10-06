@@ -4,6 +4,7 @@
     <title>KodWiz Dashboard</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel='stylesheet' href='./style.css' />
+    <script src="https://checkout.stripe.com/checkout.js"></script>
     <script src='./main.js'></script>
   </head>
     <body onload='checkSession();'>
@@ -24,11 +25,17 @@
           <div class='navItem'>
             <p>Contact</p>
           </div>
+          <div onclick='launchApplication();' class='navItem'>
+            <p class='launchHighlight'>Launch Application</p>
+          </div>
         </div>
       </nav>
-      <header>
+      <main>
         <div class='greeting'>
-          <h1>Hello <span id='name'></span>, Welcome to your Dashboard</h1>
+          <h3>Hello <span id='name'></span>, Welcome to your Dashboard</h3>
+        </div>
+        <div class='launchApplication'>
+          <button onclick='launchApplication();' class='launchApplicationBtn'>Launch Applicaton</button>
         </div>
         <div class='accountIcon'>
           <div onclick='document.querySelector(".profilePopupContainer").classList.toggle("showProfile")' class='iconCircle'>
@@ -48,6 +55,13 @@
             </div>
           </div>
         </div>
-      </header>
+        <div class='modifable'>
+
+
+          
+
+
+        </div>
+      </main>
     </body>
   </html>
