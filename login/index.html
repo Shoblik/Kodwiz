@@ -121,7 +121,7 @@
         console.log(token);
         axios({
           method: 'post',
-          url: 'http://localhost/server/database_connect/server.php?action=post&resource=add_subscription&target=' + target,
+          url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=add_subscription&target=' + target,
           data: {
             stripeEmail: token.email,
             stripeToken: token.id

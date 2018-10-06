@@ -3,11 +3,11 @@ let activeNum = null;
 function checkSession() {
   axios({
     method: 'get',
-    url: 'http://localhost/server/database_connect/server.php?action=get&resource=readSession&customerInfo=true',
+    url: 'https://kodwiz.com/server/database_connect/server.php?action=get&resource=readSession&customerInfo=true',
   }).then(function(response) {
     console.log(response);
     if (!response.data.authorized) {
-      window.open("http://localhost/login", target = "_self");
+      window.open("https://kodwiz.com/login", target = "_self");
     } else {
       // Put dynamic content here
       document.getElementById('name').innerText = response.data.firstName;
@@ -21,14 +21,16 @@ function checkSession() {
       if (!response.data.demo) {
         document.getElementById('priceTable').style.display = 'none';
       }
-      document.getElementById('modifiable').style.display = 'block';
+      document.getElementById('spinner').style.display = 'none';
+      document.querySelector('nav').style.display = 'inline-block';
+      document.querySelector('main').style.display = 'inline-block';
     }
   });
 }
 function launchApplication() {
   axios({
     method: 'get',
-    url: 'http://localhost/server/database_connect/server.php?action=get&resource=launchApplication',
+    url: 'https://kodwiz.com/server/database_connect/server.php?action=get&resource=launchApplication',
   }).then(function(response) {
     console.log(response);
     if (response.data.url) {
@@ -61,13 +63,16 @@ var handler = StripeCheckout.configure({
     console.log(token);
     axios({
       method: 'post',
-      url: 'http://localhost/server/database_connect/server.php?action=post&resource=add_subscription&target=' + activeNum,
+      url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=add_subscription&target=' + activeNum,
       data: {
         stripeEmail: token.email,
         stripeToken: token.id
       }
     }).then(function(response) {
       console.log(response);
+      if (response.data.subscription_active) {
+        location.reload();
+      }
     })
   }
 });

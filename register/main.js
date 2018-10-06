@@ -30,7 +30,7 @@ function register() {
   if (Object.keys(errors).length === 0 && errors.constructor === Object) {
     axios({
       method: 'post',
-      url: 'http://localhost/server/database_connect/server.php?action=post&resource=register&target=' + target,
+      url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=register&target=' + target,
       data: {
         name: name,
         bussiness: bussiness,

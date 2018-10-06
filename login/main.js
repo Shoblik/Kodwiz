@@ -33,7 +33,7 @@ function register() {
   if (errors.length === 0) {
     axios({
       method: 'post',
-      url: 'http://localhost/server/database_connect/server.php?action=post&resource=register',
+      url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=register',
       data: {
         name: name,
         bussiness: bussiness,
@@ -85,7 +85,7 @@ function login() {
 
   axios({
     method: 'post',
-    url: 'http://localhost/server/database_connect/server.php?action=post&resource=login',
+    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=login',
     data: {
       email: document.getElementById('emailLogin').value,
       password: document.getElementById('pinLogin').value
@@ -94,7 +94,7 @@ function login() {
     loading = false;
     console.log(response.data);
     if (response.data.success) {
-      window.open('http://localhost/dashboard', target="_self");
+      window.open('https://kodwiz.com/dashboard', target="_self");
     } else {
       // document.getElementById('loginResponse').innerText = "Incorrect username or password";
       // document.getElementById('emailLogin').style.border = "1px solid #B23B3A";

@@ -275,8 +275,12 @@ p.disclaimer {
     width: 700px;
     position: relative;
 }
-h2#placeholder {
+nav, main {
+  display: none;
+}
+img#spinner {
     position: absolute;
-    top: 50vh;
-    left: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
