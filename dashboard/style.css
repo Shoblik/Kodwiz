@@ -275,3 +275,8 @@ p.disclaimer {
     width: 700px;
     position: relative;
 }
+h2#placeholder {
+    position: absolute;
+    top: 50vh;
+    left: 20%;
+}

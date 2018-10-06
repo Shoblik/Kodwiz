@@ -8,6 +8,20 @@ function checkSession() {
     console.log(response);
     if (!response.data.authorized) {
       window.open("http://localhost/login", target = "_self");
+    } else {
+      // Put dynamic content here
+      document.getElementById('name').innerText = response.data.firstName;
+      document.getElementById('profilefullName').innerText = response.data.fullName;
+      document.getElementById('plan').innerText = response.data.planName;
+      document.getElementById('freePrograms').innerText = response.data.programs_left;
+      document.getElementById('pricePerProgram').innerText = response.data.program_bill_rate;
+      document.getElementById('pricePerProgram').innerText = response.data.program_bill_rate;
+      document.getElementById('atCostProgramCount').innerText = response.data.programs_billed;
+
+      if (!response.data.demo) {
+        document.getElementById('priceTable').style.display = 'none';
+      }
+      document.getElementById('modifiable').style.display = 'block';
     }
   });
 }

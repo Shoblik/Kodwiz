@@ -19,7 +19,5 @@ if (!isset($ACCESS_CONTROL) || $ACCESS_CONTROL === false) {
     $post['id'] = mysqli_fetch_assoc($result)['id'];
 
     require('./actions/update_session.php');
-    // $token = generateToken($date, $email);
-    //
-    // $output['url'] = 'http://application.kodwiz.com?warp=' . $token . '&usr=' . $email;
+    
   }
