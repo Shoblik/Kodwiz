@@ -70,7 +70,7 @@ button:hover {
   </content>
   <script>
     function openLogin() {
-      window.open("http://kodwiz.com/login");
+      window.open("https://kodwiz.com/login", target="_self");
     }
   </script>
   '

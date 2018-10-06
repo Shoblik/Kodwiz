@@ -43,7 +43,6 @@ try
     '9900' => 'Silver',
   );
 
-  if ($_GET['target'])
 
   $subscription = \Stripe\Subscription::create(array(
     'customer' => $customer->id,
