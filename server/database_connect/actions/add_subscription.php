@@ -76,7 +76,7 @@ try
 
 
   } else {
-    header('https://kodwiz.com/login');
+    $output['errors'][] = 'not authorized';
   }
 
   $output['subscription_active'] = true;
