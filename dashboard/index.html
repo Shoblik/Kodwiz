@@ -8,7 +8,48 @@
     <script src='./main.js'></script>
     <script>checkSession();</script>
   </head>
-    <body>
+    <body onload='init()'>
+      <div class='modal'>
+        <div class='innerModalContainer update'>
+          <div class='removeContainer'>
+            <img class='removeBtn' src='../images/remove.png' />
+          </div>
+          <h3 class='updateTitle'>Change plan subscription to <span id='planName'>Diamond</span></h3>
+          <div class='planDetails'>
+            <div class='monthlyCharge'>
+              <p class='green-text'>Monthly price of <span id='monthlyCharge'>$499.00</span></p>
+            </div>
+            <div class='programsIncluded'>
+              <p class='green-text'><span id='freeProgramsOnModal'>50</span> free programs per month</p>
+            </div>
+            <div class='feePerProgram'>
+              <p class='green-text'><span id='additionalPrice'>$10.00</span> per additional program</p>
+            </div>
+            <div class='updateDisclaimer'>
+              <p><span>Disclaimer</span>: You will be charged today for programs generated in excess of your previous plan's progam per month limit and receive a prorated charge at the beginning of your next billing cycle.</p>
+            </div>
+            <div class='btnContainer'>
+              <img id='updatePlanSpinner' src='../images/spinner.gif' />
+              <button class='updateSubscription'>Update Subscription</button>
+            </div>
+          </div>
+        </div>
+        <div class='innerModalContainer account'>
+          <div class='removeContainer'>
+            <img class='removeBtn' src='../images/remove.png' />
+          </div>
+          <h3 class='updateTitle'>Update Account Details</h3>
+          <div class='accountContainer'>
+            <div class='updateBilling'>
+              <p>Last four digits of current card: <span id='cardNums'></span></p>
+              <button class=''>Change billing method</button>
+            </div>
+            <div class='cancelSub'>
+              <p onclick='cancelSubscription();'>Cancel subscription</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <img id='spinner' src='../images/spinner.gif' />
       <nav>
         <div class='logo'>
@@ -18,11 +59,11 @@
           <div class='navItem'>
             <p>Home</p>
           </div>
-          <div class='navItem'>
-            <p>Account Info</p>
+          <div onclick='getAccountDetails()' class='navItem'>
+            <p>Account</p>
           </div>
           <div class='navItem'>
-            <p>Subscriptions</p>
+            <p>Tutorials</p>
           </div>
           <div class='navItem'>
             <p>Contact</p>
@@ -49,9 +90,9 @@
             </div>
             <div class='profilePopup'>
               <div class='profileInfo'>
-                <p class='profileLink'>Account Info</p>
+                <p class='profileLink'>Account</p>
               </div>
-              <div class='profileLogout'>
+              <div class='profileLogout' onclick='logout();'>
                 <p class='profileLink'>Logout</p>
               </div>
             </div>
@@ -81,7 +122,7 @@
           <div id='priceTable' class='priceStructure'>
             <div class='innerPriceContainer'>
               <h2 class='upgradeNowText'>Upgrade Your Account Today</h2>
-              <div onclick='addCustomerToSubscription(0);' class='individualOption basic'>
+              <div onclick='addCustomerToSubscription(0, "Save Payment Details");' class='individualOption basic'>
                 <div>
                   <div class='user'>
                     <p>Basic</p>
@@ -135,7 +176,7 @@
               <div onclick='addCustomerToSubscription(19900);' class='individualOption gold'>
                 <div>
                   <div class='user'>
-                    <p>Golden</p>
+                    <p>Gold</p>
                   </div>
                   <div class='feePer'>
                     <div>

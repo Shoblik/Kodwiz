@@ -2,7 +2,7 @@ function processPayment() {
   console.log('load');
   axios({
     method: 'post',
-    url: 'http://localhost/server/database_connect/server.php?action=post&resource=payment',
+    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=payment',
     data: {
       test: true,
     }

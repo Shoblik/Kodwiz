@@ -3,6 +3,9 @@
 // See your keys here: https://dashboard.stripe.com/account/apikeys
 $output['success'] = true;
 
+//customer billing get customer ID
+require('./actions/read_session.php');
+
 // If you're using Composer, use Composer's autoload:
 
 
@@ -29,7 +32,6 @@ try
   // );
 
   //Test Version
-
   $array_of_plans = array(
     '1000000' => 'plan_DjVMQpwWm9SCsk',
     '49900' => 'prod_DiPKcr7kTpNCMZ',
@@ -43,15 +45,16 @@ try
     '9900' => 'Silver',
   );
 
+  // if its a subscription add them to the subscription
 
-  $subscription = \Stripe\Subscription::create(array(
-    'customer' => $customer->id,
-    'items' => array(array('plan' => $array_of_plans[$_GET['target']])),
-  ));
+  if ($_GET['target'] != 0) {
+    $subscription = \Stripe\Subscription::create(array(
+      'customer' => $customer->id,
+      'items' => array(array('plan' => $array_of_plans[$_GET['target']])),
+    ));
+  }
 
   //store relevant info in our db
-  //customer billing get customer ID
-  require('./actions/read_session.php');
 
   if ($output['authorized']) {
     $id = $output['id'];

@@ -1,4 +1,4 @@
-<?php
+  <?php
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 
@@ -49,6 +49,12 @@ switch($_GET['action']) {
           break;
         }
       }
+      case 'logout': {
+        if (!empty($post)) {
+          require('./actions/update_session.php');
+          break;
+        }
+      }
     }
   case 'get':
     switch($_GET['resource']) {
@@ -68,6 +74,14 @@ switch($_GET['action']) {
       }
       case 'launchApplication': {
         require('./actions/launch_application.php');
+        break;
+      }
+      case 'update_subscription': {
+        require('./actions/update_subscription.php');
+        break;
+      }
+      case 'getCustomerInfo': {
+        require('./actions/read_account_info.php');
         break;
       }
     }

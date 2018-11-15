@@ -46,8 +46,11 @@
           <div class='login' style='height: initial;'>
             <div class='errorContainer'></div>
             <div class='form'>
+              <div class='passwordResetFeedback'>
+                <p class='resetText'>Success! We've sent a link to reset your password to your inbox.</p>
+              </div>
               <div class='progressBar'></div>
-              <div class='outerInputContainer'>
+              <div class='outerInputContainer reg'>
                 <div class='inputContainer'>
                   <input onfocus='moveLabel()' id='name' type='text'/>
                   <label class='activeLabel activateLabel'>What's your name?</label>
@@ -73,7 +76,7 @@
                 </div> -->
                 <button onClick='register();' class='signUpBtn'>Sign Up</button>
               </div>
-              <div class='otherLinks'>
+              <div class='otherLinks reg'>
                 <p onclick='showLogIn();'>Log In</p>
               </div>
             </div>
@@ -96,9 +99,6 @@
                 <p onclick='showLogIn();'>Log in</p>
               </div>
             </div>
-          </div>
-          <div class='passwordResetFeedback'>
-            <p class='resetText'>Success! We've sent a link to reset your password to your inbox.</p>
           </div>
         </div>
       </div>

@@ -222,8 +222,11 @@ p.resetText {
   color: #28a745;
 }
 .passwordResetFeedback {
-  opacity: 0;
-  transition: .3s;
+    opacity: 1;
+    transition: .3s;
+    position: absolute !important;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .login {
     padding-top: 45px;
@@ -288,4 +291,9 @@ p#response {
 }
 .collapseProgressBar {
   width: 0;
+}
+.hideOuterInputContainer {
+    transition: .5s;
+    height: 175px;
+    opacity: 0;
 }

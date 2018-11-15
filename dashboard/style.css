@@ -5,6 +5,9 @@
   font-weight: 100;
   color: #605E5E;
 }
+button:focus {
+  outline: 0;
+}
 body {
     overflow-x: hidden;
     background-color: #e3e8ee;
@@ -12,6 +15,9 @@ body {
 nav {
     display: inline-block;
     width: 20%;
+}
+.navItem:hover {
+    cursor: pointer;
 }
 main {
     display: inline-block;
@@ -154,8 +160,6 @@ main {
     z-index: 10000 !important;
     border: 1px solid #CCC;
 }
-
-
 .showProfile {
   display: block;
 }
@@ -184,7 +188,7 @@ main {
 
 /* Pricing */
 .innerPriceContainer {
-    width: 1028px;
+    width: 1020px;
 }
 .upgradeNowText {
     font-size: initial;
@@ -199,11 +203,6 @@ main {
     height: 450px;
     font-size: 0;
     text-align: left;
-}
-.individualOption > div {
-    padding: 10px;
-    border: 1px solid #CCC;
-    border-radius: 10px;
 }
 .individualOption {
     position: relative;
@@ -284,3 +283,151 @@ img#spinner {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* Modal Section */
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0, .8);
+    z-index: 1000;
+    display: none;
+}
+.innerModalContainer {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    background-color: #e3e8ee;
+}
+.innerModalContainer p {
+    padding: 15px 0;
+    position: relative;
+}
+.innerModalContainer.update {
+  display: none;
+}
+h3.updateTitle {
+    text-align: center;
+    padding: 40px 0;
+    background-color: white;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+#planName {
+    color: #4cae4c;
+}
+.planDetails {
+    width: 80%;
+    margin: auto;
+    padding: 15px 0;
+}
+.updateSubscription {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    margin: 15px 0;
+    background: #4cae4c;
+    color: white;
+    border: 1px solid #4cae4c;
+}
+.btnContainer {
+    text-align: center;
+    position: relative;
+}
+.removeContainer:hover {
+    cursor: pointer;
+}
+.removeContainer {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.removeBtn {
+    height: 10px;
+    padding: 10px;
+}
+.updateDisclaimer p {
+    color: #605E5E;
+}
+.updateDisclaimer {
+    font-size: 0.7rem;
+}
+.updateDisclaimer p span {
+  font-weight: bold;
+}
+#updatePlanSpinner {
+    position: absolute;
+    width: 75px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.showUpdatePlanSpinner {
+  display: block !important;
+}
+.updateSubscriptionLoading {
+  opacity: .5;
+  color: #4cae4c;
+}
+.showModal {
+  display: block !important;
+}
+.updateSubscription:hover {
+    cursor: pointer;
+}
+#monthlyCharge, #freeProgramsOnModal, #additionalPrice {
+    color: #4cae4c;
+}
+
+/* Account information on modal */
+.accountContainer {
+    width: 80%;
+    margin: auto;
+    padding: 15px 0;
+}
+.updateBilling button {
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 0.8rem;
+}
+.updateBilling button:hover {
+    cursor: pointer;
+}
+.updateBilling button {
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    background-color: #28a745;
+    border: 2px solid #28a745;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+    -moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+    -o-box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+}
+.cancelSub p:hover {
+    cursor: pointer;
+}
+.cancelSub p {
+    color: #dc3545;
+    padding-bottom: 1px;
+    display: inline-block;
+    border-bottom: 1px solid;
+    font-size: 0.9rem;
+    margin-top: 35px;
+}
+.cancelSub {
+    text-align: center;
+}
+#cardNums {
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+}
+/* End Modal Section */

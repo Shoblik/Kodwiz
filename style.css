@@ -48,7 +48,7 @@ nav {
 }
 .navItem p {
     font-family: helvetica;
-    font-weight: bold;
+    font-weight: 100;
     color: white;
 }
 .navItem:first-child p {
@@ -176,7 +176,7 @@ iframe {
 
 /* Feature Section */
 .featureSection {
-    padding: 50px 0 175px 0;
+    padding: 50px 0 125px 0;
     font-family: helvetica;
     color: #605E5E;
     background-color: white;
@@ -330,6 +330,161 @@ form div {
 }
 .hidden-desktop {
   display: none;
+}
+
+
+/* Pricing */
+.innerPriceContainer {
+    width: 1020px;
+    margin: auto;
+}
+.upgradeNowText {
+    font-size: initial;
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px 0;
+    color: #B23B3A;
+}
+.priceStructure {
+    width: 1150px;
+    font-size: 0;
+    text-align: center;
+    margin: auto;
+}
+.individualOption {
+    position: relative;
+    display: inline-block;
+    width: 19.6%;
+    vertical-align: top;
+    height: 415px;
+    margin: 0 2px;
+    border-radius: 10px;
+    background-color: rgba(250, 250, 250, 1);
+    transition: .3s;
+    text-align: center;
+    font-family: helvetica;
+    font-weight: 100;
+}
+.priceStructure p {
+    font-size: initial;
+}
+.user p {
+    font-size: 1.3rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.individualOption div p {
+    width: 100%;
+}
+.individualOption div {
+    position: relative;
+}
+.text-highlight {
+  color: #B23B3A;
+}
+.individualOption > div {
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* .individualOption:hover > div > div > div > p {
+    color: #CCC;
+} */
+.individualOption:hover {
+    /* background-color: #B23B3A;
+    color: white; */
+    cursor: pointer;
+}
+.individualOption > div {
+    pointer-events: none;
+}
+p.disclaimer {
+    font-size: initial;
+    margin: 0 auto 15px auto;
+    color: #605E5E;
+}
+/* .individualOption:hover div p {
+    color: black;
+} */
+.boldify {
+  font-weight: bold;
+  color: black;
+}
+.disclaimer {
+    font-size: 1rem;
+    width: 700px;
+    position: relative;
+}
+img#spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.priceSection {
+    background-color: white;
+    padding-bottom: 80px;
+}
+h2.upgradeNowText {
+    padding: 75px 0 45px 0;
+    font-family: helvetica;
+    color: #605E5E;
+    background-color: white;
+    font-size: 109px;
+}
+.newAccount {
+    padding-top: 45px;
+    text-align: center;
+}
+button.freeTrialBtn {
+    font-size: 25px;
+    font-weight: 100;
+    background-color: #E7FF6E;
+    padding: 15px 75px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+}
+p.text-highlight-green {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+.user, .feePer, .monthFee, .notes {
+    height: 25%;
+}
+button.freeTrialBtn:hover {
+    cursor: pointer;
+}
+.window {
+    width: 100%;
+    height: 250px;
+    border: 2px solid #E7FF6E;
+    border-left: none;
+    border-right: none;
+}
+.secondSection {
+    height: 60%;
+    padding: 0 5px;
+}
+.firstSection {
+    height: 40%;
+    background: #E7FF6E;
+}
+.secondSection p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* End Pricing */
+
+/* Desktop Media Queries */
+@media only screen and (min-width: 1824px) {
+.landingPage {
+    height: 1150px;
+  }
+
 }
 /* Mobile Media Queries */
 @media only screen and (max-width: 768px) {
@@ -494,12 +649,27 @@ textarea#message {
     font-weight: 100;
     color: #605E5E;
 }
+.priceStructure {
+    width: 100%;
 }
-
-/* Desktop Media Queries */
-@media only screen and (min-width: 1824px) {
-.landingPage {
-    height: 1150px;
-  }
-
+.innerPriceContainer {
+    width: 100%;
+}
+.individualOption {
+    width: 100%;
+    height: 415px;
+    margin: 5px 2px;
+}
+.user p {
+    font-size: 2rem !important;
+}
+.individualOption div div p {
+    font-size: 1.3rem;
+}
+h2.upgradeNowText {
+  font-size: 50px;
+}
+.secondSection {
+    padding: 0 15px;
+}
 }

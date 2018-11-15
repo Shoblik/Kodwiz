@@ -23,7 +23,5 @@ if ($logout) {
   ];
   $output['id'] = $post['id'];
   $_SESSION['kodWizAuth'] = json_encode($authObj);
-} else {
-  die('test');
 }
  ?>

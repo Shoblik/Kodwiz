@@ -54,12 +54,17 @@ function register() {
           signUpBtn.style.backgroundColor = '#5cb85c';
           signUpBtn.style.backgroundColor = '#5cb85c';
 
-          document.querySelector('#response').style.color = 'initial';
+          document.querySelector('.resetText').innerText = response.data.message;
+          document.querySelector('.outerInputContainer.reg').classList.add('hideOuterInputContainer');
+          document.querySelector('.otherLinks.reg').style.display = 'none';
+          document.querySelector('#response').innerText = '';
+
       } else {
         document.querySelector('#response').style.color = 'white';
+        document.querySelector('#response').innerText = response.data.message;
+
       }
 
-      document.querySelector('#response').innerText = response.data.message;
       // console.log(response.data);
 //       if (response.data.plan === 0701) {
 //         document.querySelector('#response').innerText = response.data.message;

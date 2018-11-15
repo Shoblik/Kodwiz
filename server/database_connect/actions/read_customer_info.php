@@ -3,6 +3,10 @@
 if (!isset($ACCESS_CONTROL) || $ACCESS_CONTROL === false) {
   die('no direct access allowed');
 }
+if (!isset($auth)) {
+  require('./actions/read_session.php');
+};
+
 $id = $auth->id;
 
 
@@ -22,7 +26,7 @@ if ($result) {
           if ($row['activeSubscription']) {
             $output['demo'] = false;
             $output['planName'] = $row['subscription_name'];
-            if ($row['programs_per_month'] == 0) {
+            if ($row['programs_per_month'] == 0 && $row['monthly_fee'] != 0) {
               $output['programs_left'] = 'Unlimited';
               $output['programs_billed'] = 0;
               $output['program_bill_rate'] = '$0.00';
