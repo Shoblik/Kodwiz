@@ -91,11 +91,30 @@ nav {
     position: fixed;
     bottom: 0;
     right: 15px;
-    width: 300px;
-    padding: 20px 0 20px 20px;
+    width: 280px;
+    padding: 20px;
     background: #E7FF6E;
     z-index: 1000;
 }
+.buyContainer p:hover {
+    cursor: pointer;
+    /* display: none; */
+}
+
+.buyContainer {
+    width: 60%;
+    position: relative;
+}
+.buyContainer p {
+    display: inline-block;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 18px !important;
+    z-index: 10001;
+    position: relative;
+    margin: 5px 10px 0 0;
+}
+
 .demoContainer p {
     font-size: 20px;
     font-family: helvetica;
@@ -275,6 +294,7 @@ iframe {
     font-weight: 100;
     opacity: 0;
     transition: 1s;
+    color: #605E5E;
 }
 .formContainer {
     text-align: center;
@@ -410,7 +430,7 @@ p.disclaimer {
 } */
 .boldify {
   font-weight: bold;
-  color: black;
+  color: #605E5E;
 }
 .disclaimer {
     font-size: 1rem;

@@ -4,8 +4,9 @@ if (!isset($ACCESS_CONTROL) || $ACCESS_CONTROL === false) {
 }
 
 require_once('./stripe-php-6.19.1/init.php');
+require_once('./stripe_creds.php');
 
-\Stripe\Stripe::setApiKey("sk_test_AJROI8uQWjtqax5K0wh2EnbI");
+\Stripe\Stripe::setApiKey($secretKey);
 
 $output['success'] = true;
 
