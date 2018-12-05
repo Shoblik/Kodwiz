@@ -232,7 +232,7 @@ p.text-highlight-green {
     top: 50%;
     position: relative;
     transform: translateY(-50%);
-    color: white;
+    color: #ad524c;
 }
 .user, .feePer, .monthFee, .notes {
     height: 25%;
@@ -253,7 +253,6 @@ button.freeTrialBtn:hover {
 }
 .firstSection {
     height: 40%;
-    background: #ad524c;
 }
 .secondSection p {
     position: relative;
