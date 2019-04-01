@@ -49,17 +49,7 @@ function logout() {
   window.open("https://kodwiz.com/login", target='_self');
 }
 function launchApplication() {
-  axios({
-    method: 'get',
-    url: 'https://kodwiz.com/server/database_connect/server.php?action=get&resource=launchApplication',
-  }).then(function(response) {
-    console.log(response);
-    if (response.data.url) {
-      window.open(response.data.url, target="_self");
-    } else {
-      window.open("https://kodwiz.com/login");
-    }
-  });
+  window.open('https://kodwiz.com/takeMeToTheFuckingApplication.php');
 }
 function addCustomerToSubscription(price, label=null) {
   activeNum = price;

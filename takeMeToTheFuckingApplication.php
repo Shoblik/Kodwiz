@@ -1,35 +1,5 @@
 <?php
 
-if (!isset($ACCESS_CONTROL) || $ACCESS_CONTROL === false) {
-  die('no direct access allowed');
-}
-
-$output['success'] = true;
-
-require('./actions/read_session.php');
-
-if (true) {
-
-  //find email
-  $query = "SELECT `email` FROM `customer` WHERE `id` = '{$output['id']}' AND `active` = 1";
-  $result = mysqli_query($conn, $query);
-
-  $email = mysqli_fetch_assoc($result)['email'];
-  $date = date('mdY');
-
-  $token = generateToken($date, $email);
-
-//header('host: eccides7.domain.com');
-//header("location: http://199.243.91.7:8000/sap/bc/bsp/sap/yhh_app/yhh_app.do/?warp=$token&usr=$email&teeeeest");
-//header('location: https://gogle.com');
-  $output['url'] = 'http://199.243.91.7:8000/sap/bc/bsp/sap/yhh_app/yhh_app.do/?warp=' . $token . '&usr=' . $email;
-
-} else {
-  $output['url'] = 'https://kodwiz.com/login';
-}
-
-
-
 function generateToken($date, $emailUsername) {
   $letterArr = array(
     'a' => '01',
@@ -114,3 +84,21 @@ function generateToken($date, $emailUsername) {
 
   return $token;
 }
+
+$token = generateToken(date('mdY'), 'shoblik@yahoo.com');
+
+$headers = array(
+	'host' => 'eccides7.domain.com',
+	//'Location' => " http://199.243.91.7:8000/sap/bc/bsp/sap/yhh_app/yhh_app.do/?warp=' . $token . '&usr=' . 'shoblik@yahoo.com'" 
+	'Location' => " http://199.243.91.7:8000/sap/bc/bsp/sap/yhh_app/yhh_app.do?host=localhost"
+);
+
+foreach ($headers as $headerType => $headerValue) {
+	header($headerType . ': ' . $headerValue);
+}
+
+//header("host: localhost");
+//header("location: http://199.243.91.7:8000/sap/bc/bsp/sap/yhh_app/yhh_app.do/?warp=' . $token . '&usr=' . 'shoblik@yahoo.com'");
+
+ ?>
+
