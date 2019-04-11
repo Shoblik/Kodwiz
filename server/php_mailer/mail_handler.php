@@ -10,26 +10,19 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
     'success' => false,
   ];
 }
-    $mail = new PHPMailer;
-    $mail->SMTPDebug = 0;           // Enable verbose debug output. Change to 0 to disable debugging output.
-
-    $mail->isSMTP();                // Set mailer to use SMTP.
-    $mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers.
-    $mail->SMTPAuth = true;         // Enable SMTP authentication
+    $mail = new PHPMailer(true);
+    $mail->SMTPDebug = 4;           // Enable verbose debug output. Change to 0 to disable debugging output.
 
 
+    $mail->Host = 'smtp.office365.com';
+    $mail->Port       = 587;
+    $mail->SMTPSecure = 'tls';
+    $mail->SMTPAuth   = true;
     $mail->Username = EMAIL_USER;   // SMTP username
     $mail->Password = EMAIL_PASS;   // SMTP password
-    $mail->SMTPSecure = 'tls';      // Enable TLS encryption, `ssl` also accepted, but TLS is a newer more-secure encryption
-    $mail->Port = 587;              // TCP port to connect to
-    $options = array(
-        'ssl' => array(
-            'verify_peer' => false,
-            'verify_peer_name' => false,
-            'allow_self_signed' => true
-        )
-    );
-    $mail->smtpConnect($options);
+
+
+    $mail->smtpConnect();
 
     if (isset($verifyAccount)) {
       $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
@@ -52,11 +45,11 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
       $mail->Body    = 'Please follow the link to reset your password ' . $verifyLink;
 
     } else {
-      $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
+      $mail->From = 'business@kodwiz.com';  // sender's email address (shows in "From" field)
       $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
       $mail->addAddress('shoblik@yahoo.com');  // Add a recipient
-      $mail->addAddress('jhoblik@yahoo.com');
-      $mail->addAddress('otto.oficial@gmail.com');
+      // $mail->addAddress('jhoblik@yahoo.com');
+      // $mail->addAddress('otto.oficial@gmail.com');
 
       $mail->addReplyTo($post['email']);
       $mail->isHTML(true);
@@ -70,7 +63,7 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
         $output['success'] = false;
         $output['message'] = $mail->ErrorInfo;
         if (isset($verifyAccount)) {
-          $output['message'] = 'An error occured, please contact customer support at 714-608-7664 if this issue persists.';
+          $output['message'] = 'An error occured, please contact us at business@kodwiz.com.';
         }
     } else {
 //    echo 'Message has been sent';
