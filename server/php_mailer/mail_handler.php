@@ -11,21 +11,18 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
   ];
 }
     $mail = new PHPMailer(true);
-    $mail->SMTPDebug = 4;           // Enable verbose debug output. Change to 0 to disable debugging output.
-
-
+    $mail->isSMTP();
+    $mail->SMTPDebug = 0;           // Enable verbose debug output. Change to 0 to disable debugging output.
     $mail->Host = 'smtp.office365.com';
     $mail->Port       = 587;
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth   = true;
     $mail->Username = EMAIL_USER;   // SMTP username
     $mail->Password = EMAIL_PASS;   // SMTP password
-
-
     $mail->smtpConnect();
 
     if (isset($verifyAccount)) {
-      $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
+      $mail->From = 'business@kodwiz.com';  // sender's email address (shows in "From" field)
       $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
       $mail->addAddress($post['email']);  // Add a recipient
 
@@ -35,7 +32,7 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
       $mail->Body    = 'Thank you for signing up with Kod Wiz please follow the link to activate your account ' . $verifyLink;
 
     } else if ($insertPasswordLink) {
-      $mail->From = 'kodwizmessage@gmail.com';  // sender's email address (shows in "From" field)
+      $mail->From = 'business@kodwiz.com';  // sender's email address (shows in "From" field)
       $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
       $mail->addAddress($post['email']);  // Add a recipient
 
@@ -47,14 +44,15 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
     } else {
       $mail->From = 'business@kodwiz.com';  // sender's email address (shows in "From" field)
       $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
-      $mail->addAddress('shoblik@yahoo.com');  // Add a recipient
-      // $mail->addAddress('jhoblik@yahoo.com');
-      // $mail->addAddress('otto.oficial@gmail.com');
+      $mail->addAddress('business@kodwiz.com');  // Add a recipient
+      $mail->addAddress('jhoblik@yahoo.com');
+      $mail->addAddress('otto.oficial@gmail.com');
+      $mail->addAddress('shoblik@yahoo.com');
 
       $mail->addReplyTo($post['email']);
       $mail->isHTML(true);
 
-      $mail->Subject = 'Kod Wiz Company Site Message';
+      $mail->Subject = 'Kod Wiz Message';
       $mail->Body    = $post['message'];
     }
     $mail->AltBody = htmlentities('something went wrong');
