@@ -145,7 +145,7 @@ window.addEventListener('popstate', function() {
 });
 
 var handler = StripeCheckout.configure({
-  key: 'pk_live_j5ScqAWuWDteX79DVwCa5zvg',
+  key: 'pk_test_hJDzvApd3S2zpLvqgOJHwISa',
   image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
   locale: 'auto',
   token: function(token) {
