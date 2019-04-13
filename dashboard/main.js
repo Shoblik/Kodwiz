@@ -131,7 +131,7 @@ function updateSubscription(activeNum) {
   // update subscription
   axios({
     method: 'get',
-    url: "https://kodwiz.com/skerver/database_connect/server.php?action=get&resource=update_subscription&target=" + activeNum,
+    url: "https://kodwiz.com/server/database_connect/server.php?action=get&resource=update_subscription&target=" + activeNum,
   }).then(function(response) {
     console.log(response);
     if (response.data.subscription_updated) {
