@@ -10,17 +10,27 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
     'success' => false,
   ];
 }
-    $mail = new PHPMailer(true);
-    $mail->isSMTP();
-    $mail->SMTPDebug = 0;           // Enable verbose debug output. Change to 0 to disable debugging output.
-    $mail->Host = 'smtp.office365.com';
-    $mail->Port       = 587;
-    $mail->SMTPSecure = 'tls';
-    $mail->SMTPAuth   = true;
-    $mail->Username = EMAIL_USER;   // SMTP username
-    $mail->Password = EMAIL_PASS;   // SMTP password
-    $mail->smtpConnect();
-    
+$mail = new PHPMailer;
+$mail->SMTPDebug = 0;           // Enable verbose debug output. Change to 0 to disable debugging output.
+
+$mail->isSMTP();                // Set mailer to use SMTP.
+$mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers.
+$mail->SMTPAuth = true;         // Enable SMTP authentication
+
+
+$mail->Username = EMAIL_USER;   // SMTP username
+$mail->Password = EMAIL_PASS;   // SMTP password
+$mail->SMTPSecure = 'tls';      // Enable TLS encryption, `ssl` also accepted, but TLS is a newer more-secure encryption
+$mail->Port = 587;              // TCP port to connect to
+$options = array(
+    'ssl' => array(
+        'verify_peer' => false,
+        'verify_peer_name' => false,
+        'allow_self_signed' => true
+    )
+);
+$mail->smtpConnect($options);
+
 
     if (isset($verifyAccount)) {
       $mail->From = 'business@kodwiz.com';  // sender's email address (shows in "From" field)
