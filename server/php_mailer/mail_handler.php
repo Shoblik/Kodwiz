@@ -64,7 +64,7 @@ $mail->smtpConnect($options);
       $mail->isHTML(true);
 
       $mail->Subject = 'Kod Wiz Message';
-      $mail->Body    = $post['message'];
+      $mail->Body    = $post['message'] . ' <br /><br /> From ' . $post['name'] . '<br/><br/> ' . $post['phone'];
     }
     $mail->AltBody = htmlentities('something went wrong');
 

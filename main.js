@@ -6,7 +6,9 @@ function submitForm(e) {
   url: './server/php_mailer/mail_handler.php',
   data: {
     message: document.getElementById('message').value,
-    email: document.getElementById('email').value
+    email: document.getElementById('email').value,
+    phone: document.getElementById('phone').value,
+    name: document.getElementById('name').value
   }
 }).then(function(response) {
   console.log(response);
