@@ -56,7 +56,7 @@ $mail->smtpConnect($options);
       $mail->From = 'business@kodwiz.com';  // sender's email address (shows in "From" field)
       $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
       $mail->addAddress('business@kodwiz.com');  // Add a recipient
-      $mail->addAddress('otto.oficial@gmail.com')
+      $mail->addAddress('otto.oficial@gmail.com');  
       $mail->addAddress('jhoblik@yahoo.com');
       $mail->addAddress('shoblik@yahoo.com');
 
