@@ -20,6 +20,7 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
     $mail->Username = EMAIL_USER;   // SMTP username
     $mail->Password = EMAIL_PASS;   // SMTP password
     $mail->smtpConnect();
+    
 
     if (isset($verifyAccount)) {
       $mail->From = 'business@kodwiz.com';  // sender's email address (shows in "From" field)
