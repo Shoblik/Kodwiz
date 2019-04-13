@@ -19,7 +19,7 @@ if ($output['authorized']) {
 
   $token = generateToken($date, $email);
 
-  $output['url'] = 'http://application.kodwiz.com?warp=' . $token . '&usr=' . $email;
+  $output['url'] = 'http://application.kodwiz.com?sap-sessioncmd=open&warp=' . $token . '&usr=' . $email;
 
 } else {
   $output['url'] = 'https://kodwiz.com/login';
