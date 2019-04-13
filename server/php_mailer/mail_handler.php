@@ -46,7 +46,6 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
       $mail->FromName = 'KodWiz';   // sender's name (shows in "From" field)
       $mail->addAddress('business@kodwiz.com');  // Add a recipient
       $mail->addAddress('jhoblik@yahoo.com');
-      $mail->addAddress('otto.oficial@gmail.com');
       $mail->addAddress('shoblik@yahoo.com');
 
       $mail->addReplyTo($post['email']);
