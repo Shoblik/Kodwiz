@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  color: #605E5E;
+}
+body {
+    overflow-x: hidden;
+    background-color: rgba(255,255,255, 1);
+}
+header {
+    width: 60%;
+    margin: auto;
+    position: relative;
+}
+.logoContainer, nav {
+    display: inline-block;
+}
+.navItem {
+    display: inline-block;
+    padding: 10px 12px;
+}
+.innerNavContainer {
+    position: relative;
+    top: 50%;
+    text-align: right;
+    transform: translateY(-50%);
+}
+nav {
+    height: 100%;
+    position: absolute;
+    width: 70%;
+}
+.navItem p {
+    font-weight: 400;
+}
+/* .navItem:first-child p {
+  color: #E7FF6E;
+} */
+.navItem p:hover {
+  color: #B23B3A;
+  transition: .3s;
+  cursor: pointer;
+}
+.logoContainer img {
+    width: 50%;
+    vertical-align: middle;
+    padding: 10px 0;
+}
+.mainContainer {
+    /* background-image: url('./images/plane_in_trees.jpg'); */
+    height: 100vh;
+    width: 100vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.filter {
+    /* position: absolute;
+    width: 100%;
+    height: 100%; */
+    /* background-color : rgba(0,0,0, 0.4); */
+}
+.headerContainer {
+    background-color: rgba(250,250,250, 1);
+}
+content {
+    font-size: 0;
+}
+.left-col, .right-col {
+    display: inline-block;
+    font-size: initial;
+    width: 50%;
+    position: relative;
+    vertical-align: top;
+    text-align: center;
+}
+.left-col h1, .right-col h1 {
+    text-align: center;
+    color: white;
+}
+label {
+    color: white;
+}
+.form input {
+    font-size: 0.9rem;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #CCC;
+    margin: 2px 0;
+    border-radius: 3px;
+}
+.colContainer {
+    padding: 20px 0;
+    font-size: 0;
+    color: black;
+    width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+.form div {
+    position: relative;
+    text-align: center;
+}
+.head div {
+    display: inline-block;
+    font-size: initial;
+}
+/* Price */
+content h1 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 120px;
+    background-color: #a44843;
+    color: white;
+    font-weight: 100;
+}
+.innerPriceContainer {
+    width: 1020px;
+    margin: auto;
+}
+.upgradeNowText {
+    font-size: initial;
+    text-align: center;
+    font-size: 2rem;
+    padding: 20px 0;
+    color: #B23B3A;
+}
+.priceStructure {
+    width: 1150px;
+    font-size: 0;
+    text-align: center;
+    margin: auto;
+}
+.individualOption {
+    position: relative;
+    display: inline-block;
+    width: 19.6%;
+    vertical-align: top;
+    height: 415px;
+    margin: 20px 2px;
+    border-radius: 10px;
+    background-color: rgba(250, 250, 250, 1);
+    transition: .3s;
+    text-align: center;
+    font-family: helvetica;
+    font-weight: 100;
+}
+.priceStructure p {
+    font-size: initial;
+}
+.user p {
+    font-size: 1.3rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.individualOption div p {
+    width: 100%;
+}
+.individualOption div {
+    position: relative;
+}
+.text-highlight {
+  color: #B23B3A;
+}
+.individualOption > div {
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    height: 100%;
+    box-sizing: border-box;
+}
+/* .individualOption:hover > div > div > div > p {
+    color: #CCC;
+} */
+.individualOption:hover {
+    /* background-color: #B23B3A;
+    color: white; */
+    cursor: pointer;
+}
+.individualOption > div {
+    pointer-events: none;
+}
+p.disclaimer {
+    font-size: initial;
+    margin: 0 auto 15px auto;
+    color: #605E5E;
+}
+/* .individualOption:hover div p {
+    color: black;
+} */
+.boldify {
+  font-weight: bold;
+  color: black;
+}
+.disclaimer {
+    font-size: 1rem;
+    width: 700px;
+    position: relative;
+}
+img#spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.priceSection {
+    background-color: white;
+    padding-bottom: 65px;
+}
+h2.upgradeNowText {
+    padding: 75px 0 45px 0;
+    font-family: helvetica;
+    color: #605E5E;
+    background-color: white;
+    font-size: 109px;
+}
+.newAccount {
+    padding-top: 45px;
+    text-align: center;
+}
+button.freeTrialBtn {
+    font-size: 25px;
+    font-weight: 100;
+    background-color: #ad524c;
+    padding: 15px 75px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    color: white;
+}
+p.text-highlight-green {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    color: #ad524c;
+}
+.user, .feePer, .monthFee, .notes {
+    height: 25%;
+}
+button.freeTrialBtn:hover {
+    cursor: pointer;
+}
+.window {
+    width: 100%;
+    height: 250px;
+    border: 2px solid #E7FF6E;
+    border-left: none;
+    border-right: none;
+}
+.secondSection {
+    height: 60%;
+    padding: 0 5px;
+}
+.firstSection {
+    height: 40%;
+}
+.secondSection p {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* End Pricing */
+
+/* .priceStructure {
+    width: 1200px;
+    height: 450px;
+    margin: 25px auto 0 auto;
+    font-size: 0;
+    text-align: center;
+}
+.singleRow {
+    padding: 10px 0;
+}
+.head {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #CCC;
+    font-weight: bold;
+    color: #B23B3A;
+}
+.body {
+    padding: 10px;
+    text-align: left;
+}
+.login, .signUp {
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+}
+.loginBtn:hover, .signUpBtn:hover {
+  cursor: pointer;
+}
+.colContainer button:hover {
+    background: #B23B3A;
+    color: white;
+    border: 2px solid transparent;
+}
+.colContainer button {
+    background-color: white;
+    border: 2px solid #303030;
+    font-size: 15px;
+    padding: 10px 30px;
+    color: #303030;
+    border-radius: 3px;
+    transition: .3s;
+    margin-top: 5px;
+}
+.priceStructureContainer {
+    padding: 50px 0;
+    background-color: white;
+}
+.activeBtn {
+    background: #B23B3A !important;
+    color: white !important;
+    border: 2px solid transparent !important;
+}
+.signUpTitle, .loginTitle {
+    padding-bottom: 20px;
+    color: #B23B3A;
+}
+.form {
+    text-align: right;
+    display: inline-block;
+}
+.errorContainer {
+  text-align: left;
+}
+.errorContainer p {
+  color: #B23B3A;
+}
+.individualOption > div {
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.individualOption {
+    position: relative;
+    display: inline-block;
+    width: 14.5%;
+    vertical-align: top;
+    height: 90%;
+    margin: 0 2px;
+    border-radius: 10px;
+    background-color: rgba(250, 250, 250, 1);
+    transition: .3s;
+}
+.priceStructure p {
+    font-size: initial;
+}
+.user p {
+    font-size: 1.3rem;
+}
+.individualOption div p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.individualOption div {
+    height: 24%;
+    position: relative;
+}
+.text-highlight {
+  color: #B23B3A;
+}
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 100px;
+    background: #B23B3A;
+    color: white;
+}
+
+button.selectBtn:hover {
+    color: white;
+    border-color: transparent;
+    background-color: #B23B3A;
+    cursor: pointer;
+}
+button.selectBtn {
+    width: 80%;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #CCC;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    transition: .3s;
+}
+.individualOption:hover > div > div > div > p {
+    color: #CCC;
+}
+.individualOption:hover {
+    background-color: #B23B3A;
+    color: white;
+    cursor: pointer;
+}
+.individualOption > div {
+    pointer-events: none;
+}
+*/
+.hover {
+  transform: translateY(-20px);
+}
+p.disclaimer {
+    font-size: initial;
+    /* width: 700px; */
+    margin: 0 auto 15px auto;
+    color: #605E5E;
+}
+.individualOption:hover div p {
+    /* color: black; */
+}
+.boldify {
+  font-weight: bold;
+  color: black;
+}
+.disclaimer {
+    font-size: 1rem;
+    width: 700px;
+    position: relative;
+}
+.content {
+    width: 84%;
+}
+.notice {
+    margin-right: 15px;
+}
+.notice, .content {
+    display: inline-block;
+    vertical-align: top;
+}
+.disclaimer {
+    font-size: 1rem;
+    width: 700px;
+    position: relative;
+    margin: 0 auto 30px auto;
+}

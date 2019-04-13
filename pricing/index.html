@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kod Wiz</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src='./main.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+    <link rel='stylesheet' href='./style.css' />
+  </head>
+  <body onload='initTransition()'>
+    <div class='mainContainer'>
+      <div class='filter'></div>
+      <div class='headerContainer'>
+        <header>
+          <div class='logoContainer'>
+            <img src='../images/kod_wiz_logo_org.png' />
+          </div>
+          <nav>
+            <div class='innerNavContainer'>
+              <div onclick='window.open("https://kodwiz.com", target="_self")' class='navItem'>
+                <p>Home</p>
+              </div>
+              <div onclick='window.open("https://kodwiz.com#technology", target="_self")' class='navItem'>
+                <p>Product</p>
+              </div>
+              <div onclick='window.open("https://kodwiz.com#feature", target="_self")' class='navItem'>
+                <p>Features</p>
+              </div>
+              <div onclick='window.open("https://kodwiz.com/tutorials", target="_self")' class='navItem'>
+                <p>Tutorials</p>
+              </div>
+              <div onclick='window.open("https://kodwiz.com#about", target="_self")' class='navItem'>
+                <p>About</p>
+              </div>
+              <div onclick='window.open("https://kodwiz.com#contact", target="_self")' class='navItem'>
+                <p>Contact</p>
+              </div>
+            </div>
+          </nav>
+        </header>
+      </div>
+      <content>
+        <h1>Pricing</h1>
+        <div id='pricing' class='priceSection'>
+          <div id='priceTable' class='priceStructure'>
+            <div class='innerPriceContainer'>
+              <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption basic'>
+                <div>
+                  <div class='user'>
+                    <p>Basic</p>
+                  </div>
+                  <div class='feePer'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Fee / per Program:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>$20 / per program</p>
+                    </div>
+                  </div>
+                  <div class='monthFee'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Monthly Fee:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>$0</p>
+                    </div>
+                  </div>
+                  <div class='notes'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Package Details:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption silver'>
+                <div>
+                  <div class='user'>
+                    <p>Silver</p>
+                  </div>
+                  <div class='feePer'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Fee / per Program:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>$15 / per program</p>
+                    </div>
+                  </div>
+                  <div class='monthFee'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Monthly Fee:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>$99</p>
+                    </div>
+                  </div>
+                  <div class='notes'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Package Details:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>10 programs/month generation included.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption gold'>
+                <div>
+                  <div class='user'>
+                    <p>Gold</p>
+                  </div>
+                  <div class='feePer'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Fee / per Program:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>$15 / per program</p>
+                    </div>
+                  </div>
+                  <div class='monthFee'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Monthly Fee:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>$199</p>
+                    </div>
+                  </div>
+                  <div class='notes'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Package Details:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>30 program/month included in monthly fees.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption platinum'>
+                <div>
+                  <div class='user'>
+                    <p>Platinum</p>
+                  </div>
+                  <div class='feePer'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Fee / per Program:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>$10 / per program</p>
+                    </div>
+                  </div>
+                  <div class='monthFee'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Monthly Fee:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>$499</p>
+                    </div>
+                  </div>
+                  <div class='notes'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Package Details:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>50 programs/month included in monthly fees.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption diamond'>
+                <div>
+                  <div class='user'>
+                    <p>Diamond</p>
+                  </div>
+                  <div class='feePer'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Fee / per Program:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>N/A</p>
+                    </div>
+                  </div>
+                  <div class='monthFee'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Monthly Fee:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>$10000</p>
+                    </div>
+                  </div>
+                  <div class='notes'>
+                    <div class='firstSection'>
+                      <p class='text-highlight-green'>Package Details:</p>
+                    </div>
+                    <div class='secondSection'>
+                      <p>Unlimited program generation.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='newAccount'>
+                <button onclick='window.open("https://kodwiz.com/login", "_self")' class='freeTrialBtn'>Start with a free trial</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class='priceStructure'>
+          <div onclick='window.open("http://localhost/login?target=0000", target="_self");' class='individualOption basic'>
+            <div>
+              <div class='user'>
+                <p>Basic</p>
+              </div>
+              <div class='feePer'>
+                <div>
+                  <p class='text-highlight'>Fee / per Program:</p>
+                </div>
+                <p>$20 / per program</p>
+              </div>
+              <div class='monthFee'>
+                <div>
+                  <p class='text-highlight'>Montly Fee:</p>
+                </div>
+                <p>$0</p>
+              </div>
+              <div class='notes'>
+                <div>
+                  <p class='text-highlight'>Package Details:</p>
+                </div>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <div onclick='window.open("http://localhost/login?target=9900", target="_self");' class='individualOption silver'>
+            <div>
+              <div class='user'>
+                <p>Silver</p>
+              </div>
+              <div class='feePer'>
+                <div>
+                  <p class='text-highlight'>Fee / per Program:</p>
+                </div>
+                <p>$15 / per program</p>
+              </div>
+              <div class='monthFee'>
+                <div>
+                  <p class='text-highlight'>Montly Fee:</p>
+                </div>
+                <p>$99</p>
+              </div>
+              <div class='notes'>
+                <div>
+                  <p class='text-highlight'>Package Details:</p>
+                </div>
+                <p>10 programs/month generation included.</p>
+              </div>
+            </div>
+          </div>
+          <div onclick='window.open("http://localhost/login?target=19900", target="_self");' class='individualOption gold'>
+            <div>
+              <div class='user'>
+                <p>Golden</p>
+              </div>
+              <div class='feePer'>
+                <div>
+                  <p class='text-highlight'>Fee / per Program:</p>
+                </div>
+                <p>$15 / per program</p>
+              </div>
+              <div class='monthFee'>
+                <div>
+                  <p class='text-highlight'>Monthly Fee:</p>
+                </div>
+                <p>$199</p>
+              </div>
+              <div class='notes'>
+                <div>
+                  <p class='text-highlight'>Package Details:</p>
+                </div>
+                <p>30 program/month included in monthly fees.</p>
+              </div>
+            </div>
+          </div>
+          <div onclick='window.open("http://localhost/login?target=49900", target="_self");' class='individualOption platinum'>
+            <div>
+              <div class='user'>
+                <p>Platinum</p>
+              </div>
+              <div class='feePer'>
+                <div>
+                  <p class='text-highlight'>Fee / per Program:</p>
+                </div>
+                <p>$10 / per program</p>
+              </div>
+              <div class='monthFee'>
+                <div>
+                  <p class='text-highlight'>Monthly Fee:</p>
+                </div>
+                <p>$499</p>
+              </div>
+              <div class='notes'>
+                <div>
+                  <p class='text-highlight'>Package Details:</p>
+                </div>
+                <p>50 programs/month included in monthly fees.</p>
+              </div>
+            </div>
+          </div>
+          <div onclick='window.open("http://localhost/login?target=1000000", target="_self");' class='individualOption diamond'>
+            <div>
+              <div class='user'>
+                <p>Diamond</p>
+              </div>
+              <div class='feePer'>
+                <div>
+                  <p class='text-highlight'>Fee / per Program:</p>
+                </div>
+                <p>N/A</p>
+              </div>
+              <div class='monthFee'>
+                <div>
+                  <p class='text-highlight'>Monthly Fee:</p>
+                </div>
+                <p>$10000</p>
+              </div>
+              <div class='notes'>
+                <div>
+                  <p class='text-highlight'>Package Details:</p>
+                </div>
+                <p>Unlimited program generation.</p>
+              </div>
+            </div>
+          </div>
+          <div onclick='window.open("http://localhost/login?target=0701", target="_self")' class='individualOption demo'>
+            <div>
+              <div class='user'>
+                <p>Demo</p>
+              </div>
+              <div class='feePer'>
+                <div>
+                  <p class='text-highlight'>Fee / per Program:</p>
+                </div>
+                <p>$0</p>
+              </div>
+              <div class='monthFee'>
+                <div>
+                  <p class='text-highlight'>Monthly Fee:</p>
+                </div>
+                <p>$0</p>
+              </div>
+              <div class='notes'>
+                <div>
+                  <p class='text-highlight'>Package Details:</p>
+                </div>
+                <p>5 program limit.</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div>
+          <!-- <p class='disclaimer'><span class='boldify'>Disclaimer</span> How KodWiz identifies a new program: if the data model significantly differs from the previous program it will be billed as a new program.</p> -->
+          <div class='disclaimer'>
+            <div class='notice'>
+              <p class='boldify'>Disclaimer</p>
+            </div>
+            <div class='content'>
+              <p>How KodWiz identifies a new program: if the data model significantly differs from the previous program it will be billed as a new program.</p>
+            </div>
+          </div>
+        </div>
+      </content>
+    </div>
+  </body>
+</html>
