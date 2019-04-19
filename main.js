@@ -1,3 +1,7 @@
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('newOffer').classList.add('showNewOffer');
+});
 function submitForm(e) {
   e.preventDefault();
   console.log('submit form');

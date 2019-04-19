@@ -87,6 +87,10 @@ nav {
 .arrowIcon img {
     padding: 15px;
 }
+.newlyOfferingContainer {
+    position: absolute;
+
+}
 .demoContainer {
     position: fixed;
     bottom: 0;
@@ -499,6 +503,34 @@ button.freeTrialBtn:hover {
 }
 /* End Pricing */
 
+
+.newlyOfferingContainer {
+    position: relative;
+    top: 20px;
+    font-family: helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    padding: 15px 40px;
+    background-color: #B23B3A;
+    right: 0;
+    width: 501px;
+    left: 100%;
+    transition: .3s;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 10px 2px 5px 2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 10px 2px 5px 2px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 10px 2px 5px 2px rgba(0,0,0,0.6);
+    -o-box-shadow: 10px 2px 5px 2px rgba(0,0,0,0.6);
+}
+.newlyOfferingContainer:hover {
+    cursor: pointer;
+
+}
+.showNewOffer {
+    transform: translateX(-100%);
+}
 /* Desktop Media Queries */
 @media only screen and (min-width: 1824px) {
 .landingPage {
@@ -508,6 +540,13 @@ button.freeTrialBtn:hover {
 }
 /* Mobile Media Queries */
 @media only screen and (max-width: 768px) {
+    .newlyOfferingContainer {
+        font-size: 135%;
+        left: 100%;
+        width: auto !important;
+        border-radius: 0px;
+        box-shadow: none;
+    }
   .landingPageContent {
   width: 100%;
   }
