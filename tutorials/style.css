@@ -87,7 +87,8 @@ content {
     text-align: center;
 }
 .right {
-  width: 66%;
+    width: 66%;
+    overflow: auto;
 }
 .textWrapper {
     position: relative;
@@ -105,8 +106,12 @@ content {
     width: 249px;
 }
 .featuredVideo {
-  position:relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-bottom: 35px;
+}
+.individualVideo {
+    display: inline;
 }
