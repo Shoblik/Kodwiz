@@ -174,17 +174,17 @@ iframe {
     position: relative;
 }
 .tutorialBtn button:hover {
-    background-color: #E7FF6E;
+    cursor: pointer;
 }
 .tutorialBtn button {
-    color: black;
-    padding: 15px 30px;
+    color: #B23B3A;
+    padding: 25px 95px;
     position: relative;
     font-size: 1.2rem;
     background-color: white;
-    border: 4px solid black;
+    border: 4px solid #B23B3A;
     font-family: helvetica;
-    font-weight: bold;
+    font-weight: 100;
     transition: 1s;
 }
 .tutorialBtn {
@@ -531,12 +531,25 @@ button.freeTrialBtn:hover {
 .showNewOffer {
     transform: translateX(-100%);
 }
+.tutorialBtnMobile {
+    text-align: center;
+    margin-top: 35px;
+}
+.tutorialBtnMobile button {
+    font-size: 18px;
+    border: 2px solid #B23B3A;
+    color: #B23B3A;
+    background: white;
+    padding: 10px 20px;
+}
 /* Desktop Media Queries */
 @media only screen and (min-width: 1824px) {
 .landingPage {
     height: 1150px;
   }
-
+    .tutorialBtnMobile button {
+        display: none;
+    }
 }
 /* Mobile Media Queries */
 @media only screen and (max-width: 768px) {
@@ -546,6 +559,9 @@ button.freeTrialBtn:hover {
         width: auto !important;
         border-radius: 0px;
         box-shadow: none;
+    }
+    .tutorialBtn button {
+        display: none;
     }
   .landingPageContent {
   width: 100%;
