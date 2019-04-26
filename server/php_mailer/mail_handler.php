@@ -67,7 +67,7 @@ $mail = new \SendGrid\Mail\Mail();
       $mail->addContent($post['message'] . ' <br /><br /> From ' . $post['name'] . '<br/><br/> ' . $post['phone']);
     }
 
-      $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+      $sendgrid = new \SendGrid(SENDGRID_API_KEY);
 
       $response = $sendgrid->send($mail);
 
