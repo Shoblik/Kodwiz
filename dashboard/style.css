@@ -5,6 +5,10 @@
   font-weight: 100;
   color: #605E5E;
 }
+.dashboardBody {
+    width: 1305px;
+    margin: auto;
+}
 button:focus {
   outline: 0;
 }
