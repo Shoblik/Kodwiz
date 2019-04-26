@@ -73,7 +73,7 @@ $mail = new \SendGrid\Mail\Mail();
 
     if($response->statusCode() != 202) {
         $output['success'] = false;
-        $output['message'] = $mail->ErrorInfo;
+        $output['message'] = 'There was an error';
         if (isset($verifyAccount)) {
           $output['message'] = 'An error occured, please contact us at business@kodwiz.com.';
         }
