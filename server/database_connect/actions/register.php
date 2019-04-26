@@ -34,9 +34,11 @@ if (isset($ACCESS_CONTROL)) {
     //send email to customer with link to follow to verify account
     $verifyAccount = true;
     if ($_SERVER['HTTP_HOST'] === 'localhost') {
-      $verifyLink = "<a href='http://localhost/server/database_connect/server.php?action=get&resource=verify&code=$code'>here</a>";
+        $verifyLinkRaw = "http://localhost/server/database_connect/server.php?action=get&resource=verify&code=$code";
+        $verifyLink = "<a href='$verifyLinkRaw'>here</a>";
     } else {
-      $verifyLink = "<a href='https://kodwiz.com/server/database_connect/server.php?action=get&resource=verify&code=$code'>here</a>";
+        $verifyLinkRaw = "https://kodwiz.com/server/database_connect/server.php?action=get&resource=verify&code=$code";
+        $verifyLink = "<a href='$verifyLinkRaw'>here</a>";
     }
     $output['emailSent'] = true;
     require_once('../php_mailer/mail_handler.php');
