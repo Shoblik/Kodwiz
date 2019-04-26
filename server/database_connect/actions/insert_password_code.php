@@ -17,9 +17,11 @@ if (isset($ACCESS_CONTROL)) {
 
   if ($result) {
     if ($_SERVER['HTTP_HOST'] === 'localhost') {
-      $verifyLink = "<a href='http://localhost/amnesia?code=$code'>here</a>";
+        $verifyLinkRaw = "http://localhost/amnesia?code=$code";
+        $verifyLink = "<a href='$verifyLinkRaw'>here</a>";
     } else {
-      $verifyLink = "<a href='https://kodwiz.com/amnesia?code=$code'>here</a>";
+        $verifyLinkRaw = "https://kodwiz.com/amnesia?code=$code";
+        $verifyLink = "<a href='$verifyLinkRaw'>here</a>";
     }
 
     require_once('../php_mailer/mail_handler.php');
