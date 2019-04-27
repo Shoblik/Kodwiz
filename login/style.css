@@ -221,6 +221,10 @@ label {
   margin-top: 15px;
   color: #28a745;
 }
+#resetSuccess h2.resetText {
+    text-align: left;
+    font-weight: 100;
+}
 .passwordResetFeedback {
     opacity: 1;
     transition: .3s;
