@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83c8b782-2f2d-43b6-bb81-0d4ff7f16b42" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/index.html" afterPath="$PROJECT_DIR$/login/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/main.js" afterPath="$PROJECT_DIR$/login/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/style.css" afterPath="$PROJECT_DIR$/login/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register/style.css" afterPath="$PROJECT_DIR$/register/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,21 +44,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/login/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="159" column="5" lean-forward="true" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
+            <state relative-caret-position="219">
+              <caret line="153" column="68" lean-forward="true" selection-start-line="153" selection-start-column="68" selection-end-line="153" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/login/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="107" column="16" lean-forward="true" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
+            <state relative-caret-position="426">
+              <caret line="100" column="20" lean-forward="true" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#content#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -153,6 +151,7 @@
       <find>addContent</find>
       <find>passwordResetFeedback</find>
       <find>resetText</find>
+      <find>block !imp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,9 +167,9 @@
         <option value="$PROJECT_DIR$/server/database_connect/actions/register.php" />
         <option value="$PROJECT_DIR$/server/php_mailer/email_config.default.php" />
         <option value="$PROJECT_DIR$/server/php_mailer/mail_handler.php" />
-        <option value="$PROJECT_DIR$/login/main.js" />
         <option value="$PROJECT_DIR$/login/index.html" />
         <option value="$PROJECT_DIR$/register/style.css" />
+        <option value="$PROJECT_DIR$/login/main.js" />
       </list>
     </option>
   </component>
@@ -273,7 +272,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12307000" />
+    <option name="totallyTimeSpent" value="12589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="745" extended-state="6" />
@@ -474,11 +473,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/main.js">
+    <entry file="file://$PROJECT_DIR$/login/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="159" column="5" lean-forward="true" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="426">
+          <caret line="100" column="20" lean-forward="true" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#content#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -490,13 +491,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login/index.html">
+    <entry file="file://$PROJECT_DIR$/login/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="107" column="16" lean-forward="true" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#content#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="219">
+          <caret line="153" column="68" lean-forward="true" selection-start-line="153" selection-start-column="68" selection-end-line="153" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>

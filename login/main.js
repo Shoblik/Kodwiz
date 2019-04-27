@@ -151,7 +151,7 @@ function resetPassword() {
     console.log(response.data);
     loading = false;
     if (response.data.emailSent) {
-      document.querySelector('#resetSuccess').style.display = 'block !important';
+      document.querySelector('#resetSuccess').style.display = 'block';
     } else {
       document.querySelector('.resetText').innerText = 'Error. Please contact customer support at business@kodwiz.com';
       document.querySelector('.resetText').style.color = '#B23B3A';

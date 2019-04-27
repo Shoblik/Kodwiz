@@ -219,7 +219,7 @@ label {
   margin-top: 15px;
   color: #28a745;
 }
-#restSuccess h2 {
+#resetSuccess h2.resetText {
     text-align: left;
     font-weight: 100;
 }
