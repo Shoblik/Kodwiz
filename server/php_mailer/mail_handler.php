@@ -12,7 +12,7 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
 }
 // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
-require 'vendor/autoload.php'; // If you're using Composer (recommended)
+require '/var/www/kodwiz.com/Kodwiz/vendor/autoload.php'; // If you're using Composer (recommended)
 // Comment out the above line if not using Composer
 // require("./sendgrid-php.php");
 // If not using Composer, uncomment the above line
@@ -52,7 +52,7 @@ $mail = new \SendGrid\Mail\Mail();
       $mail->addTo($post['email']);  // Add a recipient
 
       $mail->setSubject('Password reset');
-      $mail->addContent('Please follow the link to reset your password ' . $verifyLink . '<br><br>or paste this in your search bar<br><br>' . $verifyLinkRaw);
+      $mail->addContent('text/html', 'Please follow the link to reset your password ' . $verifyLink . '<br><br>or follow this link<br><br>' . $verifyLinkRaw);
 
     } else {
       $mail->setFrom('business@kodwiz.com', 'KodWiz');  // sender's email address (shows in "From" field)
@@ -64,7 +64,7 @@ $mail = new \SendGrid\Mail\Mail();
       $mail->setReplyTo($post['email']);
 
       $mail->setSubject('Kod Wiz Message');
-      $mail->addContent($post['message'] . ' <br /><br /> From ' . $post['name'] . '<br/><br/> ' . $post['phone']);
+      $mail->addContent('text/html', $post['message'] . ' <br /><br /> From ' . $post['name'] . '<br/><br/> ' . $post['phone']);
     }
 
       $sendgrid = new \SendGrid(SENDGRID_API_KEY);
@@ -83,7 +83,7 @@ $mail = new \SendGrid\Mail\Mail();
         $output['success'] = true;
 
         if (isset($verifyAccount)) {
-          $output['message'] = 'Success! Thank you for registering, please check your email for an account confirmation link.';
+          $output['message'] = '<h3>Success! Thank you for registering</h3><h3>Check your <bold>inbox</bold> and <bold>spam</bold> folder for an account confirmation link.</h3>';
         }
     }
     if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
