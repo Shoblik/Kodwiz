@@ -214,10 +214,14 @@ label {
 .forgotPassword {
   display: none;
 }
-p.resetText {
+.resetText {
   text-align: center;
   margin-top: 15px;
   color: #28a745;
+}
+#restSuccess h2 {
+    text-align: left;
+    font-weight: 100;
 }
 .passwordResetFeedback {
   opacity: 0;

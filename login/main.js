@@ -151,9 +151,9 @@ function resetPassword() {
     console.log(response.data);
     loading = false;
     if (response.data.emailSent) {
-      document.querySelector('.passwordReset1').style.display = 'block !important';
+      document.querySelector('#resetSuccess').style.display = 'block !important';
     } else {
-      document.querySelector('.resetText').innerText = 'Error. Please contact customer support at 714-608-7664';
+      document.querySelector('.resetText').innerText = 'Error. Please contact customer support at business@kodwiz.com';
       document.querySelector('.resetText').style.color = '#B23B3A';
       document.querySelector('.passwordResetFeedback').style.opacity = 1;
     }
