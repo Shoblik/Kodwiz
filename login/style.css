@@ -225,6 +225,11 @@ label {
     text-align: left;
     font-weight: 100;
 }
+.resetText h3 {
+    text-align: left;
+    margin-bottom: 15px;
+    font-weight: 100;
+}
 .passwordResetFeedback {
     opacity: 1;
     transition: .3s;

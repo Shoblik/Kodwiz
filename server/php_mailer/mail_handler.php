@@ -12,7 +12,8 @@ if (!isset($verifyAccount) && !isset($insertPasswordLink)) {
 }
 // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
-require '/var/www/kodwiz.com/Kodwiz/vendor/autoload.php'; // If you're using Composer (recommended)
+//require '/var/www/kodwiz.com/Kodwiz/vendor/autoload.php'; // If you're using Composer (recommended)
+require '../../vendor/autoload.php';
 // Comment out the above line if not using Composer
 // require("./sendgrid-php.php");
 // If not using Composer, uncomment the above line

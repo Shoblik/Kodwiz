@@ -33,7 +33,7 @@ function register() {
   if (errors.length === 0) {
     axios({
       method: 'post',
-      url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=register',
+      url: '../server/database_connect/server.php?action=post&resource=register',
       data: {
         name: name,
         bussiness: bussiness,
@@ -54,7 +54,7 @@ function register() {
           signUpBtn.style.backgroundColor = '#5cb85c';
           signUpBtn.style.backgroundColor = '#5cb85c';
 
-          document.querySelector('.resetText').innerText = response.data.message;
+          document.querySelector('.resetText').innerHTML = response.data.message;
           document.querySelector('.outerInputContainer.reg').classList.add('hideOuterInputContainer');
           document.querySelector('.otherLinks.reg').style.display = 'none';
           document.querySelector('#response').innerText = '';
@@ -90,7 +90,7 @@ function login() {
 
   axios({
     method: 'post',
-    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=login',
+    url: '../server/database_connect/server.php?action=post&resource=login',
     data: {
       email: document.getElementById('emailLogin').value,
       password: document.getElementById('pinLogin').value
@@ -143,7 +143,7 @@ function resetPassword() {
   let email = document.querySelector('#emailReset').value;
   axios({
     method: 'post',
-    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=passwordreset',
+    url: '../server/database_connect/server.php?action=post&resource=passwordreset',
     data: {
       email: email
     }

@@ -12,9 +12,9 @@ require('./actions/read_session.php');
 // Be sure to replace this with your actual test API key
 // (switch to the live key later)
 require_once('./stripe-php-6.19.1/init.php');
-require_once('./stripe_creds.php');
+require_once('./environment.php');
 
-\Stripe\Stripe::setApiKey($secretKey);
+\Stripe\Stripe::setApiKey(STRIPE_SECRET_KEY);
 
 try
 {
@@ -24,30 +24,35 @@ try
   ));
 
   $output['customer'] = $customer;
-  //Production Version
-  $array_of_plans = array(
-    '1000000' => 'plan_DiPME224KjlQjf',
-    '49900' => 'plan_DiPLwDoC5bTaIu',
-    '19900' => 'plan_DiPJbY7mL8vXEv',
-    '9900' => 'plan_DiPI2toee3aXq0',
-  );
 
-  //Test Version
-  // $array_of_plans = array(
-  //   '1000000' => 'plan_DjVMQpwWm9SCsk',
-  //   '49900' => 'prod_DiPKcr7kTpNCMZ',
-  //   '19900' => 'prod_DiPIPiTmwBqTUf',
-  //   '9900' => 'prod_DiPFfklXrHy9v0',
-  // );
+  if (DEV) {
+       $array_of_plans = array(
+         '1000000' => 'plan_DjVMQpwWm9SCsk',
+         '49900' => 'prod_DiPKcr7kTpNCMZ',
+         '19900' => 'prod_DiPIPiTmwBqTUf',
+         '9900' => 'prod_DiPFfklXrHy9v0',
+         '0'    => 'prod_EyH5vmOok3Gkj9'
+       );
+  } else {
+      //Production Version
+      $array_of_plans = array(
+          '1000000' => 'plan_DiPME224KjlQjf',
+          '49900' => 'plan_DiPLwDoC5bTaIu',
+          '19900' => 'plan_DiPJbY7mL8vXEv',
+          '9900' => 'plan_DiPI2toee3aXq0',
+          '0' => 'plan_EyK8cpD85WaPmp'
+      );
+  }
+
   $array_of_plan_names = array(
     '1000000' => 'Diamond',
     '49900' => 'Platinum',
     '19900' => 'Golden',
     '9900' => 'Silver',
+    '0' => 'Basic'
   );
 
   // if its a subscription add them to the subscription
-
   if ($_GET['target'] != 0) {
     $subscription = \Stripe\Subscription::create(array(
       'customer' => $customer->id,

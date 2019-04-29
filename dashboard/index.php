@@ -1,3 +1,7 @@
+<?php
+require_once('../server/database_connect/environment.php');
+
+?>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -9,6 +13,7 @@
     <script>checkSession();</script>
   </head>
     <body onload='init()' class="dashboardBody">
+    <input type="hidden" id="stripeKey" value="<?php echo STRIPE_PUBLIC_KEY; ?>" >
       <div class='modal'>
         <div class='innerModalContainer update'>
           <div class='removeContainer'>

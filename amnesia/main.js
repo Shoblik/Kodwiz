@@ -7,7 +7,7 @@ function updatePassword() {
 
   axios({
     method: 'post',
-    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=updatePassword',
+    url: '../server/database_connect/server.php?action=post&resource=updatePassword',
     data: {
       password: document.getElementById('password').value,
       code: code

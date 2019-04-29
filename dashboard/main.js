@@ -1,4 +1,8 @@
 let activeNum = null;
+
+
+var handler = null;
+
 function init() {
   let ele = document.querySelectorAll('.removeContainer');
   for (let i=0; i < ele.length; i++) {
@@ -11,7 +15,7 @@ function init() {
 function checkSession() {
   axios({
     method: 'get',
-    url: 'https://kodwiz.com/server/database_connect/server.php?action=get&resource=readSession&customerInfo=true',
+    url: '../server/database_connect/server.php?action=get&resource=readSession&customerInfo=true',
   }).then(function(response) {
     console.log(response);
     if (!response.data.authorized) {
@@ -38,7 +42,7 @@ function checkSession() {
 function logout() {
   axios({
     method: 'post',
-    url: 'https://kodwiz.com/server/database_connect/server.php?action=post&resource=logout',
+    url: '../server/database_connect/server.php?action=post&resource=logout',
     data: {
       'auth': false,
       'logout': true,
@@ -51,7 +55,7 @@ function logout() {
 function launchApplication() {
   axios({
     method: 'get',
-    url: 'https://kodwiz.com/server/database_connect/server.php?action=get&resource=launchApplication',
+    url: '../server/database_connect/server.php?action=get&resource=launchApplication',
   }).then(function(response) {
     console.log(response);
     if (response.data.url) {
@@ -64,8 +68,29 @@ function launchApplication() {
 function addCustomerToSubscription(price, label=null) {
   activeNum = price;
 
+  // New Subscription
   if (document.querySelector('#plan').innerText === 'Demo') {
     // Open Checkout with further options:
+    handler = StripeCheckout.configure({
+        key: document.getElementById('stripeKey').value,
+        image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+        locale: 'auto',
+        token: function(token) {
+            axios({
+                method: 'post',
+                url: "../server/database_connect/server.php?action=post&resource=add_subscription&target=" + activeNum,
+                data: {
+                    stripeEmail: token.email,
+                    stripeToken: token.id
+                }
+            }).then(function(response) {
+                console.log(response);
+                if (response.data.subscription_active) {
+                    location.reload();
+                }
+            })
+        }
+    });
     handler.open({
       name: 'Kodwiz',
       // description: 'Monthly charge',
@@ -131,10 +156,10 @@ function updateSubscription(activeNum) {
   // update subscription
   axios({
     method: 'get',
-    url: "https://kodwiz.com/server/database_connect/server.php?action=get&resource=update_subscription&target=" + activeNum,
+    url: "../server/database_connect/server.php?action=get&resource=update_subscription&target=" + activeNum,
   }).then(function(response) {
     console.log(response);
-    if (response.data.subscription_updated) {
+    if (response.data.subscription_success) {
       location.reload();
     }
   })
@@ -144,27 +169,6 @@ window.addEventListener('popstate', function() {
   handler.close();
 });
 
-var handler = StripeCheckout.configure({
-  key: 'pk_live_j5ScqAWuWDteX79DVwCa5zvg',
-  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
-  locale: 'auto',
-  token: function(token) {
-    console.log(token);
-    axios({
-      method: 'post',
-      url: "https://kodwiz.com/server/database_connect/server.php?action=post&resource=add_subscription&target=" + activeNum,
-      data: {
-        stripeEmail: token.email,
-        stripeToken: token.id
-      }
-    }).then(function(response) {
-      console.log(response);
-      if (response.data.subscription_active) {
-        location.reload();
-      }
-    })
-  }
-});
 function getAccountDetails() {
   //close inner modal
   document.querySelector('.innerModalContainer.update').style.display = 'none';
@@ -173,7 +177,7 @@ function getAccountDetails() {
   //gather account info
   axios({
     method: 'get',
-    url: "https://kodwiz.com/server/database_connect/server.php?action=get&resource=getCustomerInfo",
+    url: "../server/database_connect/server.php?action=get&resource=getCustomerInfo",
   }).then(function(response) {
     console.log(response);
     document.querySelector('#cardNums').innerText = response.data.last4;
