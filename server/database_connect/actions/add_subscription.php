@@ -31,7 +31,7 @@ try
          '49900' => 'prod_DiPKcr7kTpNCMZ',
          '19900' => 'prod_DiPIPiTmwBqTUf',
          '9900' => 'prod_DiPFfklXrHy9v0',
-         '0'    => 'prod_EyH5vmOok3Gkj9'
+         '0'    => 'plan_EyH6St1NjCIUFM'
        );
   } else {
       //Production Version
