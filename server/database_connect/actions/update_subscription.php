@@ -58,10 +58,6 @@ if ($billing_customer_id) {
 
   if ($current_sub_name === 'Basic') {
 
-      // cancel
-      $subscription = \Stripe\Subscription::retrieve($customer['subscriptions']['data'][0]['id']);
-      $newSub = $subscription->cancel();
-
       // create new subscription
       $newSub = \Stripe\Subscription::create(array(
           'customer' => $billing_customer_id,
