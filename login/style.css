@@ -126,7 +126,7 @@ label {
 }
 .login, .signUp {
     text-align: center;
-    height: 0;
+    height: auto;
     overflow: hidden;
 }
 .activeLabel {

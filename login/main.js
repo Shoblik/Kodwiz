@@ -159,7 +159,10 @@ function resetPassword() {
     }
   });
 }
-function showFeedback(text, color = 'rgba(178, 59, 58, 1)') {
+function showFeedback(text, color) {
+  if (color === undefined) {
+    color = 'rgba(178, 59, 58, 1)';
+  }
   document.querySelector('.feedbackText').innerText = text;
   document.querySelector('.feedbackContainer').classList.add('showFeedback');
   document.querySelector('.feedbackContainer').style.background = color;
