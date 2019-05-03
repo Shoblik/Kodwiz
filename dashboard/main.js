@@ -1,11 +1,11 @@
-let activeNum = null;
+var activeNum = null;
 
 
 var handler = null;
 
 function init() {
-  let ele = document.querySelectorAll('.removeContainer');
-  for (let i=0; i < ele.length; i++) {
+  var ele = document.querySelectorAll('.removeContainer');
+  for (var i=0; i < ele.length; i++) {
     ele[i].addEventListener('click', function() {
       console.log('click');
       document.querySelector('.modal').classList.remove('showModal');
@@ -104,7 +104,7 @@ function addCustomerToSubscription(price, label=null) {
 function openSubscriptionModal(activeNum) {
   document.querySelector('.innerModalContainer.account').style.display = 'none';
   document.querySelector('.innerModalContainer.update').style.display = 'block';
-  let planObj = {
+  var planObj = {
     '0' : {
       'planName': 'Basic',
       'monthlyCharge': '$0.00',

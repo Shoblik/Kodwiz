@@ -2,8 +2,8 @@ function moveLabel() {
   // event.target.nextElementSibling.classList.add('activateLabel');
 }
 function updatePassword() {
-  let url = window.location.href;
-  let code = url.slice(url.indexOf('code=') + 5);
+  var url = window.location.href;
+  var code = url.slice(url.indexOf('code=') + 5);
 
   axios({
     method: 'post',

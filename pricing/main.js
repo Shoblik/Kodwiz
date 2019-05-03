@@ -1,13 +1,13 @@
 function register() {
-  let errors = {};
+  var errors = {};
 
   //check to make sure there is a value for all of these
-  let first_name = document.querySelector('#first_name').value;
-  let last_name = document.querySelector('#last_name').value;
-  let bussiness = document.querySelector('#bussiness').value;
-  let email = document.querySelector('#email').value;
-  let phone = document.querySelector('#phone').value;
-  let pin = document.querySelector('#pin').value;
+  var first_name = document.querySelector('#first_name').value;
+  var last_name = document.querySelector('#last_name').value;
+  var bussiness = document.querySelector('#bussiness').value;
+  var email = document.querySelector('#email').value;
+  var phone = document.querySelector('#phone').value;
+  var pin = document.querySelector('#pin').value;
 
   if (!first_name) {
     errors['first_name_error'] = 'Please enter a first name';
@@ -63,9 +63,9 @@ function handleErrors(errors) {
   }
 }
 function initTransition() {
-  let pills = document.querySelectorAll('.individualOption');
+  var pills = document.querySelectorAll('.individualOption');
 
-  for (let i = 0; i < pills.length; i++) {
+  for (var i = 0; i < pills.length; i++) {
     pills[i].addEventListener('mouseover', function() {
       this.classList.add('hover');
     });

@@ -1,4 +1,4 @@
-let timeout = null;
+var timeout = null;
 function moveLabel() {
   // event.target.nextElementSibling.classList.add('activateLabel');
 }
@@ -6,20 +6,20 @@ function register() {
   loading = true;
   moveProgressBar(1);
 
-  let errors = [];
+  var errors = [];
 
-  let activeErrors = document.getElementsByClassName('individualError');
+  var activeErrors = document.getElementsByClassName('individualError');
 
   while(activeErrors[0]) {
     activeErrors[0].remove();
   }
 
   //check to make sure there is a value for all of these
-  let name = document.querySelector('#name').value;
-  let bussiness = document.querySelector('#bussiness').value;
-  let email = document.querySelector('#email').value;
-  let phone = document.querySelector('#phone').value;
-  let password = document.querySelector('#pin').value;
+  var name = document.querySelector('#name').value;
+  var bussiness = document.querySelector('#bussiness').value;
+  var email = document.querySelector('#email').value;
+  var phone = document.querySelector('#phone').value;
+  var password = document.querySelector('#pin').value;
 
   if (!name) {
     errors.push('Name can\'t be blank');
@@ -46,8 +46,8 @@ function register() {
       loading = false;
 
       if (response.data.emailSent) {
-          let column = document.querySelector('.left-col');
-          let signUpBtn = document.querySelector('.signUpBtn');
+          var column = document.querySelector('.left-col');
+          var signUpBtn = document.querySelector('.signUpBtn');
           column.style.transition = '1s';
           column.style.backgroundColor = '#5cb85c';
 
@@ -109,10 +109,10 @@ function login() {
   });
 }
 function handleErrors(errors) {
-  for (let i = 0; i < errors.length; i++) {
-    let individualError = document.createElement('DIV');
+  for (var i = 0; i < errors.length; i++) {
+    var individualError = document.createElement('DIV');
     individualError.classList.add('individualError');
-    let p = document.createElement('P');
+    var p = document.createElement('P');
     p.innerText = errors[i];
 
     individualError.appendChild(p);
@@ -140,7 +140,7 @@ function resetPassword() {
   loading = true;
   moveProgressBar(2);
 
-  let email = document.querySelector('#emailReset').value;
+  var email = document.querySelector('#emailReset').value;
   axios({
     method: 'post',
     url: '../server/database_connect/server.php?action=post&resource=passwordreset',
@@ -172,9 +172,9 @@ function showFeedback(text, color) {
 
   }, 6000);
 }
-let loading = false;
-let expand = true;
-let interval = null;
+var loading = false;
+var expand = true;
+var interval = null;
 
 function moveProgressBar(index) {
   movement(index);
@@ -183,7 +183,7 @@ function moveProgressBar(index) {
   }, 700);
 }
 function movement(index) {
-  let progressBar = document.querySelectorAll('.progressBar')[index];
+  var progressBar = document.querySelectorAll('.progressBar')[index];
   if (loading) {
     if (expand) {
       progressBar.classList.add('expandProgressBar');
@@ -204,8 +204,8 @@ function movement(index) {
 }
 function init() {
   // setInterval(function() {
-    // let email = document.querySelector('#emailLogin');
-    // let password = document.querySelector('#pinLogin');
+    // var email = document.querySelector('#emailLogin');
+    // var password = document.querySelector('#pinLogin');
     // console.log(email.value, password.value);
     // if (email.value !== '') {
     //   email.nextElementSibling.classList.add('activateLabel');

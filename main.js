@@ -15,8 +15,7 @@ function submitForm(e) {
     name: document.getElementById('name').value
   }
 }).then(function(response) {
-  console.log(response);
-  let target = document.getElementById('feedbackMessage');
+  var target = document.getElementById('feedbackMessage');
   if (response.data.emailSent) {
     target.innerHTML = 'Thank you for contacting us, we\'ll be reaching out to you soon.';
     target.style.display = 'inline-block';
@@ -31,7 +30,7 @@ function showHeader() {
 }
 function smoothScroll(destination) {
   //element to scroll to
-  let target = document.getElementById(destination);
+  var target = document.getElementById(destination);
 
   event.preventDefault();
   window.scrollTo({
@@ -41,19 +40,19 @@ function smoothScroll(destination) {
 }
 
 window.addEventListener('scroll', function() {
-  let elementArr = ['.singleAttribute', '.tutorialBtn', '#contactInstructions', '.formContainer'];
+  var elementArr = ['.singleAttribute', '.tutorialBtn', '#contactInstructions', '.formContainer'];
   function isScrolledIntoView() {
-    let data = [];
-    let offset = 100;
+    var data = [];
+    var offset = 100;
     for (i = 0; i < elementArr.length; i++) {
-      let eleSelector = document.querySelector(elementArr[i]);
+      var eleSelector = document.querySelector(elementArr[i]);
       if (eleSelector) {
         var rect = eleSelector.getBoundingClientRect();
         var elemTop = rect.top + offset;
         var elemBottom = rect.bottom + offset;
 
         isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-        let temp = {
+        var temp = {
           element: eleSelector,
           isVisible: isVisible,
           selector: elementArr[i],
@@ -65,12 +64,12 @@ window.addEventListener('scroll', function() {
 }
 
   (function() {
-    let data = isScrolledIntoView();
-    for (let i in data) {
+    var data = isScrolledIntoView();
+    for (var i in data) {
       if (data[i].isVisible && data[i].selector === '.singleAttribute') {
-        let divs = document.querySelectorAll('.singleAttribute');
-        let timeout = 0;
-        for (let x = 0; x < divs.length; x++) {
+        var divs = document.querySelectorAll('.singleAttribute');
+        var timeout = 0;
+        for (var x = 0; x < divs.length; x++) {
           setTimeout(function() {
             divs[x].style.transform = 'none';
             divs[x].style.opacity = 1;

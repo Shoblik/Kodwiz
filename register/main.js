@@ -1,21 +1,20 @@
-let timeout = null;
+var timeout = null;
 function moveLabel() {
   // event.target.nextElementSibling.classList.add('activateLabel');
 }
 function register() {
-  let errors = {};
+  var errors = {};
 
   //get the target
-  let url = window.location.href;
-  target = url.slice(url.indexOf('target=') + 7);
-  console.log(target);
+  var url = window.location.href;
+  var target = url.slice(url.indexOf('target=') + 7);
 
   //check to make sure there is a value for all of these
-  let name = document.querySelector('#name').value;
-  let bussiness = document.querySelector('#bussiness').value;
-  let email = document.querySelector('#email').value;
-  let phone = document.querySelector('#phone').value;
-  let password = document.querySelector('#pin').value;
+  var name = document.querySelector('#name').value;
+  var bussiness = document.querySelector('#bussiness').value;
+  var email = document.querySelector('#email').value;
+  var phone = document.querySelector('#phone').value;
+  var password = document.querySelector('#pin').value;
 
   if (!name) {
     errors['first_name_error'] = 'Name can\'t be blank';
@@ -72,8 +71,8 @@ function showFeedback(text, color = 'rgba(178, 59, 58, 1)') {
 }
 function init() {
   // setInterval(function() {
-    // let email = document.querySelector('#emailLogin');
-    // let password = document.querySelector('#pinLogin');
+    // var email = document.querySelector('#emailLogin');
+    // var password = document.querySelector('#pinLogin');
     // console.log(email.value, password.value);
     // if (email.value !== '') {
     //   email.nextElementSibling.classList.add('activateLabel');
