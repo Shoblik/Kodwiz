@@ -126,7 +126,7 @@ main {
 .currentPlan, .remainingFreePrograms, .atCostPrograms {
     display: inline-block;
     width: 290px;
-    font-size: initial;
+    font-size: 1rem;
     text-align: center;
     margin: 0 15px;
     min-height: 145px;
@@ -221,7 +221,7 @@ main {
     text-align: center;
 }
 .priceStructure p {
-    font-size: initial;
+    font-size: 1rem;
 }
 .user p {
     font-size: 1.3rem;

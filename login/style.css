@@ -57,7 +57,7 @@ content {
 }
 .left-col, .right-col {
     display: inline-block;
-    font-size: initial;
+    font-size: 1rem;
     /* width: 50%; */
     position: relative;
     vertical-align: top;
