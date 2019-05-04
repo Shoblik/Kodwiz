@@ -6,6 +6,7 @@ require_once('../server/database_connect/environment.php');
   <head>
     <meta charset="UTF-8">
     <title>KodWiz Dashboard</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel='stylesheet' href='./style.css' />
     <script src="https://checkout.stripe.com/checkout.js"></script>
