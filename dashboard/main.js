@@ -65,7 +65,11 @@ function launchApplication() {
     }
   });
 }
-function addCustomerToSubscription(price, label=null) {
+function addCustomerToSubscription(price, label) {
+  if (label === undefined) {
+    label = null;
+  }
+
   activeNum = price;
 
   // New Subscription
