@@ -108,7 +108,7 @@ namespace SendGrid;
  * @method Client forward_spam()
  * @method Client plain_content()
  * @method Client spam_check()
- * @method Client template()
+ * @method Client dashboard_template()
  *
  * Partner settings
  * @method Client partner_settings()

@@ -33,7 +33,7 @@ class Mail implements \JsonSerializable
     /** @var $attachments Attachment[] Email attachments */
     private $attachments;
 
-    /** @var $template_id TemplateId Id of a template that you would like to use */
+    /** @var $template_id TemplateId Id of a dashboard_template that you would like to use */
     private $template_id;
 
     /** @var $sections Section[] Key/value pairs that define block sections of code to be used as substitutions */
@@ -693,7 +693,7 @@ class Mail implements \JsonSerializable
     }
 
     /**
-     * Retrieve dynamic template data key/value pairs from a Personalization object
+     * Retrieve dynamic dashboard_template data key/value pairs from a Personalization object
      * 
      * @param int|0 $personalizationIndex Index into an array of
      *                                    existing Personalization
@@ -1202,9 +1202,9 @@ class Mail implements \JsonSerializable
     }
 
     /**
-     * Add a template id to a Mail object
+     * Add a dashboard_template id to a Mail object
      *
-     * @param string $template_id The id of the template to be
+     * @param string $template_id The id of the dashboard_template to be
      *                            appied to this email
      */
     public function setTemplateId($template_id)
@@ -1217,7 +1217,7 @@ class Mail implements \JsonSerializable
     }
 
     /**
-     * Retrieve a template id attached to a Mail object
+     * Retrieve a dashboard_template id attached to a Mail object
      *
      * @return TemplateId
      */

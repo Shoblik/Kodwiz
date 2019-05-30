@@ -22,8 +22,8 @@ namespace SendGrid\Mail;
 class TemplateId implements \JsonSerializable
 {
     /**
-     * @var $template_id string The id of a template that you would like to use. If you use a
-     * template that contains a subject and content (either text or html), you do
+     * @var $template_id string The id of a dashboard_template that you would like to use. If you use a
+     * dashboard_template that contains a subject and content (either text or html), you do
      * not need to specify those at the personalizations nor message level
      */
     private $template_id;
@@ -31,8 +31,8 @@ class TemplateId implements \JsonSerializable
     /**
      * Optional constructor
      *
-     * @param string|null $template_id The id of a template that you would like
-     *                                 to use. If you use a template that contains
+     * @param string|null $template_id The id of a dashboard_template that you would like
+     *                                 to use. If you use a dashboard_template that contains
      *                                 a subject and content (either text or html),
      *                                 you do not need to specify those at the
      *                                 personalizations nor message level
@@ -45,10 +45,10 @@ class TemplateId implements \JsonSerializable
     }
 
     /**
-     * Add a template id to a TemplateId object
+     * Add a dashboard_template id to a TemplateId object
      *
-     * @param string $template_id The id of a template that you would like
-     *                            to use. If you use a template that contains
+     * @param string $template_id The id of a dashboard_template that you would like
+     *                            to use. If you use a dashboard_template that contains
      *                            a subject and content (either text or html),
      *                            you do not need to specify those at the
      *                            personalizations nor message level
@@ -65,7 +65,7 @@ class TemplateId implements \JsonSerializable
     }
 
     /**
-     * Retrieve a template id from a TemplateId object
+     * Retrieve a dashboard_template id from a TemplateId object
      *
      * @return string
      */
