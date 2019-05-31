@@ -77,9 +77,10 @@ nav {
     border-bottom: 4px solid white;
 }
 .navItem p:hover {
-  color: #E7FF6E;
-  transition: .3s;
-  cursor: pointer;
+    border-bottom: 4px solid #b23b3a;
+    color: white;
+    transition: .1s;
+    cursor: pointer;
 }
 .landingPageContent {
     width: 843px;
@@ -237,15 +238,26 @@ iframe {
     margin-top: 45px;
 }
 
+/*Spacing Element*/
+
+.spacingElement {
+    height: 400px;
+    background-color: rgba(178, 59, 58, .8);
+    border: 6px solid #b23b3a;
+    border-left: none;
+    border-right: none;
+}
+
 /* Feature Section */
 .featureSection {
-    padding: 50px 0 125px 0;
+    padding: 130px 0;
     font-family: helvetica;
     color: #605E5E;
     background-color: white;
-    margin-top: 400px;
+    /* margin-top: 400px; */
     border-top: 3px solid #b23b3a;
 }
+
 .featureSection h2 {
     text-align: center;
     font-size: 109px;
@@ -629,6 +641,13 @@ button.freeTrialBtn:hover {
 }
 /* Mobile Media Queries */
 @media only screen and (max-width: 768px) {
+    .spacingElement {
+        height: 300px;
+        background-color: rgba(178, 59, 58, .8);
+        border: 6px solid #b23b3a;
+        border-left: none;
+        border-right: none;
+    }
     .landingVideoContainer div > div {
         width: 95%;
     }
@@ -714,7 +733,7 @@ button.freeTrialBtn:hover {
     padding-bottom: 0;
 }
 .featureSection {
-    padding: 60px 0 40px 0;
+    padding: 80px 0;
 }
 .tutorialBtn {
   opacity: 1;
@@ -740,7 +759,7 @@ button.freeTrialBtn:hover {
 }
 .aboutSection h2 {
     font-size: 40px;
-    margin-bottom: 55px;
+    margin-bottom: 8px;
 }
 .aboutContent {
     width: 100%;
@@ -769,7 +788,7 @@ button.freeTrialBtn:hover {
 .aboutTextContainer {
     width: 80%;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     padding: 0;
 }
 .aboutTextContainer p {
