@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" sizes="300x300" href="./images/kod_wiz_logo_org.png">
-    <title>Kod Wiz</title>
+    <title>KodWiz</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src='./main.js'></script>
@@ -13,10 +13,6 @@
   <body>
     <div onclick='window.open("https://kodwiz.com/login", target="_self");' class='demoContainer hover'>
       <p>Launch KodWiz</p>
-      <div class='buyContainer hidden-small'>
-        <p onclick='event.stopPropagation(); window.open("https://kodwiz.com/login", target="_self");'>Login</p>
-        <p onclick='event.stopPropagation(); window.open("https://kodwiz.com/pricing", target="_self");'>Buy</p>
-      </div>
     </div>
     <div class='landingPage'>
       <video autoplay playsinline muted loop>
@@ -68,12 +64,6 @@
     </div>
     <div id='technology' class='technologySection'>
       <h2>OUR TECHNOLOGY</h2>
-      <div class='hidden-desktop'>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/FuyUdb3PyMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <div class='tutorialBtnMobile'>
-          <button onclick='window.open("https://kodwiz.com/tutorials")'>TUTORIALS</button>
-        </div>
-      </div>
       <div class='attributeContainer'>
         <div class='singleAttribute'>
           <div class='attrTitle'>
@@ -100,37 +90,51 @@
           </div>
         </div>
       </div>
-      <div class='pleaseContain hidden-small'>
-        <div style="width: 860px; position: relative; height: 760px; left: 50%; transform: translateX(-50%);" class="s_BIwzIGroupSkin" id="comp-iocoqb1m">
-          <div id="comp-iocoqb1minlineContent" class="s_BIwzIGroupSkininlineContent">
-            <div style="left: 0px; position: absolute; top: 0px; width: 860px; height: 819px;" data-exact-height="819" data-content-padding-horizontal="0" data-content-padding-vertical="0" title="" class="wp2" id="comp-iobc5w87">
-                <div data-style="" class="wp2img" id="comp-iobc5w87img" style="position: relative; width: 860px; height: 819px;"><img id="comp-iobc5w87imgimage" alt="" data-type="image" style="width: 860px; height: 819px; object-fit: cover;" src="./images/computer.png"></div>
-            </div>
-            <style type="text/css" data-styleid="wp2">.wp2_zoomedin {
-              cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.cur), auto;overflow:hidden;display:block;}
-              .wp2_zoomedout {cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.cur), auto;}
-              .wp2link {display:block;overflow:hidden;}
-              .wp2img {overflow:hidden;}
-              .wp2imgimage {position:static;box-shadow:#000 0 0 0;user-select:none;}
-            </style>
-            <div style="left: 59px; position: absolute; top: 76px; width: 744px; height: 414px;" data-exact-height="404" data-content-padding-horizontal="0" data-content-padding-vertical="0" title="" class="wp2" id="comp-iobcj2me">
-              <div style="width: 744px; height: 100%;" id="comp-iobcj2melink" class="wp2link">
-                <div data-style="" class="wp2img" id="comp-iobcj2meimg" style="position: relative; width: 744px; height: 100%;">
-                <!-- <img id="comp-iobcj2meimgimage" alt="Untitled.jpeg" data-type="image" style="width: 744px; height: 404px; object-fit: cover;" src="./images/product_demo.png"> -->
-                <!-- <iframe src="https://www.youtube.com/embed/WVOYPEyEfsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-                <iframe src="https://www.youtube.com/embed/FuyUdb3PyMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-            </div>
-          </div>
-          <style type="text/css" data-styleid="wp2">.wp2_zoomedin {
-            cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.cur), auto;overflow:hidden;display:block;}
-            .wp2_zoomedout {cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.cur), auto;}
-            .wp2link {display:block;overflow:hidden;}
-            .wp2img {overflow:hidden;}
-            .wp2imgimage {position:static;box-shadow:#000 0 0 0;user-select:none;}
-         </style>
+      <!--<div class='pleaseContain hidden-small'>-->
+        <!--<div style="width: 860px; position: relative; height: 760px; left: 50%; transform: translateX(-50%);" class="s_BIwzIGroupSkin" id="comp-iocoqb1m">-->
+          <!--<div id="comp-iocoqb1minlineContent" class="s_BIwzIGroupSkininlineContent">-->
+            <!--<div style="left: 0px; position: absolute; top: 0px; width: 860px; height: 819px;" data-exact-height="819" data-content-padding-horizontal="0" data-content-padding-vertical="0" title="" class="wp2" id="comp-iobc5w87">-->
+                <!--<div data-style="" class="wp2img" id="comp-iobc5w87img" style="position: relative; width: 860px; height: 819px;"><img id="comp-iobc5w87imgimage" alt="" data-type="image" style="width: 860px; height: 819px; object-fit: cover;" src="./images/computer.png"></div>-->
+            <!--</div>-->
+            <!--<style type="text/css" data-styleid="wp2">.wp2_zoomedin {-->
+              <!--cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.cur), auto;overflow:hidden;display:block;}-->
+              <!--.wp2_zoomedout {cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.cur), auto;}-->
+              <!--.wp2link {display:block;overflow:hidden;}-->
+              <!--.wp2img {overflow:hidden;}-->
+              <!--.wp2imgimage {position:static;box-shadow:#000 0 0 0;user-select:none;}-->
+            <!--</style>-->
+            <!--<div style="left: 59px; position: absolute; top: 76px; width: 744px; height: 414px;" data-exact-height="404" data-content-padding-horizontal="0" data-content-padding-vertical="0" title="" class="wp2" id="comp-iobcj2me">-->
+              <!--<div style="width: 744px; height: 100%;" id="comp-iobcj2melink" class="wp2link">-->
+                <!--<div data-style="" class="wp2img" id="comp-iobcj2meimg" style="position: relative; width: 744px; height: 100%;">-->
+                <!--&lt;!&ndash; <img id="comp-iobcj2meimgimage" alt="Untitled.jpeg" data-type="image" style="width: 744px; height: 404px; object-fit: cover;" src="./images/product_demo.png"> &ndash;&gt;-->
+                <!--&lt;!&ndash; <iframe src="https://www.youtube.com/embed/WVOYPEyEfsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> &ndash;&gt;-->
+                <!--<iframe src="https://www.youtube.com/embed/FuyUdb3PyMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<style type="text/css" data-styleid="wp2">.wp2_zoomedin {-->
+            <!--cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.cur), auto;overflow:hidden;display:block;}-->
+            <!--.wp2_zoomedout {cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.cur), auto;}-->
+            <!--.wp2link {display:block;overflow:hidden;}-->
+            <!--.wp2img {overflow:hidden;}-->
+            <!--.wp2imgimage {position:static;box-shadow:#000 0 0 0;user-select:none;}-->
+         <!--</style>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="landingVideoContainer">
+        <div class="left-col">
+          <div>
+            <h3>What is Kodwiz?</h3>
+            <iframe src="https://www.youtube.com/embed/FuyUdb3PyMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
+        <div class="right-col">
+            <div>
+              <h3>How does it work?</h3>
+              <iframe src="https://www.youtube.com/embed/yDpW61BjiuI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
       </div>
       <div class='tutorialBtn'>
         <button onclick='window.open("https://kodwiz.com/tutorials")'>TUTORIALS</button>
@@ -141,173 +145,6 @@
       <h3 class='boldify'>Report wizard, Conversion wizard, ABAP application, HTML report and app, Swift iOS report and app, ABAP interface, Android report and app</h3>
       <h3>tools for DEVELOPERS of any experience level generation of predictable and repetitive parts of code is fully automated code generation that minimizes routine work to increase creative work technical specification generation in MS Word format</h3>
     </div>
-    <!-- <div class='window'></div>
-    <div id='pricing' class='priceSection'>
-      <div id='priceTable' class='priceStructure'>
-        <div class='innerPriceContainer'>
-          <h2 class='upgradeNowText'>Pricing</h2>
-          <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption basic'>
-            <div>
-              <div class='user'>
-                <p>Basic</p>
-              </div>
-              <div class='feePer'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Fee / per Program:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>$20 / per program</p>
-                </div>
-              </div>
-              <div class='monthFee'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Monthly Fee:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>$0</p>
-                </div>
-              </div>
-              <div class='notes'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Package Details:</p>
-                </div>
-                <div class='secondSection'>
-                  <p></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption silver'>
-            <div>
-              <div class='user'>
-                <p>Silver</p>
-              </div>
-              <div class='feePer'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Fee / per Program:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>$15 / per program</p>
-                </div>
-              </div>
-              <div class='monthFee'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Monthly Fee:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>$99</p>
-                </div>
-              </div>
-              <div class='notes'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Package Details:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>10 programs/month generation included.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption gold'>
-            <div>
-              <div class='user'>
-                <p>Gold</p>
-              </div>
-              <div class='feePer'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Fee / per Program:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>$15 / per program</p>
-                </div>
-              </div>
-              <div class='monthFee'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Monthly Fee:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>$199</p>
-                </div>
-              </div>
-              <div class='notes'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Package Details:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>30 program/month included in monthly fees.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption platinum'>
-            <div>
-              <div class='user'>
-                <p>Platinum</p>
-              </div>
-              <div class='feePer'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Fee / per Program:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>$10 / per program</p>
-                </div>
-              </div>
-              <div class='monthFee'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Monthly Fee:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>$499</p>
-                </div>
-              </div>
-              <div class='notes'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Package Details:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>50 programs/month included in monthly fees.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div onclick='window.open("https://kodwiz.com/login", "_self")' class='individualOption diamond'>
-            <div>
-              <div class='user'>
-                <p>Diamond</p>
-              </div>
-              <div class='feePer'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Fee / per Program:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>N/A</p>
-                </div>
-              </div>
-              <div class='monthFee'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Monthly Fee:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>$10000</p>
-                </div>
-              </div>
-              <div class='notes'>
-                <div class='firstSection'>
-                  <p class='text-highlight-green'>Package Details:</p>
-                </div>
-                <div class='secondSection'>
-                  <p>Unlimited program generation.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class='newAccount'>
-            <button onclick='window.open("https://kodwiz.com/login", "_self")' class='freeTrialBtn'>Start with a free trial</button>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div id="about" class='aboutSection'>
       <h2>MEET KodWiz</h2>
       <div class='aboutContent'>

@@ -11,11 +11,31 @@ body {
 }
 video {
     pointer-events: none;
-    position: absolute;
     background-size: cover;
     position: fixed;
     z-index: -1;
-    width: 100vw;
+    width: 100%;
+}
+div#feature .boldify {
+    font-weight: 100 !important;
+}
+textarea#message {
+    width: 80%;
+    margin-top: 5px;
+    font-weight: 100 !important;
+    font-family: 'system-ui' !important;
+}
+.formContainer input {
+    padding: 15px;
+    width: 600px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid #CCC;
+    margin: 5px;
+    background: #605E5E;
+}
+form input, form textarea {
+    background-color: white !important;
 }
 .landingPage {
     height: 950px;
@@ -25,7 +45,7 @@ video {
     background-size: cover;
 }
 header {
-    width: 60%;
+    width: 960px;
     margin: auto;
     position: relative;
 }
@@ -44,15 +64,17 @@ header {
 nav {
     height: 100%;
     position: absolute;
-    width: 70%;
+    right: 0;
 }
 .navItem p {
     font-family: helvetica;
-    font-weight: 100;
+    font-weight: 400;
     color: white;
+    font-size: 20px;
 }
 .navItem:first-child p {
-  color: #E7FF6E;
+    color: white;
+    border-bottom: 4px solid white;
 }
 .navItem p:hover {
   color: #E7FF6E;
@@ -91,14 +113,30 @@ nav {
     position: absolute;
 
 }
+.demoContainer p,
+.buyContainer p {
+    font-size: 25px !important;
+}
 .demoContainer {
     position: fixed;
     bottom: 0;
-    right: 15px;
+    right: 0;
     width: 280px;
-    padding: 20px;
-    background: #E7FF6E;
     z-index: 1000;
+    font-family: helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    padding: 15px 40px;
+    background-color: #B23B3A;
+    transition: .3s;
+    border-radius: 8px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 4px 2px 5px 2px rgba(0,0,0,0.6);
+    -moz-box-shadow: 4px 2px 5px 2px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 4px 2px 5px 2px rgba(0,0,0,0.6);
+    -o-box-shadow: 4px 2px 5px 2px rgba(0,0,0,0.6);
 }
 .buyContainer p:hover {
     cursor: pointer;
@@ -152,7 +190,7 @@ iframe {
     display: inline-block;
     vertical-align: top;
     padding: 0 20px;
-    opacity: 0;
+    opacity: 1;
     transition: 1s;
 }
 .attrTitle p {
@@ -186,11 +224,13 @@ iframe {
     font-family: helvetica;
     font-weight: 100;
     transition: 1s;
+    border-radius: 8px;
 }
 .tutorialBtn {
     text-align: center;
-    opacity: 0;
+    opacity: 1 !important;
     transition: .8s;
+    padding: 60px 0;
 }
 .pleaseContain {
     position: relative;
@@ -203,6 +243,8 @@ iframe {
     font-family: helvetica;
     color: #605E5E;
     background-color: white;
+    margin-top: 400px;
+    border-top: 3px solid #b23b3a;
 }
 .featureSection h2 {
     text-align: center;
@@ -225,16 +267,18 @@ iframe {
 }
 /* About Section */
 .aboutSection {
-  background-color: #E7FF6E;
-  padding: 80px 0;
+    background-color: #ededed;
+    padding: 80px 0;
 }
 .aboutContent {
     text-align: center;
 }
+
 .left-col, .right-col {
     display: inline-block;
     width: 49%;
     vertical-align: top;
+    margin: 25px 0;
 }
 .aboutTextContainer p {
     font-family: helvetica;
@@ -303,35 +347,41 @@ iframe {
 .formContainer {
     text-align: center;
     opacity: 0;
-    transition: 1;
+    transition: 1s;
 }
 .formContainer input {
-    padding: 10px;
+    padding: 15px;
     width: 600px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     border-radius: 5px;
-    border: 1px solid #CCC;
+    border: 2px solid #CCC;
     margin: 5px;
     background: #E7FF6E;
+    font-weight: 100;
 }
 textarea#message {
     width: 600px;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     height: 100px;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-weight: 100;
     font-family: helvetica;
-    border: 1px solid #CCC;
-    background: #E7FF6E;
+    border: 2px solid #CCC;
+    background: #605E5E;
+    color: white;
+    margin-top: 5px;
 }
 .submitFormBtn {
     background-color: white;
     padding: 10px 40px;
     font-size: 1rem;
     font-family: helvetica;
-    border: 4px solid #605E5E;
-    color: #605E5E;
+    border: 4px solid #b23b3a;
+    color: #b23b3a;
     margin: 15px 0;
+    border-radius: 8px;
+    font-weight: 600;
 }
 form div {
     position: relative;
@@ -542,6 +592,32 @@ button.freeTrialBtn:hover {
     background: white;
     padding: 10px 20px;
 }
+
+.landingVideoContainer h3 {
+    /* text-align: left; */
+    font-weight: 400;
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #605E5E;
+}
+.landingVideoContainer iframe {
+    /* width: 355px; */
+    margin: auto;
+    min-height: 290px;
+}
+.landingVideoContainer div > div {
+    /* text-align: left; */
+    font-weight: 100;
+    width: 450px;
+    margin: auto;
+}
+.landingVideoContainer {
+    text-align: center;
+    max-width: 980px;
+    margin: 100px auto 5px auto;
+}
 /* Desktop Media Queries */
 @media only screen and (min-width: 1824px) {
 .landingPage {
@@ -553,6 +629,19 @@ button.freeTrialBtn:hover {
 }
 /* Mobile Media Queries */
 @media only screen and (max-width: 768px) {
+    .landingVideoContainer div > div {
+        width: 95%;
+    }
+    .landingVideoContainer h3 {
+        width: 275px;
+        margin: 25px auto;
+        text-align: left;
+    }
+    .landingVideoContainer {
+        text-align: center;
+        max-width: 980px;
+        margin: 0px auto;
+    }
     .newlyOfferingContainer {
         font-size: 135%;
         left: 100%;
@@ -561,16 +650,17 @@ button.freeTrialBtn:hover {
         box-shadow: none;
     }
     .tutorialBtn button {
-        display: none;
+        display: block;
+        margin: auto;
     }
   .landingPageContent {
   width: 100%;
   }
-  .landingPage {
-    height: 90vh;
-  }
+    .landingPage {
+        height: 100%;
+    }
   video {
-    height: 90vh;
+    height: 100%;
     width: auto;
   }
   nav {
