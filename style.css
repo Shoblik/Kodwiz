@@ -257,14 +257,32 @@ iframe {
     /* margin-top: 400px; */
     border-top: 3px solid #b23b3a;
 }
-
+.featureContainer {
+    margin: 50px auto;
+    width: 880px;
+    text-align: center;
+}
+.featureContainer h3 {
+    width: auto;
+    margin: auto;
+    font-weight: 100;
+    border: 3px solid #b23b3a;
+    font-size: 1.4rem;
+    display: inline-block !important;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 4px;
+}
+.redify {
+    color: #b23b3a !important;
+}
 .featureSection h2 {
     text-align: center;
     font-size: 109px;
     width: 891px;
     margin: auto;
 }
-.featureSection h3 {
+.featureEnd {
     width: 860px;
     margin: auto;
     font-weight: 100;
@@ -675,6 +693,20 @@ button.freeTrialBtn:hover {
   .landingPageContent {
   width: 100%;
   }
+    .featureContainer h3 {
+        font-size: 15px;
+        display: inline-block !important;
+        padding: 8px;
+        margin: 5px 4px;
+        width: 39%;
+        vertical-align: top;
+        height: 34px;
+    }
+    .featureContainer {
+        margin: 50px auto;
+        width: 90%;
+        text-align: center;
+    }
     .landingPage {
         height: 100%;
     }
@@ -745,7 +777,7 @@ button.freeTrialBtn:hover {
 .featureSection h3.boldify {
     font-size: 1.4rem;
 }
-.featureSection h3 {
+.featureEnd {
     width: 76%;
     margin: auto;
     font-weight: 100;
