@@ -10,6 +10,9 @@
     <script src='./main.js'></script>
   </head>
   <body>
+    <?php
+        require('../header/header.php');
+    ?>
     <content>
       <div class='left-col'>
         <div>
