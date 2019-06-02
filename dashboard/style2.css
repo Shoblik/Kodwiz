@@ -92,7 +92,7 @@ h3.changePlan:hover {
     text-decoration: underline;
 }
 .main-head {
-    margin: 125px 0;
+    margin: 125px 0 0 0;
 }
 
 /*PRICING*/
@@ -138,7 +138,8 @@ h3.changePlan:hover {
     color: #b23c39;
 }
 .plans {
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
+    padding: 125px 0 100px 0;
 }
 .perMonth {
     font-size: 13px;

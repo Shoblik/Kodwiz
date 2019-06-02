@@ -100,7 +100,9 @@ function formatPrice($price) {
     <div class="main-container">
         <div class="main-head">
             <h1><?php echo $output['planName']; ?> Plan Dashboard</h1>
-            <h3 class="changePlan">Change my plan</h3>
+            <a href="#plans">
+                <h3 class="changePlan">Change my plan</h3>
+            </a>
 
             <div class="details">
                 <div>
@@ -113,7 +115,7 @@ function formatPrice($price) {
                 </div>
             </div>
         </div>
-        <div class="plans">
+        <div id="plans" class="plans">
             <h1>KodWiz Plans</h1>
             <div class="planContainer">
             <?php foreach ($plans as $plan) {

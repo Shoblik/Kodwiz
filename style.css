@@ -275,13 +275,15 @@ iframe {
 .featureContainer h3 {
     width: auto;
     margin: auto;
-    font-weight: 100;
+    font-weight: 400;
     border: 3px solid #b23b3a;
     font-size: 1.4rem;
     display: inline-block !important;
     border-radius: 8px;
     padding: 10px;
     margin: 10px 4px;
+    color: #b23b3a;
+    position: relative;
 }
 .redify {
     color: #b23b3a !important;
@@ -398,7 +400,7 @@ iframe {
     width: 600px;
     font-size: 1.5rem;
     border-radius: 5px;
-    border: 2px solid #CCC;
+    border: 2px solid #605e5e;
     margin: 5px;
     background: #E7FF6E;
     font-weight: 100;
@@ -411,7 +413,7 @@ textarea#message {
     font-size: 1.5rem;
     font-weight: 100;
     font-family: helvetica;
-    border: 2px solid #CCC;
+    border: 2px solid #605e5e;
     background: #605E5E;
     color: black;
     margin-top: 5px;
@@ -662,6 +664,7 @@ button.freeTrialBtn:hover {
     max-width: 980px;
     margin: 100px auto 5px auto;
 }
+
 /* Desktop Media Queries */
 @media only screen and (min-width: 1824px) {
 .landingPage {
@@ -679,6 +682,13 @@ button.freeTrialBtn:hover {
         border: 6px solid #b23b3a;
         border-left: none;
         border-right: none;
+    }
+    .featureContainer h3 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
     }
     .spacingElement img {
         width: 235px;
