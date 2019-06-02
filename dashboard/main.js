@@ -19,7 +19,7 @@ function checkSession() {
   }).then(function(response) {
     console.log(response);
     if (!response.data.authorized) {
-      window.open("https://kodwiz.com/login", target = "_self");
+      window.open("../login", target = "_self");
     } else {
       // Put dynamic content here
       document.getElementById('name').innerText = response.data.firstName;
@@ -50,7 +50,7 @@ function logout() {
   }).then(function(response) {
     console.log(response);
   });
-  window.open("https://kodwiz.com/login", target='_self');
+  window.open("../login", target='_self');
 }
 function launchApplication() {
   axios({
@@ -61,7 +61,7 @@ function launchApplication() {
     if (response.data.url) {
       window.open(response.data.url, target="_self");
     } else {
-      window.open("https://kodwiz.com/login");
+      window.open("../login");
     }
   });
 }
@@ -73,7 +73,7 @@ function addCustomerToSubscription(price, label) {
   activeNum = price;
 
   // New Subscription
-  if (document.querySelector('#plan').innerText === 'Demo') {
+  if (document.querySelector('#plan').value === 'Demo') {
     // Open Checkout with further options:
     handler = StripeCheckout.configure({
         key: document.getElementById('stripeKey').value,
@@ -104,6 +104,9 @@ function addCustomerToSubscription(price, label) {
   } else {
      openSubscriptionModal(activeNum);
   }
+}
+function closeModal() {
+    document.querySelector('.modal').classList.remove('showModal');
 }
 function openSubscriptionModal(activeNum) {
   document.querySelector('.innerModalContainer.account').style.display = 'none';
@@ -139,10 +142,6 @@ function openSubscriptionModal(activeNum) {
       'freeProgramsOnModal': 'Unlimited',
       'additionalPrice': '$0.00',
     }
-  }
-
-  if (document.querySelector('#plan').innerText === planObj[activeNum]['planName']) {
-    return;
   }
 
   for (i in planObj[activeNum]) {

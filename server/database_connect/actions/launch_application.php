@@ -4,26 +4,17 @@ if (!isset($ACCESS_CONTROL) || $ACCESS_CONTROL === false) {
   die('no direct access allowed');
 }
 
-$output['success'] = true;
 
-require('./actions/read_session.php');
+//find email
+$query = "SELECT `email` FROM `customer` WHERE `id` = '{$output['id']}' AND `active` = 1";
+$result = mysqli_query($conn, $query);
+$email = mysqli_fetch_assoc($result)['email'];
+$date = date('mdY');
 
-if ($output['authorized']) {
+$token = generateToken($date, $email);
 
-  //find email
-  $query = "SELECT `email` FROM `customer` WHERE `id` = '{$output['id']}' AND `active` = 1";
-  $result = mysqli_query($conn, $query);
+$output['url'] = 'http://application.kodwiz.com?sap-sessioncmd=open&warp=' . $token . '&usr=' . $email;
 
-  $email = mysqli_fetch_assoc($result)['email'];
-  $date = date('mdY');
-
-  $token = generateToken($date, $email);
-
-  $output['url'] = 'http://application.kodwiz.com?sap-sessioncmd=open&warp=' . $token . '&usr=' . $email;
-
-} else {
-  $output['url'] = 'https://kodwiz.com/login';
-}
 
 
 

@@ -40,7 +40,7 @@ function smoothScroll(destination) {
 }
 
 window.addEventListener('scroll', function() {
-  var elementArr = ['.singleAttribute', '.tutorialBtn', '#contactInstructions', '.formContainer'];
+  var elementArr = ['.tutorialBtn', '#contactInstructions', '.formContainer'];
   function isScrolledIntoView() {
     var data = [];
     var offset = 100;
@@ -66,19 +66,7 @@ window.addEventListener('scroll', function() {
   (function() {
     var data = isScrolledIntoView();
     for (var i in data) {
-      if (data[i].isVisible && data[i].selector === '.singleAttribute') {
-        var divs = document.querySelectorAll('.singleAttribute');
-        var timeout = 0;
-        for (var x = 0; x < divs.length; x++) {
-          setTimeout(function() {
-            divs[x].style.transform = 'none';
-            divs[x].style.opacity = 1;
-            console.log(timeout)
-          }, timeout);
-          timeout += 300;
-        }
-        return;
-      } else if (data[i].isVisible) {
+      if (data[i].isVisible) {
         data[i].element.style.transform = 'none';
         data[i].element.style.opacity = 1;
       }

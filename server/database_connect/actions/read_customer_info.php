@@ -16,6 +16,7 @@ $query = "SELECT * FROM `customer` c
           LEFT JOIN `subscription_details` sd
           ON (cb.subscription_id = sd.subscription_id)
           WHERE c.id = '{$id}'";
+
 $result = mysqli_query($conn, $query);
 
 if ($result) {

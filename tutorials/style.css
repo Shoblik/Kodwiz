@@ -9,45 +9,45 @@ body {
     background-color: rgba(255,255,255, 1);
 }
 /*////////////////////////   Header     /////////////////////////////////////  */
-header {
-    width: 60%;
-    margin: auto;
-    position: relative;
-}
-.logoContainer, nav {
-    display: inline-block;
-}
-.navItem {
-    display: inline-block;
-    padding: 10px 12px;
-}
-.innerNavContainer {
-    position: relative;
-    top: 50%;
-    text-align: right;
-    transform: translateY(-50%);
-}
-nav {
-    height: 100%;
-    position: absolute;
-    width: 70%;
-}
-.navItem p {
-    font-weight: 400;
-}
+/*header {*/
+    /*width: 60%;*/
+    /*margin: auto;*/
+    /*position: relative;*/
+/*}*/
+/*.logoContainer, nav {*/
+    /*display: inline-block;*/
+/*}*/
+/*.navItem {*/
+    /*display: inline-block;*/
+    /*padding: 10px 12px;*/
+/*}*/
+/*.innerNavContainer {*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*text-align: right;*/
+    /*transform: translateY(-50%);*/
+/*}*/
+/*nav {*/
+    /*height: 100%;*/
+    /*position: absolute;*/
+    /*width: 70%;*/
+/*}*/
+/*.navItem p {*/
+    /*font-weight: 400;*/
+/*}*/
 /* .navItem:first-child p {
   color: #E7FF6E;
 } */
-.navItem p:hover {
-  color: #B23B3A;
-  transition: .3s;
-  cursor: pointer;
-}
-.logoContainer img {
-    width: 50%;
-    vertical-align: middle;
-    padding: 10px 0;
-}
+/*.navItem p:hover {*/
+  /*color: #B23B3A;*/
+  /*transition: .3s;*/
+  /*cursor: pointer;*/
+/*}*/
+/*.logoContainer img {*/
+    /*width: 50%;*/
+    /*vertical-align: middle;*/
+    /*padding: 10px 0;*/
+/*}*/
 .mainContainer {
     /* background-image: url('./images/plane_in_trees.jpg'); */
     height: 100vh;
@@ -57,9 +57,9 @@ nav {
     position: relative;
 }
 
-.headerContainer {
-    background-color: rgba(250,250,250, 1);
-}
+/*.headerContainer {*/
+    /*background-color: rgba(250,250,250, 1);*/
+/*}*/
 content {
     font-size: 0;
 }

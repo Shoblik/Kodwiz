@@ -99,7 +99,7 @@ function login() {
     loading = false;
     console.log(response.data);
     if (response.data.success) {
-      window.open('https://kodwiz.com/dashboard', target="_self");
+      window.open('../dashboard', target="_self");
     } else {
       // document.getElementById('loginResponse').innerText = "Incorrect username or password";
       // document.getElementById('emailLogin').style.border = "1px solid #B23B3A";

@@ -8,35 +8,36 @@
     <script src='./main.js'></script>
   </head>
   <body>
-    <div class='headerContainer'>
-      <header>
-        <div class='logoContainer'>
-          <img src='../images/kod_wiz_logo_org.png' />
-        </div>
-        <nav>
-          <div class='innerNavContainer'>
-            <div onclick='window.open("https://kodwiz.com", target="_self")' class='navItem'>
-              <p>Home</p>
-            </div>
-            <div onclick='window.open("https://kodwiz.com#technology", target="_self")' class='navItem'>
-              <p>Product</p>
-            </div>
-            <div onclick='window.open("https://kodwiz.com#feature", target="_self")' class='navItem'>
-              <p>Features</p>
-            </div>
-            <div onclick='window.open("https://kodwiz.com/tutorials", target="_self")' class='navItem'>
-              <p>Tutorials</p>
-            </div>
-            <div onclick='window.open("https://kodwiz.com#about", target="_self")' class='navItem'>
-              <p>About</p>
-            </div>
-            <div onclick='window.open("https://kodwiz.com#contact", target="_self")' class='navItem'>
-              <p>Contact</p>
-            </div>
-          </div>
-        </nav>
-      </header>
-    </div>
+    <?php require('../header/header.php'); ?>
+    <!--<div class='headerContainer'>-->
+      <!--<header>-->
+        <!--<div class='logoContainer'>-->
+          <!--<img src='../images/kod_wiz_logo_org.png' />-->
+        <!--</div>-->
+        <!--<nav>-->
+          <!--<div class='innerNavContainer'>-->
+            <!--<div onclick='window.open("https://kodwiz.com", target="_self")' class='navItem'>-->
+              <!--<p>Home</p>-->
+            <!--</div>-->
+            <!--<div onclick='window.open("https://kodwiz.com#technology", target="_self")' class='navItem'>-->
+              <!--<p>Product</p>-->
+            <!--</div>-->
+            <!--<div onclick='window.open("https://kodwiz.com#feature", target="_self")' class='navItem'>-->
+              <!--<p>Features</p>-->
+            <!--</div>-->
+            <!--<div onclick='window.open("https://kodwiz.com/tutorials", target="_self")' class='navItem'>-->
+              <!--<p>Tutorials</p>-->
+            <!--</div>-->
+            <!--<div onclick='window.open("https://kodwiz.com#about", target="_self")' class='navItem'>-->
+              <!--<p>About</p>-->
+            <!--</div>-->
+            <!--<div onclick='window.open("https://kodwiz.com#contact", target="_self")' class='navItem'>-->
+              <!--<p>Contact</p>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</nav>-->
+      <!--</header>-->
+    <!--</div>-->
     <main>
       <div class='featured'>
         <div class='container'>

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83c8b782-2f2d-43b6-bb81-0d4ff7f16b42" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dashboard/main_content.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dashboard_template/css/dashboard_global.css" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/dashboard/index.php" afterPath="$PROJECT_DIR$/dashboard/index2.php" />
@@ -10,6 +11,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/lib/Client.php" afterPath="$PROJECT_DIR$/vendor/sendgrid/php-http-client/lib/Client.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/lib/mail/Mail.php" afterPath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/lib/mail/Mail.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/lib/mail/TemplateId.php" afterPath="$PROJECT_DIR$/vendor/sendgrid/sendgrid/lib/mail/TemplateId.php" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +23,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Kodwiz" />
+  </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="dashboard_layout.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard_template/dashboard_layout.php">
@@ -61,6 +70,56 @@
         </entry>
       </file>
     </leaf>
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.6910876">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="174">
+                  <caret line="183" column="47" lean-forward="true" selection-start-line="183" selection-start-column="47" selection-end-line="183" selection-end-column="47" />
+                  <folding>
+                    <marker date="1559281597791" expanded="false" signature="3920:4008" ph="..." />
+                    <marker date="1559281597791" expanded="false" signature="4179:4248" ph="..." />
+                    <marker date="1559281597791" expanded="false" signature="4471:4519" ph="..." />
+                    <marker date="1559281597791" expanded="false" signature="4585:4632" ph="..." />
+                    <marker date="1559281597791" expanded="false" signature="5604:5675" ph="..." />
+                    <marker date="1559281597791" expanded="false" signature="5845:5872" ph="..." />
+                    <marker date="1559281597791" expanded="false" signature="6000:6047" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/main.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="176">
+                  <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="198">
+                  <caret line="87" column="34" lean-forward="false" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -72,13 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Body</find>
-      <find>mail_handler.php</find>
-      <find>Success!</find>
-      <find>$insertPaswordLink</find>
-      <find>insertPasswordLink</find>
-      <find>passwordreset</find>
-      <find>loginTitle</find>
       <find>p.reset</find>
       <find>passwordResetFeedback</find>
       <find>resetText</find>
@@ -102,6 +154,13 @@
       <find>//Production Version</find>
       <find>let</find>
       <find>undefined</find>
+      <find>singleAttribute</find>
+      <find>.singleAttribute</find>
+      <find>.left-</find>
+      <find>Tutorials</find>
+      <find>ms word for</find>
+      <find>@</find>
+      <find>.spacingElement</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -144,10 +203,10 @@
         <option value="$PROJECT_DIR$/payment/index.html" />
         <option value="$PROJECT_DIR$/pricing/index.html" />
         <option value="$PROJECT_DIR$/register/index.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/server/database_connect/environment.php" />
         <option value="$PROJECT_DIR$/login/style.css" />
         <option value="$PROJECT_DIR$/dashboard/style.css" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/dashboard_views/js/dashboard_global.js" />
         <option value="$PROJECT_DIR$/dashboard_views/css/dashboard_global.css" />
         <option value="$PROJECT_DIR$/dashboard/index2.php" />
@@ -155,6 +214,11 @@
         <option value="$PROJECT_DIR$/dashboard_template/dashboard_layout.php" />
         <option value="$PROJECT_DIR$/dashboard/main_content.php" />
         <option value="$PROJECT_DIR$/dashboard/index.php" />
+=======
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/style.css" />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
       </list>
     </option>
   </component>
@@ -213,6 +277,7 @@
             <path>
               <item name="Kodwiz" type="b2602c69:ProjectViewProjectNode" />
               <item name="Kodwiz" type="2a2b976b:PhpTreeStructureProvider$1" />
+<<<<<<< HEAD
               <item name="dashboard" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -235,6 +300,9 @@
               <item name="Kodwiz" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="database_connect" type="2a2b976b:PhpTreeStructureProvider$1" />
+=======
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
             </path>
           </expand>
           <select />
@@ -292,28 +360,50 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="37438000" />
+=======
+    <option name="totallyTimeSpent" value="42377000" />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22507553" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22507553" sideWeight="0.49455675" order="5" side_tool="false" content_ui="combo" />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+=======
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.4821151" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22507553" sideWeight="0.5054432" order="2" side_tool="true" content_ui="tabs" />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24546827" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -347,6 +437,37 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/server/database_connect/actions/insert_password_code.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="22" column="65" lean-forward="false" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/database_connect/actions/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/database_connect/actions/update_subscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/php_mailer/email_config.default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -541,6 +662,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
         </state>
       </provider>
     </entry>
@@ -548,6 +680,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3915">
+          <caret line="261" column="0" lean-forward="false" selection-start-line="261" selection-start-column="0" selection-end-line="261" selection-end-column="0" />
+          <folding />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
         </state>
       </provider>
     </entry>
@@ -576,6 +719,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="97" lean-forward="false" selection-start-line="5" selection-start-column="97" selection-end-line="5" selection-end-column="97" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -590,6 +734,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+=======
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
         </state>
       </provider>
     </entry>
@@ -624,6 +770,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="595">
           <caret line="227" column="1" lean-forward="false" selection-start-line="227" selection-start-column="1" selection-end-line="227" selection-end-column="1" />
         </state>
@@ -640,10 +787,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="9" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="14" selection-end-column="9" />
+=======
+        <state relative-caret-position="312">
+          <caret line="219" column="20" lean-forward="true" selection-start-line="219" selection-start-column="20" selection-end-line="219" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="42" column="20" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/dashboard_controller/index.php" />
     <entry file="file://$PROJECT_DIR$/dashboard/main.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -701,6 +860,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="59" lean-forward="true" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
+=======
+    <entry file="file://$PROJECT_DIR$/images/kod_wiz_logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/kod_wiz_logo_org.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="183" column="47" lean-forward="true" selection-start-line="183" selection-start-column="47" selection-end-line="183" selection-end-column="47" />
+          <folding>
+            <marker date="1559281597791" expanded="false" signature="3920:4008" ph="..." />
+            <marker date="1559281597791" expanded="false" signature="4179:4248" ph="..." />
+            <marker date="1559281597791" expanded="false" signature="4471:4519" ph="..." />
+            <marker date="1559281597791" expanded="false" signature="4585:4632" ph="..." />
+            <marker date="1559281597791" expanded="false" signature="5604:5675" ph="..." />
+            <marker date="1559281597791" expanded="false" signature="5845:5872" ph="..." />
+            <marker date="1559281597791" expanded="false" signature="6000:6047" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="87" column="34" lean-forward="false" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+>>>>>>> 9de174039af2ca0173bc92b907432caf578eacc0
           <folding />
         </state>
       </provider>

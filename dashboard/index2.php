@@ -40,21 +40,6 @@ require_once('../server/database_connect/environment.php');
             </div>
           </div>
         </div>
-        <div class='innerModalContainer account'>
-          <div class='removeContainer'>
-            <img class='removeBtn' src='../images/remove.png' />
-          </div>
-          <h3 class='updateTitle'>Update Account Details</h3>
-          <div class='accountContainer'>
-            <div class='updateBilling'>
-              <p>Last four digits of current card: <span id='cardNums'></span></p>
-              <button class=''>Change billing method</button>
-            </div>
-            <div class='cancelSub'>
-              <p onclick='cancelSubscription();'>Cancel subscription</p>
-            </div>
-          </div>
-        </div>
       </div>
       <img id='spinner' src='../images/spinner.gif' />
       <nav>
