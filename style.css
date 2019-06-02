@@ -52,44 +52,44 @@ form input, form textarea {
     background-repeat: no-repeat;
     background-size: cover;
 }
-header {
-    width: 960px;
-    margin: auto;
-    position: relative;
-}
-.logoContainer, nav {
-    display: inline-block;
-}
-.navItem {
-    display: inline-block;
-    padding: 10px 12px;
-}
-.innerNavContainer {
-    position: relative;
-    top: 50%;
-    text-align: right;
-}
-nav {
-    height: 100%;
-    position: absolute;
-    right: 0;
-}
-.navItem p {
-    font-family: helvetica;
-    font-weight: 400;
-    color: white;
-    font-size: 20px;
-}
-.navItem:first-child p {
-    color: white;
-    border-bottom: 4px solid white;
-}
-.navItem p:hover {
-    border-bottom: 4px solid white;
-    color: white;
-    transition: .1s;
-    cursor: pointer;
-}
+/*header {*/
+    /*width: 960px;*/
+    /*margin: auto;*/
+    /*position: relative;*/
+/*}*/
+/*.logoContainer, nav {*/
+    /*display: inline-block;*/
+/*}*/
+/*.navItem {*/
+    /*display: inline-block;*/
+    /*padding: 10px 12px;*/
+/*}*/
+/*.innerNavContainer {*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*text-align: right;*/
+/*}*/
+/*nav {*/
+    /*height: 100%;*/
+    /*position: absolute;*/
+    /*right: 0;*/
+/*}*/
+/*.navItem p {*/
+    /*font-family: helvetica;*/
+    /*font-weight: 400;*/
+    /*color: white;*/
+    /*font-size: 20px;*/
+/*}*/
+/*.navItem:first-child p {*/
+    /*color: white;*/
+    /*border-bottom: 4px solid white;*/
+/*}*/
+/*.navItem p:hover {*/
+    /*border-bottom: 4px solid white;*/
+    /*color: white;*/
+    /*transition: .1s;*/
+    /*cursor: pointer;*/
+/*}*/
 .landingPageContent {
     width: 843px;
     margin: auto;
@@ -103,10 +103,9 @@ nav {
     color: white;
     font-family: helvetica;
     font-weight: bold;
-    font-stretch: 100%;
-    font-size: 110px;
+    font-size: 95px;
     margin-top: 135px;
-    padding-left: 60px;
+    padding-left: 100px;
 }
 .arrowIcon {
     text-align: center;
@@ -601,24 +600,30 @@ button.freeTrialBtn:hover {
 
 
 .newlyOfferingContainer {
+    margin: 0 !important;
     position: relative;
-    top: 20px;
+    top: 75px;
     font-family: helvetica;
     font-size: 25px;
     font-weight: 500;
     color: white;
-    padding: 15px 40px;
+    padding: 6px 0px;
     background-color: #B23B3A;
     right: 0;
-    width: 501px;
+    width: 100%;
     left: 100%;
     transition: .3s;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    /* border-top-left-radius: 8px; */
+    /* border-bottom-left-radius: 8px; */
     box-shadow: 10px 2px 5px 2px rgba(0,0,0,0.6);
     -moz-box-shadow: 10px 2px 5px 2px rgba(0,0,0,0.6);
     -webkit-box-shadow: 10px 2px 5px 2px rgba(0,0,0,0.6);
     -o-box-shadow: 10px 2px 5px 2px rgba(0,0,0,0.6);
+}
+div#newOffer p {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
 }
 .newlyOfferingContainer:hover {
     cursor: pointer;
@@ -707,11 +712,14 @@ button.freeTrialBtn:hover {
         margin: 0px auto;
     }
     .newlyOfferingContainer {
-        font-size: 135%;
+        font-size: 16px;
         left: 100%;
         width: auto !important;
         border-radius: 0px;
         box-shadow: none;
+        top: 75px;
+        padding: 15px;
+        text-align: center;
     }
     .tutorialBtn button {
         display: block;
@@ -735,34 +743,38 @@ button.freeTrialBtn:hover {
         text-align: center;
     }
     .landingPage {
-        height: 100%;
+        height: 93vh;
     }
-  video {
+
+    video {
     height: 100%;
     width: auto;
   }
-  nav {
-    display: none;
-  }
-  header {
-    width: 100%;
-    margin: auto;
-    position: relative;
-    text-align: center;
-  }
-  .landingPageContent h1 {
-    font-size: 45px;
-    margin-top: 100px;
-    padding: 0;
-    text-align: center;
-  }
-  .arrowIcon img {
-    width: 14%;
-  }
-  .arrowIcon {
-    text-align: center;
-    margin-top: 25px;
-  }
+    .landingPageContent h1 {
+        font-size: 45px;
+        margin-top: 0;
+        padding: 0;
+        text-align: center;
+    }
+    .arrowIcon img {
+        width: 50px;
+    }
+    div#home {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
+        margin-top: 0;
+    }
+    .arrowIcon {
+        text-align: center;
+         margin-top: 0;
+        position: absolute;
+        bottom: 0;
+        transform: translate(-50%, -100%);
+        left: 50%;
+        margin-bottom: 50px !important;
+    }
   .technologySection h2 {
     font-size: 35px;
     padding-top: 75px;
@@ -863,7 +875,7 @@ button.freeTrialBtn:hover {
 }
 .contactSection h2 {
     font-size: 40px;
-    padding-top: 50px;
+    padding-top: 8px;
 }
 .contactSection h3 {
     margin: 30px 0;
@@ -917,4 +929,10 @@ h2.upgradeNowText {
 .secondSection {
     padding: 0 15px;
 }
+}
+
+
+/*messy override*/
+.contactSection, .aboutSection {
+    padding-top: 75px;
 }

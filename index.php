@@ -11,6 +11,7 @@
     <link rel='stylesheet' href='./style.css' />
   </head>
   <body>
+    <?php require('./header/header.php'); ?>
     <div onclick='window.open("../login", target="_self");' class='demoContainer hover'>
       <p>Launch KodWiz</p>
     </div>
@@ -19,48 +20,48 @@
         <source src="./images/bay_video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-      <header>
-        <div class='logoContainer'>
-          <img src='./images/kod_wiz_logo.png' />
-        </div>
-        <nav>
-          <div class='innerNavContainer'>
-            <div onclick='smoothScroll("home")' class='navItem'>
-              <p>Home</p>
-            </div>
-            <div onclick='smoothScroll("technology")' class='navItem'>
-              <p>Product</p>
-            </div>
-            <div onclick='smoothScroll("feature")' class='navItem'>
-              <p>Features</p>
-            </div>
-            <div onclick='window.open("../tutorials", target="_self")' class='navItem'>
-              <p>Tutorials</p>
-            </div>
-            <div onclick='smoothScroll("about")' class='navItem'>
-              <p>About</p>
-            </div>
-            <div onclick='smoothScroll("contact")' class='navItem'>
-              <p>Contact</p>
-            </div>
-            <div onclick='window.open("../login", target="_self");' class='navItem'>
-              <p>Demo</p>
-            </div>
-          </div>
-        </nav>
-      </header>
+<!--      <header>-->
+<!--        <div class='logoContainer'>-->
+<!--          <img src='./images/kod_wiz_logo.png' />-->
+<!--        </div>-->
+<!--        <nav>-->
+<!--          <div class='innerNavContainer'>-->
+<!--            <div onclick='smoothScroll("home")' class='navItem'>-->
+<!--              <p>Home</p>-->
+<!--            </div>-->
+<!--            <div onclick='smoothScroll("technology")' class='navItem'>-->
+<!--              <p>Product</p>-->
+<!--            </div>-->
+<!--            <div onclick='smoothScroll("feature")' class='navItem'>-->
+<!--              <p>Features</p>-->
+<!--            </div>-->
+<!--            <div onclick='window.open("../tutorials", target="_self")' class='navItem'>-->
+<!--              <p>Tutorials</p>-->
+<!--            </div>-->
+<!--            <div onclick='smoothScroll("about")' class='navItem'>-->
+<!--              <p>About</p>-->
+<!--            </div>-->
+<!--            <div onclick='smoothScroll("contact")' class='navItem'>-->
+<!--              <p>Contact</p>-->
+<!--            </div>-->
+<!--            <div onclick='window.open("../login", target="_self");' class='navItem'>-->
+<!--              <p>Demo</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </nav>-->
+<!--      </header>-->
       <div id="newOffer" onclick="smoothScroll('contact')" class="newlyOfferingContainer">
-        <p>Now offering offsite ABAP SAP development.</p>
+        <p>Now offering offsite ABAP SAP development!</p>
       </div>
       <div id='home' class='landingPageContent'>
         <div class='centeringDiv'>
           <h1>FIRST TRULY INTELLIGENT ABAP WIZARD</h1>
         </div>
-        <div onclick='smoothScroll("technology");' class='arrowIcon'>
-          <!-- icon credit https://fontawesome.com/icons/chevron-down?style=solid&from=io -->
-          <img src='./images/chevron-down.png' />
-        </div>
       </div>
+    <div onclick='smoothScroll("technology");' class='arrowIcon'>
+        <!-- icon credit https://fontawesome.com/icons/chevron-down?style=solid&from=io -->
+        <img src='./images/chevron-down.png' />
+    </div>
     </div>
     <div id='technology' class='technologySection'>
       <h2>OUR TECHNOLOGY</h2>
