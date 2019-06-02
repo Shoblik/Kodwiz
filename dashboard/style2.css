@@ -40,6 +40,9 @@
 .main-container {
     width: 1000px;
 }
+.main-head a {
+    text-decoration: none;
+}
 button.launch {
     position: absolute;
     bottom: 20%;
