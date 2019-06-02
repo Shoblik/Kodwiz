@@ -142,7 +142,7 @@
 
 
 </script>
-<div class="headerContainer">
+<div style="width: 100vw !important;" class="headerContainer">
     <header>
         <div class="logoContainer">
             <a href="../">
