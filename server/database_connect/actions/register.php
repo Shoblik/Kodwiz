@@ -31,6 +31,13 @@ if (isset($ACCESS_CONTROL)) {
 
     $output['customer_verification_added'] = true;
 
+//    fix emails
+    $output['url'] = '../dashboard';
+    $ACCESS_CONTROL = true;
+    require_once('./actions/login.php');
+
+
+
     //send email to customer with link to follow to verify account
     $verifyAccount = true;
     if ($_SERVER['HTTP_HOST'] === 'localhost') {

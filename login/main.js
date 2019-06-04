@@ -42,8 +42,12 @@ function register() {
         password: password,
       }
     }).then(function(response) {
-      console.log(response.data);
-      loading = false;
+
+      // fix emails
+      window.open('../dashboard', target='_self');
+
+
+        loading = false;
 
       if (response.data.emailSent) {
           var column = document.querySelector('.left-col');
