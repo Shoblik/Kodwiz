@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+$ACCESS_CONTROL = true;
+require_once('../server/database_connect/connect.php');
+
+$qry = "SELECT * FROM videos WHERE active = 1 ORDER BY position ASC";
+$result = mysqli_query($conn, $qry);
+$videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
+
+?>
+<!DOCTYPE>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -9,59 +18,17 @@
   </head>
   <body>
     <?php require('../header/header.php'); ?>
-    <!--<div class='headerContainer'>-->
-      <!--<header>-->
-        <!--<div class='logoContainer'>-->
-          <!--<img src='../images/kod_wiz_logo_org.png' />-->
-        <!--</div>-->
-        <!--<nav>-->
-          <!--<div class='innerNavContainer'>-->
-            <!--<div onclick='window.open("https://kodwiz.com", target="_self")' class='navItem'>-->
-              <!--<p>Home</p>-->
-            <!--</div>-->
-            <!--<div onclick='window.open("https://kodwiz.com#technology", target="_self")' class='navItem'>-->
-              <!--<p>Product</p>-->
-            <!--</div>-->
-            <!--<div onclick='window.open("https://kodwiz.com#feature", target="_self")' class='navItem'>-->
-              <!--<p>Features</p>-->
-            <!--</div>-->
-            <!--<div onclick='window.open("https://kodwiz.com/tutorials", target="_self")' class='navItem'>-->
-              <!--<p>Tutorials</p>-->
-            <!--</div>-->
-            <!--<div onclick='window.open("https://kodwiz.com#about", target="_self")' class='navItem'>-->
-              <!--<p>About</p>-->
-            <!--</div>-->
-            <!--<div onclick='window.open("https://kodwiz.com#contact", target="_self")' class='navItem'>-->
-              <!--<p>Contact</p>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</nav>-->
-      <!--</header>-->
-    <!--</div>-->
     <main>
-      <div class='featured'>
-        <div class='container'>
-          <div class='left'>
-            <div class='textWrapper'>
-              <p>Learn faster with our video tutorials</p>
-            </div>
-          </div>
-          <div class='right'>
-            <div class="individualVideo">
-              <iframe class='featuredVideo' width="560" height="315" src="https://www.youtube.com/embed/WVOYPEyEfsY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="individualVideo">
-              <iframe class='featuredVideo' width="560" height="315" src="https://www.youtube.com/embed/AetCujhHlSs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="individualVideo">
-              <iframe class='featuredVideo' width="560" height="315" src="https://www.youtube.com/embed/trqWLaOLwGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="individualVideo">
-              <iframe class='featuredVideo' width="560" height="315" src="https://www.youtube.com/embed/GPPwGyBQrW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
+        <div class="header">
+            <h1>Learn Faster with our Video Tutorials</h1>
         </div>
-      </div>
+        <div class="videoContainer">
+            <?php foreach ($videos as $video) { ?>
+                <div class="video">
+                    <iframe class='featuredVideo' width="100%" height="300px" src="<?php echo $video['url']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            <?php } ?>
+        </div>
     </main>
   </body>
 </html>

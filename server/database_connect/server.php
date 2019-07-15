@@ -55,6 +55,18 @@ switch($_GET['action']) {
           break;
         }
       }
+      case 'updateVideoPosition': {
+         if (!empty($post)) {
+             require('./actions/updateVideoPosition.php');
+         }
+         break;
+      }
+        case 'deleteVideo': {
+            if (!empty($post)) {
+                require('./actions/deleteVideo.php');
+            }
+            break;
+        }
     }
   case 'get':
     switch($_GET['resource']) {
