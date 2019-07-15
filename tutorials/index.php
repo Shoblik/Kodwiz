@@ -25,7 +25,6 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
         <div class="videoContainer">
             <?php foreach ($videos as $video) { ?>
                 <div class="video">
-                    <d
                     <iframe class='featuredVideo' width="100%" height="300px" src="<?php echo $video['url']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             <?php } ?>
