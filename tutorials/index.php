@@ -2,7 +2,7 @@
 $ACCESS_CONTROL = true;
 require_once('../server/database_connect/connect.php');
 
-$qry = "SELECT * FROM videos WHERE active = 1 ORDER BY creation_date DESC";
+$qry = "SELECT * FROM videos WHERE active = 1 ORDER BY position ASC";
 $result = mysqli_query($conn, $qry);
 $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
