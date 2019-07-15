@@ -20,7 +20,7 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
     <?php require('../header/header.php'); ?>
     <main>
         <div class="header">
-            <h1>Learn Faster with Our Video Tutorials</h1>
+            <h1>Learn Faster with our Video Tutorials</h1>
         </div>
         <div class="videoContainer">
             <?php foreach ($videos as $video) { ?>

@@ -100,6 +100,7 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
                 }
             }).then(function(response) {
                 response = response.data;
+                var text = null;
                 if (response.deleted) {
                     text = $('<p>').text('Deleted');
                 } else {
