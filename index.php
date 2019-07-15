@@ -133,7 +133,7 @@
         <div class="right-col">
             <div>
               <h3>How does it work?</h3>
-              <iframe src="https://www.youtube.com/embed/yDpW61BjiuI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/rkI1YDVQOVU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
       </div>
