@@ -2,6 +2,9 @@
     *, html {
         margin: 0 auto;
     }
+    body {
+        overflow-x: hidden;
+    }
     .headerContainer {
         width: 100% !important;
         height: 75px;

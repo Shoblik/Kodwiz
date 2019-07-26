@@ -7,10 +7,11 @@ $result = mysqli_query($conn, $qry);
 $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
 ?>
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" sizes="300x300" href="../images/kod_wiz_logo_org.png">
     <title>Tutorials</title>
     <link rel='stylesheet' href='./style.css' />
@@ -18,8 +19,8 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
   </head>
   <body>
     <?php require('../header/header.php'); ?>
-    <main>
-        <div class="header">
+    <div>
+        <div class="videoHeader">
             <h1>Learn Faster with our Video Tutorials</h1>
         </div>
         <div class="videoContainer">
@@ -29,6 +30,6 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
                 </div>
             <?php } ?>
         </div>
-    </main>
+    </div>
   </body>
 </html>

@@ -10,7 +10,7 @@ body {
     background-color: rgba(255,255,255, 1);
 }
 
-div.header {
+div.videoHeader {
     margin-top: 75px;
     height: 60vh;
     position: relative;
@@ -18,7 +18,7 @@ div.header {
     margin-bottom: -4px;
 }
 
-div.header h1 {
+div.videoHeader h1 {
     font-weight: 400;
     text-align: center;
     position: absolute;
@@ -38,4 +38,13 @@ div.header h1 {
     width: 500px;
     margin: 4px;
     display: inline-block;
+}
+
+@media only screen and (max-width: 768px) {
+    .video {
+        width: 100vw;
+        display: block;
+        height: auto;
+        margin: 0;
+    }
 }
