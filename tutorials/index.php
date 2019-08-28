@@ -11,7 +11,7 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="shortcut icon" sizes="300x300" href="../images/kod_wiz_logo_org.png">
     <title>Tutorials</title>
     <link rel='stylesheet' href='./style.css' />
