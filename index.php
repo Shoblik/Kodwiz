@@ -20,36 +20,6 @@
         <source src="./images/bay_video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
-<!--      <header>-->
-<!--        <div class='logoContainer'>-->
-<!--          <img src='./images/kod_wiz_logo.png' />-->
-<!--        </div>-->
-<!--        <nav>-->
-<!--          <div class='innerNavContainer'>-->
-<!--            <div onclick='smoothScroll("home")' class='navItem'>-->
-<!--              <p>Home</p>-->
-<!--            </div>-->
-<!--            <div onclick='smoothScroll("technology")' class='navItem'>-->
-<!--              <p>Product</p>-->
-<!--            </div>-->
-<!--            <div onclick='smoothScroll("feature")' class='navItem'>-->
-<!--              <p>Features</p>-->
-<!--            </div>-->
-<!--            <div onclick='window.open("../tutorials", target="_self")' class='navItem'>-->
-<!--              <p>Tutorials</p>-->
-<!--            </div>-->
-<!--            <div onclick='smoothScroll("about")' class='navItem'>-->
-<!--              <p>About</p>-->
-<!--            </div>-->
-<!--            <div onclick='smoothScroll("contact")' class='navItem'>-->
-<!--              <p>Contact</p>-->
-<!--            </div>-->
-<!--            <div onclick='window.open("../login", target="_self");' class='navItem'>-->
-<!--              <p>Demo</p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </nav>-->
-<!--      </header>-->
       <div id="newOffer" onclick="smoothScroll('contact')" class="newlyOfferingContainer">
         <p>Now offering offsite ABAP SAP development!</p>
       </div>
@@ -91,38 +61,6 @@
           </div>
         </div>
       </div>
-      <!--<div class='pleaseContain hidden-small'>-->
-        <!--<div style="width: 860px; position: relative; height: 760px; left: 50%; transform: translateX(-50%);" class="s_BIwzIGroupSkin" id="comp-iocoqb1m">-->
-          <!--<div id="comp-iocoqb1minlineContent" class="s_BIwzIGroupSkininlineContent">-->
-            <!--<div style="left: 0px; position: absolute; top: 0px; width: 860px; height: 819px;" data-exact-height="819" data-content-padding-horizontal="0" data-content-padding-vertical="0" title="" class="wp2" id="comp-iobc5w87">-->
-                <!--<div data-style="" class="wp2img" id="comp-iobc5w87img" style="position: relative; width: 860px; height: 819px;"><img id="comp-iobc5w87imgimage" alt="" data-type="image" style="width: 860px; height: 819px; object-fit: cover;" src="./images/computer.png"></div>-->
-            <!--</div>-->
-            <!--<style type="text/css" data-styleid="wp2">.wp2_zoomedin {-->
-              <!--cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.cur), auto;overflow:hidden;display:block;}-->
-              <!--.wp2_zoomedout {cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.cur), auto;}-->
-              <!--.wp2link {display:block;overflow:hidden;}-->
-              <!--.wp2img {overflow:hidden;}-->
-              <!--.wp2imgimage {position:static;box-shadow:#000 0 0 0;user-select:none;}-->
-            <!--</style>-->
-            <!--<div style="left: 59px; position: absolute; top: 76px; width: 744px; height: 414px;" data-exact-height="404" data-content-padding-horizontal="0" data-content-padding-vertical="0" title="" class="wp2" id="comp-iobcj2me">-->
-              <!--<div style="width: 744px; height: 100%;" id="comp-iobcj2melink" class="wp2link">-->
-                <!--<div data-style="" class="wp2img" id="comp-iobcj2meimg" style="position: relative; width: 744px; height: 100%;">-->
-                <!--&lt;!&ndash; <img id="comp-iobcj2meimgimage" alt="Untitled.jpeg" data-type="image" style="width: 744px; height: 404px; object-fit: cover;" src="./images/product_demo.png"> &ndash;&gt;-->
-                <!--&lt;!&ndash; <iframe src="https://www.youtube.com/embed/WVOYPEyEfsY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> &ndash;&gt;-->
-                <!--<iframe src="https://www.youtube.com/embed/FuyUdb3PyMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<style type="text/css" data-styleid="wp2">.wp2_zoomedin {-->
-            <!--cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_out.cur), auto;overflow:hidden;display:block;}-->
-            <!--.wp2_zoomedout {cursor:url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.png), url(https://static.parastorage.com/services/skins/2.1229.80/images/wysiwyg/core/themes/base/cursor_zoom_in.cur), auto;}-->
-            <!--.wp2link {display:block;overflow:hidden;}-->
-            <!--.wp2img {overflow:hidden;}-->
-            <!--.wp2imgimage {position:static;box-shadow:#000 0 0 0;user-select:none;}-->
-         <!--</style>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
       <div class="landingVideoContainer">
         <div class="left-col">
           <div>
@@ -147,15 +85,20 @@
     <div id='feature' class='featureSection'>
       <h2>KodWiz Features</h2>
       <div class="featureContainer">
-        <h3><span>Report Wizard</span></h3>
-        <h3><span>Conversion Wizard</span></h3>
-        <h3><span>ABAP applications</span></h3>
-        <h3><span>HTML report and app</span></h3>
-        <h3><span>Swift iOS report and app</span></h3>
-        <h3><span>ABAP interface</span></h3>
-        <h3><span>Android report and app</span></h3>
+        <h2 class="featureHead">ABAP</h2>
+        <div class="mainHighlight">
+            <h3><span>Report Wizard</span></h3>
+            <h3><span>Application Wizard</span></h3>
+            <h3><span>Conversion Wizard</span></h3>
+        </div>
+        <div class='lineBreak'></div>
+        <h3><span>ABAP OO</span></h3>
+        <h3><span>FIORI CDS</span></h3>
+        <h3><span>FIORI ODATA</span></h3>
+        <h3><span>SWIFT ODATA</span></h3>
+        <h3><span>ANDROID ODATA</span></h3>
       </div>
-      <h3 class="featureEnd">Tools for <span class="redify">developers</span> of any experience level. The generation of predictable and repetitive parts of code is fully automated, this minimizes routine work to increase creative work. The technical specification generation is in MS Word format.</h3>
+      <h3 class="featureEnd">Tools for <span class="redify">developers</span> of all experience levels. The generation of predictable and repetitive parts of code is fully automated, this minimizes routine work to increase creative work. The technical specification generation is in MS Word format.</h3>
     </div>
     <div id="about" class='aboutSection'>
       <h2>MEET KodWiz</h2>
