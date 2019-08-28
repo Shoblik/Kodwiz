@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="shortcut icon" sizes="300x300" href="../images/kod_wiz_logo_org.png">
     <title>KodWiz Login</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>

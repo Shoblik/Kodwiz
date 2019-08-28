@@ -47,5 +47,10 @@ div.videoHeader h1 {
         display: block;
         height: auto;
         margin: 0;
+        box-sizing: border-box;
+        font-size: 0;
+    }
+    .videoContainer {
+        margin: 0px auto;
     }
 }
