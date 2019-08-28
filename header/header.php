@@ -2,7 +2,7 @@
     *, html {
         margin: 0 auto;
     }
-    body {
+    body, html {
         overflow-x: hidden;
     }
     .headerContainer {
