@@ -35,6 +35,7 @@ function formatPrice($price) {
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="shortcut icon" sizes="500x500" href="../images/kod_wiz_logo_org.png">
     <title>KodWiz Dashboard</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
