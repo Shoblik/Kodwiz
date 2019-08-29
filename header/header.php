@@ -181,7 +181,7 @@
                 </a>
                 <?php } else { ?>
                 <a onclick="header.closeNav()"  href="../dashboard/" class="navItem">
-                    <p>Demo</p>
+                    <p>Launch Kodwiz</p>
                 </a>
                 <?php } ?>
             </div>
