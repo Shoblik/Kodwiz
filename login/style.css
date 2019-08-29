@@ -286,4 +286,18 @@ p#response {
     .loginInner {
         width: 95%;
     }
+    .loginTitle {
+        font-weight: 400;
+        color: #605e5e;
+    }
+    .signUpTitle {
+        color: #605e5e;
+    }
+    .registerLine {
+        color: #605E5E;
+    }
+    * {
+        color: #605E5E;
+        font-weight: 400 !important;
+    }
 }
