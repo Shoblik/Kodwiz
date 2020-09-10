@@ -30,7 +30,7 @@ div.videoHeader h1 {
 }
 
 .videoContainer {
-    width: 1024px;
+    width: 95%;
     margin: 15px auto;
     text-align: center;
 }
@@ -52,5 +52,6 @@ div.videoHeader h1 {
     }
     .videoContainer {
         margin: 0px auto;
+        width: 100vw;
     }
 }

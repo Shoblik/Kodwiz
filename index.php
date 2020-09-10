@@ -12,9 +12,6 @@
   </head>
   <body>
     <?php require('./header/header.php'); ?>
-    <div onclick='window.open("../login", target="_self");' class='demoContainer hover'>
-      <p>Launch KodWiz</p>
-    </div>
     <div class='landingPage'>
       <video autoplay playsinline muted loop>
         <source src="./images/bay_video.mp4" type="video/mp4">
@@ -130,26 +127,19 @@
     <!--</div>-->
     <div id='contact' class='contactSection'>
       <h2>CONTACT US</h2>
-      <h3 id='contactInstructions'>Please fill in your contact details below.</h3>
       <div class='formContainer'>
-        <form onSubmit='submitForm(event);'>
-          <div>
-            <input type='text' id='name' placeholder='Name'/>
-          </div>
-          <div>
-            <input type='text' id='email' placeholder='Email' />
-          </div>
-          <div>
-            <input type='text' id='phone' placeholder='Phone' />
-          </div>
-          <div>
-            <textarea type='text' id='message' placeholder='Message'></textarea>
-            <p id='feedbackMessage'></p>
-          </div>
-          <div>
-            <button class='submitFormBtn'>SEND</button>
-          </div>
-        </form>
+              <div class="call">
+                  <h4>Call or Text</h4>
+                  <h4>
+                      <a href="tel:7146087664">714-608-7664</a>
+                  </h4>
+              </div>
+              <div class="email">
+                  <h4>Shoot us an email</h4>
+                  <h4>
+                      <a href="mailto:business@kodwiz.com">business@kodwiz.com</a>
+                  </h4>
+              </div>
       </div>
     </div>
     <script>

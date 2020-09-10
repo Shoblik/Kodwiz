@@ -179,10 +179,6 @@
                 <a onclick="header.closeNav()"  href="javascript:logout();" class="navItem">
                     <p>Logout</p>
                 </a>
-                <?php } else { ?>
-                <a onclick="header.closeNav()"  href="../dashboard/" class="navItem">
-                    <p>Launch Kodwiz</p>
-                </a>
                 <?php } ?>
             </div>
         </nav>

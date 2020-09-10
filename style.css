@@ -960,6 +960,16 @@ h2.featureHead {
 .featureContainer h3 {
     text-align: left !important;
 }
+.formContainer h4 {
+    color: #605e5e;
+}
+.call h4, .email h4 {
+    font-size: 26px !important;
+    margin: 8px 25px !important;
+}
+.call {
+    margin-bottom: 61px;
+}
 }
 
 
@@ -967,4 +977,21 @@ h2.featureHead {
 /*messy override*/
 .contactSection, .aboutSection {
     padding-top: 75px;
+}
+.call, .email {
+    display: inline-block;
+    font-family: helvetica;
+}
+.call h4, .email h4 {
+    font-size: 38px;
+    margin: 8px 25px;
+}
+.formContainer {
+    margin: 100px 0;
+}
+.formContainer h4 {
+    color: #605e5e;
+}
+.formContainer a {
+    color: #b23c39;
 }

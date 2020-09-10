@@ -1,12 +1,3 @@
-<?php
-$ACCESS_CONTROL = true;
-require_once('../server/database_connect/connect.php');
-
-$qry = "SELECT * FROM videos WHERE active = 1 ORDER BY position ASC";
-$result = mysqli_query($conn, $qry);
-$videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
-
-?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -24,11 +15,24 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
             <h1>Learn Faster with our Video Tutorials</h1>
         </div>
         <div class="videoContainer">
-            <?php foreach ($videos as $video) { ?>
-                <div class="video">
-                    <iframe class='featuredVideo' width="100%" height="300px" src="<?php echo $video['url']; ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            <?php } ?>
+            <div class="video">
+                <iframe class='featuredVideo' width="100%" height="300px" src="https://www.youtube.com/embed/tenEhE8gESQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe class='featuredVideo' width="100%" height="300px" src="https://www.youtube.com/embed/e4BJHQq2vgg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe class='featuredVideo' width="100%" height="300px" src="https://www.youtube.com/embed/ocqQj5fnLis" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe class='featuredVideo' width="100%" height="300px" src="https://www.youtube.com/embed/eUP6hPNovtY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe class='featuredVideo' width="100%" height="300px" src="https://www.youtube.com/embed/ZCR4ptPIb4s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <iframe class='featuredVideo' width="100%" height="300px" src="https://www.youtube.com/embed/N1cd97oAKns" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
   </body>
