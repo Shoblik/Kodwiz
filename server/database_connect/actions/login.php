@@ -5,7 +5,7 @@ if (!isset($ACCESS_CONTROL) || $ACCESS_CONTROL === false) {
 }
 
   $password = SHA1("{$post['password']}");
-  $query = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}' AND `password` = '$password'";
+  $query = "SELECT * FROM `user` WHERE `email` = '{$post['email']}' AND `password` = '$password'";
   $result = mysqli_query($conn, $query);
 
   if ($result->num_rows > 0) {

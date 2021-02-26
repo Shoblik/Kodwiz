@@ -6,7 +6,7 @@ if (!isset($ACCESS_CONTROL) || $ACCESS_CONTROL === false) {
 
 
 //find email
-$query = "SELECT `email` FROM `customer` WHERE `id` = '{$output['id']}' AND `active` = 1";
+$query = "SELECT `email` FROM `user` WHERE `id` = '{$output['id']}' AND `active` = 1";
 $result = mysqli_query($conn, $query);
 $email = mysqli_fetch_assoc($result)['email'];
 $date = date('mdY');

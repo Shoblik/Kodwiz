@@ -10,6 +10,7 @@ $output['authorized'] = $auth->auth;
 $output['id'] = $auth->id;
 $output['success'] = true;
 
+
 if ($output['authorized'] && isset($_GET['customerInfo']) || $output['authorized'] && isset($getCustomerInfo)) {
     if (isset($serverRequest)) {
         require('../server/database_connect/actions/read_customer_info.php');

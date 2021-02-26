@@ -8,15 +8,15 @@ if (isset($ACCESS_CONTROL)) {
   }
 
   //check if the email is already in the system
-  $duplicateQuery = "SELECT * FROM `customer` WHERE `email` = '{$post['email']}'";
+  $duplicateQuery = "SELECT * FROM `user` WHERE `email` = '{$post['email']}'";
 
   $duplicateResult = mysqli_query($conn, $duplicateQuery);
 
   $data['num_rows'] = $duplicateResult->num_rows;
 
   if ($duplicateResult->num_rows === 0) {
-    $query = "INSERT INTO `customer` (`name`, `bussiness`, `email`, `phone`, `password`, `date_added`, `active`)
-    VALUES ('{$post['name']}', '{$post['bussiness']}', '{$post['email']}', '{$post['phone']}', SHA1('{$post['password']}'), CURRENT_DATE, 0)";
+    $query = "INSERT INTO `user` (`name`, `business`, `email`, `phone`, `password`,  `active`, `ip`, `forwarded_ip`)
+    VALUES ('{$post['name']}', '{$post['bussiness']}', '{$post['email']}', '{$post['phone']}', SHA1('{$post['password']}'), 1, '{$_SERVER['REMOTE_ADDR']}', '{$_SERVER['HTTP_X_FORWARDED_FOR']}')";
 
     $result = mysqli_query($conn, $query);
 
@@ -26,7 +26,7 @@ if (isset($ACCESS_CONTROL)) {
     $insert_id = $conn->insert_id;
     $code = random_str(15);
 
-    $query = "INSERT INTO `verify_customer` (`customer_id`, `confirmation_code`) VALUES ('$insert_id', $code)";
+    $query = "INSERT INTO `verify_customer` (`user_id`, `code`) VALUES ('$insert_id', $code)";
     $result = mysqli_query($conn, $query);
 
     $output['customer_verification_added'] = true;
@@ -48,7 +48,7 @@ if (isset($ACCESS_CONTROL)) {
         $verifyLink = "<a href='$verifyLinkRaw'>here</a>";
     }
     $output['emailSent'] = true;
-    require_once('../php_mailer/mail_handler.php');
+//    require_once('../php_mailer/mail_handler.php');
 
   } else {
     $output['message'] = 'Error! This email is already in use';

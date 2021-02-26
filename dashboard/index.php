@@ -1,4 +1,5 @@
 <?php
+
 $ACCESS_CONTROL = true;
 $getCustomerInfo = true;
 $serverRequest = true;
@@ -10,8 +11,7 @@ if ($output['authorized'] !== true) header("Location: ../login");
 
 require_once('../server/database_connect/actions/launch_application.php');
 
-
-$query = 'SELECT * FROM subscription_details';
+$query = 'SELECT * FROM product WHERE active = 1';
 $result = mysqli_query($conn, $query);
 $plans = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
