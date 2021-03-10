@@ -60,10 +60,19 @@ button:hover {
     width: 15%;
   }
   </style>
-  </head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNM6SHLE6Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-ZNM6SHLE6Q");
+</script>
+</head>
   <div style="text-align: center; padding: 25px; background-color: rgba(250,250,250, 1);">
     <img src="../../images/kod_wiz_logo_org.png"/>
-  </div>
+  </div> 
   <content>
     <h2>Thank you for verifying your account, your account has been activated.</h2>
     <button onclick="openLogin();">Login</button>

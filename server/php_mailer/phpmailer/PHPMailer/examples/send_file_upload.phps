@@ -35,6 +35,15 @@ if (array_key_exists('userfile', $_FILES)) {
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>PHPMailer Upload</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNM6SHLE6Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZNM6SHLE6Q');
+</script>
 </head>
 <body>
 <?php if (empty($msg)) { ?>
