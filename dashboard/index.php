@@ -98,7 +98,7 @@ function formatPrice($price) {
         <h1>Welcome <?php echo $output['firstName']; ?></h1>
         <button onclick="window.open('<?php echo $output['url']; ?>')" class="launch">Launch Application</button>
     </div>
-    <div class="main-container">
+    <div class="main-container" style="margin-bottom: 130px;">
         <div class="main-head">
             <h1><?php echo $output['planName']; ?> Plan Dashboard</h1>
             <a href="#plans">
@@ -107,54 +107,13 @@ function formatPrice($price) {
 
             <div class="details">
                 <div>
-                    <h3><?php echo $output['programs_left']; ?></h3>
+                    <h3><?php //echo $output['programs_left']; ?>10</h3>
                     <h3>Free programs remaining</h3>
                 </div>
                 <div>
-                    <h3><?php echo $output['programs_billed']; ?></h3>
+                    <h3><?php //echo $output['programs_billed']; ?>0</h3>
                     <h3>Programs billed this month</h3>
                 </div>
-            </div>
-        </div>
-        <div id="plans" class="plans">
-            <h1>KodWiz Plans</h1>
-            <div class="planContainer">
-            <?php foreach ($plans as $plan) {
-                $currentPlan = ($plan['subscription_name'] === $output['planName']) ? true : false;
-
-                ?>
-                <?php if (!$currentPlan) { ?>
-                <div onclick='addCustomerToSubscription(<?php echo $plan['monthly_fee'] !== '0' ? $plan['monthly_fee'] : '0, "Save Payment Details"' ?>)' class="individualPlan">
-                <?php } else { ?>
-                    <div class="individualPlan currentPlan">
-                    <?php } ?>
-                    <h3><?php echo $plan['subscription_name']; ?></h3>
-                    <h3>
-                        <?php
-                            if ($plan['programs_per_month'] == 0 && $plan['subscription_id'] == 1000000) {
-                                echo '<span class="redify">Unlimited Program Generation</span>';
-                            } else {
-                                echo '<span class="redify"> ' . $plan['programs_per_month'] . ' free programs</span> per month';
-                            }
-                        ?>
-                    </h3>
-                    <?php
-                    if ($plan['programs_per_month'] == 0 && $plan['subscription_id'] == 1000000) {?>
-                        <h3>Then $0 / Program</h3>
-                    <?php } else {?>
-                        <h3>Then <?php echo formatPrice($plan['per_program_fee']); ?> / Program</h3>
-                    <?php } ?>
-                    <h3 class="pricePerMonth">
-                        <?php echo formatPrice($plan['monthly_fee']); ?>
-                        <span class="perMonth">/month</span>
-                    </h3>
-                    <?php if ($currentPlan) {?>
-                        <div class="overlay">
-                            <h3>Current</h3>
-                        </div>
-                    <?php } ?>
-                </div>
-            <?php } ?>
             </div>
         </div>
     </div>

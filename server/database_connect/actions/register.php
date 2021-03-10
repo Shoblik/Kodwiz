@@ -48,6 +48,7 @@ if (isset($ACCESS_CONTROL)) {
         $verifyLink = "<a href='$verifyLinkRaw'>here</a>";
     }
     $output['emailSent'] = true;
+    $output['message'] = 'Register Successful, redirecting to dashboard';
 //    require_once('../php_mailer/mail_handler.php');
 
   } else {

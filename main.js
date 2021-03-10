@@ -20,7 +20,7 @@ function submitForm(e) {
     target.innerHTML = 'Thank you for contacting us, we\'ll be reaching out to you soon.';
     target.style.display = 'inline-block';
 } else  {
-    target.innerHTML = 'Something went wrong please contact us at jhoblik@kod-wiz.com or at 714-608-7664';
+    target.innerHTML = 'Something went wrong please contact us at simonthehoblik@gmail.com or at 657-282-2679';
     target.style.display = 'inline-block';
   }
 });

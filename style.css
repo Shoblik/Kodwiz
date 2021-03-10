@@ -696,7 +696,9 @@ h2.featureHead {
 }
 /* Mobile Media Queries */
 @media only screen and (max-width: 768px) {
-
+    .email-container h2, .phone-container h2 {
+        font-size: 28px !important;
+    }
 
 .mainHighlight h3 {
     text-align: center;
@@ -967,4 +969,19 @@ h2.featureHead {
 /*messy override*/
 .contactSection, .aboutSection {
     padding-top: 75px;
+}
+.email-container h2, .phone-container h2 {
+    font-size: 45px;
+    padding: 15px;
+    color: #b23b3b;
+}
+.contactSection .formContainer {
+    margin: 45px 45px;
+}
+.contactSection a {
+    outline: none;
+    border: none;
+}
+.contactSection a {
+    text-decoration: none;
 }

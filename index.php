@@ -130,26 +130,36 @@
     <!--</div>-->
     <div id='contact' class='contactSection'>
       <h2>CONTACT US</h2>
-      <h3 id='contactInstructions'>Please fill in your contact details below.</h3>
+<!--      <h3 id='contactInstructions'>Please fill in your contact details below.</h3>-->
       <div class='formContainer'>
-        <form onSubmit='submitForm(event);'>
-          <div>
-            <input type='text' id='name' placeholder='Name'/>
+          <div class="email-container">
+              <a href="mailto:jhoblik@yahoo.com">
+                  <h2>jhoblik@yahoo.com</h2>
+              </a>
           </div>
-          <div>
-            <input type='text' id='email' placeholder='Email' />
+          <div class="phone-container">
+              <a href="tel:7146087664">
+                  <h2>714-608-7664</h2>
+              </a>
           </div>
-          <div>
-            <input type='text' id='phone' placeholder='Phone' />
-          </div>
-          <div>
-            <textarea type='text' id='message' placeholder='Message'></textarea>
-            <p id='feedbackMessage'></p>
-          </div>
-          <div>
-            <button class='submitFormBtn'>SEND</button>
-          </div>
-        </form>
+<!--        <form onSubmit='submitForm(event);'>-->
+<!--          <div>-->
+<!--            <input type='text' id='name' placeholder='Name'/>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <input type='text' id='email' placeholder='Email' />-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <input type='text' id='phone' placeholder='Phone' />-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <textarea type='text' id='message' placeholder='Message'></textarea>-->
+<!--            <p id='feedbackMessage'></p>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <button class='submitFormBtn'>SEND</button>-->
+<!--          </div>-->
+<!--        </form>-->
       </div>
     </div>
     <script>
