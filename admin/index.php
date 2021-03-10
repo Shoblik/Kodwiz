@@ -33,6 +33,15 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='./style.css' />
     <script src='./main.js'></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNM6SHLE6Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZNM6SHLE6Q');
+</script>
 </head>
 <div style="display: inline-block; padding: 15px; border: 1px solid #CCC; margin-bottom: 10px;">
     <h3>Add new video to /tutorials page</h3>

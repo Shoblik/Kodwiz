@@ -55,6 +55,15 @@ EOT;
 <head>
     <meta charset="UTF-8">
     <title>Contact form</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNM6SHLE6Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZNM6SHLE6Q');
+</script>
 </head>
 <body>
 <h1>Contact us</h1>
