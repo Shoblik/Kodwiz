@@ -103,7 +103,7 @@
     <div id="about" class='aboutSection'>
       <h2>MEET KodWiz</h2>
       <div class='aboutContent'>
-        <div class='left-col'>
+        <div class='full-col'>
           <div class='imgContainer'>
             <img src='./images/jan_profile.png' />
           </div>
@@ -111,16 +111,6 @@
           <h3>JAN HOBLIK</h3>
           <div class='aboutTextContainer'>
             <p>Is the Chief Product Architect with a wide range of experience from Silicon Valley technology leading enterprises, he was among the first employees of Tesla Motors and helped to build up the company from a startup to the worldwide leading EV manufacturer. Currently participating on several projects as the lead SAP architect.</p>
-          </div>
-        </div>
-        <div class='right-col'>
-          <div class='imgContainer'>
-            <img src='./images/otto_profile.png' />
-          </div>
-          <div class='strikeThrough'></div>
-          <h3>OTTO FABRI</h3>
-          <div class='aboutTextContainer'>
-            <p>is responsible for business development in KodWiz bringing in experience from companies like Faraday Future and Tesla motors where he was part of the core team responsible for development of the Model S and Model X projects.</p>
           </div>
         </div>
       </div>
