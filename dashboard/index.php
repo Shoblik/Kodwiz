@@ -105,7 +105,8 @@ function formatPrice($price) {
     <div class="spacer">
 <!--        <img src="../images/kod_wiz_logo.png" />-->
         <h1>Welcome <?php echo $output['firstName']; ?></h1>
-        <button onclick="window.open('<?php echo $output['url']; ?>')" class="launch">Launch Application</button>
+        <!-- <button onclick="window.open('<?php echo $output['url']; ?>')" class="launch">Launch Application</button> -->
+	<button onclick="window.open('http://195.234.214.189:8010/sap/bc/bsp/sap/yhh_app/yhh_app.do?sap-client=800&sap-sessioncmd=open')" class="launch">Launch Application</button>
     </div>
     <div class="main-container" style="margin-bottom: 130px;">
         <div class="main-head">

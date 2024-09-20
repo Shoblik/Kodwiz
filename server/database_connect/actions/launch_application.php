@@ -13,8 +13,8 @@ $date = date('mdY');
 
 $token = generateToken($date, $email);
 
-$output['url'] = 'http://application.kodwiz.com?sap-sessioncmd=open&warp=' . $token . '&usr=' . $email;
-
+//$output['url'] = 'http://application.kodwiz.com?sap-sessioncmd=open&warp=' . $token . '&usr=' . $email;
+$output['url'] = 'http://srv-sa9-1.idesaccess.com:8010/sap/bc/bsp/sap/yhh_app/yhh_app.do?sap-client=800&sap-sessioncmd=open';
 
 
 
