@@ -16,7 +16,7 @@
     <link rel='stylesheet' href='./css/dashboard_global.css' />
     <link rel='stylesheet' href='./style.css' />
     <script src="./js/dashboard_global.js"></script>
-    <script src='./main.js'></script>
+    <script src='./main.js?ver=1.2'></script>
     <script>checkSession();</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNM6SHLE6Q"></script>

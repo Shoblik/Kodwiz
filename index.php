@@ -7,7 +7,7 @@
     <title>KodWiz</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src='./main.js'></script>
+    <script src='./main.js?ver=1.2'></script>
     <link rel='stylesheet' href='./style.css' />
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNM6SHLE6Q"></script>

@@ -10,7 +10,7 @@ require_once('../server/database_connect/environment.php');
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel='stylesheet' href='./style.css' />
     <script src="https://checkout.stripe.com/checkout.js"></script>
-    <script src='./main.js'></script>
+    <script src='./main.js?ver=1.2'></script>
     <script>checkSession();</script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNM6SHLE6Q"></script>

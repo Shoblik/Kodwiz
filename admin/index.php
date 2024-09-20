@@ -32,7 +32,7 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel='stylesheet' href='./style.css' />
-    <script src='./main.js'></script>
+    <script src='./main.js?ver=1.2'></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNM6SHLE6Q"></script>
 <script>

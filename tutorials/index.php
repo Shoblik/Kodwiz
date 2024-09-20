@@ -15,7 +15,7 @@ $videos = mysqli_fetch_all($result,MYSQLI_ASSOC);
     <link rel="shortcut icon" sizes="300x300" href="../images/kod_wiz_logo_org.png">
     <title>Tutorials</title>
     <link rel='stylesheet' href='./style.css' />
-    <script src='./main.js'></script>
+    <script src='./main.js?ver=1.2'></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNM6SHLE6Q"></script>
 <script>
