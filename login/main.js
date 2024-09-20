@@ -42,12 +42,8 @@ function register() {
         password: password,
       }
     }).then(function(response) {
-
       // fix emails
-      window.open('../dashboard', target='_self');
-
-
-        loading = false;
+      loading = false;
 
       if (response.data.emailSent) {
           var column = document.querySelector('.left-col');
@@ -62,6 +58,10 @@ function register() {
           document.querySelector('.outerInputContainer.reg').classList.add('hideOuterInputContainer');
           document.querySelector('.otherLinks.reg').style.display = 'none';
           document.querySelector('#response').innerText = '';
+
+          setTimeout(function() {
+            window.open('../dashboard', target='_self');
+          }, 1000);
 
       } else {
         document.querySelector('#response').style.color = 'white';
