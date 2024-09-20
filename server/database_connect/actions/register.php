@@ -24,7 +24,7 @@ if (isset($ACCESS_CONTROL)) {
 
     // generate code in verify customer column
     $insert_id = $conn->insert_id;
-    $code = random_str(15);
+    $code = random_number(15);
 
     $query = "INSERT INTO `verify_customer` (`user_id`, `code`) VALUES ('$insert_id', $code)";
     $result = mysqli_query($conn, $query);
@@ -59,11 +59,10 @@ if (isset($ACCESS_CONTROL)) {
   die('no direct access allowed');
 }
 
-function random_str($length, $keyspace = '0123456789') {
-    $pieces = [];
-    $max = mb_strlen($keyspace, '8bit') - 1;
-    for ($i = 0; $i < $length; ++$i) {
-        $pieces []= $keyspace[random_int(0, $max)];
-    }
-    return implode('', $pieces);
+function random_number($length) {
+    // Ensure the number doesn't start with 0 unless length is 1
+    $min = ($length === 1) ? 0 : pow(10, $length - 1);
+    $max = pow(10, $length) - 1;
+
+    return random_int($min, $max);
 }
